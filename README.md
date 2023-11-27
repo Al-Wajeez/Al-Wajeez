@@ -1,1 +1,0 @@
-# Al-Wajeez.github.io

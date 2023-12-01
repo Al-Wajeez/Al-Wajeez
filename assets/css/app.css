@@ -33274,7 +33274,7 @@ html[dir="rtl"] .faq-page-nav {
 }
 
 html[dir="rtl"] .faq-page-nav .nav-tabs .nav-link {
-    padding-right: 30px;
+    /*padding-right: 30px;*/
 }
 
 html[dir="rtl"] .faq-page-nav .nav-tabs .nav-link::after {

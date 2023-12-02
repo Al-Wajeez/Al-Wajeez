@@ -3980,7 +3980,7 @@ Countdown
   Course Widget
 ---------------------*/
 .edu-course-widget {
-    background-color: #f5f9fa;
+    /*background-color: #f5f9fa;*/
     border-radius: 5px;
     padding: 38px 30px 20px;
     margin-bottom: 50px;
@@ -4012,7 +4012,7 @@ Countdown
 }
 
 .edu-course-widget .widget-title.widget-toggle:after {
-    content: "\e91e";
+    /*content: "\e91e";
     font-family: var(--font-icomoon);
     font-size: 6px;
     position: absolute;
@@ -4022,7 +4022,7 @@ Countdown
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
     -webkit-transition: var(--transition);
-    transition: var(--transition);
+    transition: var(--transition);*/
 }
 
 .edu-course-widget .content {
@@ -4235,8 +4235,9 @@ Countdown
 
 .course-sidebar-2 {
     background-color: var(--color-white);
+    border: 1px solid #e6e6e6;
     border-radius: 5px;
-    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.07);
+    /*box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.07);*/
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {

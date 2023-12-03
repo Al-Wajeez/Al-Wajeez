@@ -92,8 +92,7 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
     var encodedNotes = encodeURIComponent('التعليق : ' + Notes);
     var encodedResults = encodeURIComponent('إجمالي الخدمات: ' + Results);
     var encodedPaybank = encodeURIComponent('التحويل المصرفي المباشر: ' + Paybank);
-    var encoded = encodeURIComponent('بريدي موب: ' + Paypal);
-    var encodedPaypal = encodeURIComponent();
+    var encodedPaypal = encodeURIComponent('بريدي موب: ' + Paypal);
     var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedMessage;
 
     // Open WhatsApp with the pre-filled message

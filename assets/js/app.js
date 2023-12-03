@@ -35,8 +35,10 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
             var value13 = check13.checked ? parseInt(check13.value) : 0;
 
             var sum = value1 + value2 + value3 + value4 + value5 + value6 + value7 + value8 + value9 + value10 + value11 + value12 + value13;
+            var formatter = new Intl.NumberFormat('ar-DZ', { minimumFractionDigits: 2 });
+            var formattedSum = formatter.format(sum);
 
-            resultsInput.value = sum;
+            resultsInput.value = formattedSum.replace('.', ' ').replace(',', '.').replace(' ', ',') + ' دج';
         }
 
         // Call the function to update the results when checkboxes are clicked
@@ -57,3 +59,33 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
         // Initial update of results when the page loads
         updateResults();
     });
+
+
+	//WhatsApp message link
+    function sendWhatsAppMessage() {
+    var form = document.getElementById('myForm');
+    var formData = new FormData(form);
+
+    var FName = formData.get('FName');
+    var SName = formData.get('SName');
+    var Email = formData.get('Email');
+    var Flink = formData.get('Flink');
+    var Tel = formData.get('Tel');
+    var Willaya = formData.get('Willaya');
+    var Orientation = formData.get('Orientation');
+    var Notes = formData.get('Notes');
+    var Results = formData.get('Results');
+    var Paybank = formData.get('Paybank');
+    var Paypal = formData.get('Paypal');
+
+    // Retrieve other form data in a similar way
+
+    // Construct the WhatsApp message link
+    var phoneNumber = '00213561520492'; // Replace with your recipient's phone number
+    var encodedMessage = encodeURIComponent(
+    	'الإسم: ' + FName + 'اللقب: ' + SName + 'البريد الإلكتروني: ' + Email + 'حساب الفايسبوك: ' + Flink + 'رقم الهاتف: ' + Tel + 'مديرية التربية: ' + Willaya + 'مركز التوجيه: ' + Orientation + 'التعليق : ' + Notes + 'إجمالي الخدمات: ' + Results + 'التحويل المصرفي المباشر: ' + Paybank + 'بريدي موب: ' + Paypal);
+    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedMessage;
+
+    // Open WhatsApp with the pre-filled message
+    window.open(whatsappLink);
+}

@@ -82,8 +82,18 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
 
     // Construct the WhatsApp message link
     var phoneNumber = '213561520492'; // Replace with your recipient's phone number
-    var encodedMessage = encodeURIComponent(
-    	'الإسم: ' + FName + '\nاللقب: ' + SName + 'البريد الإلكتروني: ' + Email + 'حساب الفايسبوك: ' + Flink + 'رقم الهاتف: ' + Tel + 'مديرية التربية: ' + Willaya + 'مركز التوجيه: ' + Orientation + 'التعليق : ' + Notes + 'إجمالي الخدمات: ' + Results + 'التحويل المصرفي المباشر: ' + Paybank + 'بريدي موب: ' + Paypal);
+    var encodedFName = encodeURIComponent('الإسم: ' + FName);
+    var encodedSName = encodeURIComponent('اللقب: ' + SName);
+    var encodedEmail = encodeURIComponent('البريد الإلكتروني: ' + Email);
+    var encodedFlink = encodeURIComponent('حساب الفايسبوك: ' + Flink);
+    var encodedTel = encodeURIComponent('رقم الهاتف: ' + Tel);
+    var encodedWillaya = encodeURIComponent('مديرية التربية: ' + Willaya);
+    var encodedOrientation = encodeURIComponent('مركز التوجيه: ' + Orientation);
+    var encodedNotes = encodeURIComponent('التعليق : ' + Notes);
+    var encodedResults = encodeURIComponent('إجمالي الخدمات: ' + Results);
+    var encodedPaybank = encodeURIComponent('التحويل المصرفي المباشر: ' + Paybank);
+    var encoded = encodeURIComponent('بريدي موب: ' + Paypal);
+    var encodedPaypal = encodeURIComponent();
     var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedMessage;
 
     // Open WhatsApp with the pre-filled message

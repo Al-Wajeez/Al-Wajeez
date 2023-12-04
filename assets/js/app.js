@@ -83,8 +83,7 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
 
     // Construct the WhatsApp message link
     var phoneNumber = '213561520492'; // Replace with your recipient's phone number 
-    var encodedFName = encodeURIComponent('الإسم: ' + FName);
-    var encodedSName = encodeURIComponent('اللقب: ' + SName);
+    var encodedFName = encodeURIComponent('الإسم واللقب: ' + FName + ' ' + SName);
     var encodedEmail = encodeURIComponent('البريد الإلكتروني: ' + Email);
     var encodedFlink = encodeURIComponent('حساب الفايسبوك: ' + Flink);
     var encodedTel = encodeURIComponent('رقم الهاتف: ' + Tel);

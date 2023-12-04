@@ -199,35 +199,6 @@
                                 </ul>
                             </nav>
                         </div>
-                        <div class="header-right">
-                            <ul class="header-action">
-                                <li class="search-bar">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search">
-                                        <button class="search-btn" type="button"><i class="icon-2"></i></button>
-                                    </div>
-                                </li>
-                                <li class="icon search-icon">
-                                    <a href="javascript:void(0)" class="search-trigger">
-                                        <i class="icon-2"></i>
-                                    </a>
-                                </li>
-                                <li class="icon cart-icon">
-                                    <a href="cart.html" class="cart-icon">
-                                        <i class="icon-3"></i>
-                                        <span class="count">0</span>
-                                    </a>
-                                </li>
-                                <li class="header-btn">
-                                    <a href="contact-us.html" class="edu-btn btn-medium btn-gradient">Try for free <i class="icon-4"></i></a>
-                                </li>
-                                <li class="mobile-menu-bar d-block d-xl-none">
-                                    <button class="hamberger-button">
-                                        <i class="icon-54"></i>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -386,7 +357,7 @@
             <div class="container">
                 <div class="breadcrumb-inner">
                     <div class="page-title">
-                        <h1 class="title">Checkout Page</h1>
+                        <h1 class="title">الخدمات عن بعد</h1>
                     </div>
                 </div>
             </div>
@@ -436,31 +407,27 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>الإسم*</label>
-                                            <input name="FName" type="text" id="FName" placeholder="الإسم">
+                                            <input name="FName" type="text" id="FName" placeholder="الإسم" required>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label>اللقب*</label>
-                                            <input name="SName" type="text" id="SName" placeholder="اللقب">
+                                            <input name="SName" type="text" id="SName" placeholder="اللقب" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label>البريد الإلكتروني*</label>
-                                    <input name="Email" type="email" id="Email" placeholder="البريد الإلكتروني">
-                                </div>
-                                <div class="form-group">
-                                    <label>رابط حساب على الفايسبوك (في حالة تريد التواصل معنا عبر المسنجر) </label>
-                                    <input name="Flink" type="url" id="Flink" placeholder="البريد الإلكتروني">
+                                    <input name="Email" type="email" id="Email" placeholder="البريد الإلكتروني" required>
                                 </div>
                                 <div class="form-group">
                                     <label>رقم الهاتف*</label>
-                                    <input name="Tel" type="tel" id="Tel" placeholder="00 00 00 000 213+">
+                                    <input name="Tel" type="tel" id="Tel" placeholder="رقم الهاتف">
                                 </div>
                                 <div class="form-group">
                                             <label>مديرية التربية*</label>
-                                            <select name="Willaya" id="Willaya">
+                                            <select name="Willaya" id="Willaya" required>
                                             <option value=" مديرية التربية لولاية ">مديرية التربية لولاية</option>
                                             <option value=" مديرية التربية لولاية أدرار ">مديرية التربية لولاية أدرار</option>
                                             <option value=" مديرية التربية لولاية الشلف ">مديرية التربية لولاية الشلف</option>
@@ -518,7 +485,7 @@
 
                                 <div class="form-group">
                                     <label>مركز التوجيه*</label>
-                                            <input name="Orientation" type="text" id="Orientation" placeholder="مركز التوجيه">
+                                            <input name="Orientation" type="text" id="Orientation" placeholder="مركز التوجيه" required>
                                 </div>
 
                                 <div class="form-group">
@@ -588,7 +555,7 @@
                     </div>
                     </div>
                                 <div class="form-group mt--50 mb-0">
-                                    <label>التعليق (يمكنكم ترك هذا الجانب فارغ في حالة طلب البرنامج فقط)</label>
+                                    <label>التعليق (يمكنكم ترك هذا الجانب فارغ)</label>
                                     <textarea name="Notes" id="Notes" rows="4" placeholder="توضيح حول نوع الطلب ."></textarea>
                                 </div>
                         </div>
@@ -600,14 +567,14 @@
                             <div class="order-summery checkout-summery">
                                 <div class="summery-table-wrap">
                                     <label>إجمالي الخدمات</label>
-                                        <input name="Results" type="text" id="Results" disabled>
+                                        <input name="Results" type="text" id="Results" readonly>
                                         <input name="Combin" type="text" id="Combin" hidden>
                                 </div>
                             </div>
                             <div class="order-payment">
                                 <label>طريقة الدفع</label>
                                 <br>
-                                <a >الدفع يتم مباشرة بعد إستلامكم للعمل في  غضون 24/48 ساعة.</a>
+                                <a>الدفع يتم مباشرة بعد إستلامكم للعمل في  غضون 24/48 ساعة.</a>
                                 <div class="payment-method">
                                     <div class="form-group">
                                         <div class="edu-form-check">
@@ -626,7 +593,7 @@
                                     </div>
                                 </div>
                                  
-                                <a class="edu-btn order-place" type="button" onclick="sendWhatsAppMessage()">تأكيد وإرسال الطلب</a>
+                                <a class="edu-btn order-place" type="button" onclick="sendWhatsAppMessage()">تأكيد وإرسال الطلب عبر الواتسب</a>
                             </div>
                         </div>
                 </form>

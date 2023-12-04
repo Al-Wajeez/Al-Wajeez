@@ -81,7 +81,7 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
     // Retrieve other form data in a similar way
 
     // Construct the WhatsApp message link
-    var phoneNumber = '213561520492'; // Replace with your recipient's phone number
+    var phoneNumber = '213561520492'; // Replace with your recipient's phone number 
     var encodedFName = encodeURIComponent('الإسم: ' + FName);
     var encodedSName = encodeURIComponent('اللقب: ' + SName);
     var encodedEmail = encodeURIComponent('البريد الإلكتروني: ' + Email);
@@ -93,8 +93,8 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
     var encodedResults = encodeURIComponent('إجمالي الخدمات: ' + Results);
     var encodedPaybank = encodeURIComponent('التحويل المصرفي المباشر: ' + Paybank);
     var encodedPaypal = encodeURIComponent('بريدي موب: ' + Paypal);
-    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedMessage;
+    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedFName + '%0A' + encodedFName + '%0A' + encodedEmail + '%0A' + encodedFlink + '%0A' + encodedTel + '%0A' + encodedWillaya + '%0A' + encodedOrientation + '%0A' + encodedNotes + '%0A' + encodedResults + '%0A' + encodedPaybank + '%0A' + encodedPaypal;
 
     // Open WhatsApp with the pre-filled message
-    window.open(whatsappLink);
+    window.open(whatsappLink,'_blank');
 }

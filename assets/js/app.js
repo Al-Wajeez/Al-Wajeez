@@ -92,7 +92,7 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
     var encodedOrientation = encodeURIComponent('مركز التوجيه: ' + Orientation);
     var encodedNotes = encodeURIComponent('التعليق : ' + Notes);
     var encodedResults = encodeURIComponent('إجمالي الخدمات: ' + Results);
-    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedFName + '%0A' + encodedFName + '%0A' + encodedEmail + '%0A' + encodedFlink + '%0A' + encodedTel + '%0A' + encodedWillaya + '%0A' + encodedOrientation + '%0A' + encodedNotes + '%0A' + encodedResults + '%0A' + 'التحويل المصرفي المباشر: ' + Paybank + '%0A' + 'بريدي موب: ' + Paypal;
+    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedFName + '%0A' + encodedFName + '%0A' + encodedEmail + '%0A' + encodedFlink + '%0A' + encodedTel + '%0A' + encodedWillaya + '%0A' + encodedOrientation + '%0A' + encodedNotes + '%0A' + encodedResults + '%0A' + 'طريقة الدفع: ' + Paybank + Paypal;
 
     // Open WhatsApp with the pre-filled message
     window.open(whatsappLink,'_blank');

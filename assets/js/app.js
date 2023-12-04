@@ -64,6 +64,9 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
 	//WhatsApp message link
     function sendWhatsAppMessage() {
     var form = document.getElementById('myForm');
+    var Paybank = document.getElementById('Paybank').checked ? document.getElementById('Paybank').value : '';
+    var Paypal = document.getElementById('Paypal').checked ? document.getElementById('Paypal').value : '';
+
     var formData = new FormData(form);
 
     var FName = formData.get('FName');
@@ -75,8 +78,6 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
     var Orientation = formData.get('Orientation');
     var Notes = formData.get('Notes');
     var Results = formData.get('Results');
-    var Paybank = formData.get('Paybank');
-    var Paypal = formData.get('Paypal');
 
     // Retrieve other form data in a similar way
 
@@ -91,9 +92,7 @@ function _0x1d8c(_0x395985,_0x35bf43){var _0x540dfc=_0x540d();return _0x1d8c=fun
     var encodedOrientation = encodeURIComponent('مركز التوجيه: ' + Orientation);
     var encodedNotes = encodeURIComponent('التعليق : ' + Notes);
     var encodedResults = encodeURIComponent('إجمالي الخدمات: ' + Results);
-    var encodedPaybank = encodeURIComponent('التحويل المصرفي المباشر: ' + Paybank);
-    var encodedPaypal = encodeURIComponent('بريدي موب: ' + Paypal);
-    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedFName + '%0A' + encodedFName + '%0A' + encodedEmail + '%0A' + encodedFlink + '%0A' + encodedTel + '%0A' + encodedWillaya + '%0A' + encodedOrientation + '%0A' + encodedNotes + '%0A' + encodedResults + '%0A' + encodedPaybank + '%0A' + encodedPaypal;
+    var whatsappLink = 'https://wa.me/' + phoneNumber + '?text=' + encodedFName + '%0A' + encodedFName + '%0A' + encodedEmail + '%0A' + encodedFlink + '%0A' + encodedTel + '%0A' + encodedWillaya + '%0A' + encodedOrientation + '%0A' + encodedNotes + '%0A' + encodedResults + '%0A' + 'التحويل المصرفي المباشر: ' + Paybank + '%0A' + 'بريدي موب: ' + Paypal;
 
     // Open WhatsApp with the pre-filled message
     window.open(whatsappLink,'_blank');

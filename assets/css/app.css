@@ -1882,7 +1882,6 @@ textarea {
     transition: var(--transition);
     border-radius: 5px;
     color: var(--color-heading);
-    height: 50px;
   /* -- Placeholder -- */
 }
 

@@ -48,10 +48,10 @@
     <link rel="stylesheet" href="assets/css/vendor/rowReorder.dataTables.css">
     <link rel="stylesheet" href="assets/css/vendor/responsive.dataTables.css">
     <link rel="stylesheet" href="assets/css/vendor/responsive.bootstrap5.min.css" >
-    <link rel="stylesheet" href="assets/css/vendor/dataTables.dataTables.css" >
+
     <link rel="stylesheet" href="assets/css/vendor/buttons.dataTables.css" >
 
-    <link rel="stylesheet" href="assets/css/vendor/datatables.min.css" >    
+    <link rel="stylesheet" href="assets/css/vendor/datatables.min.css" >
 </head>
 
 <body class="sticky-header ">
@@ -70,6 +70,19 @@
     </div>
 
     <div id="main-wrapper" class="main-wrapper">
+
+        <!--=====================================-->
+        <!--=    Sidebar Banner Area Start      =-->
+        <!--=====================================-->
+        <div class="section-buttons">
+            <a class="section-button scroll-btn" data-target="Orsection"><i class="ri-table-line"></i>
+                <span class="sidetooltip">قاعدة البيانات</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Followupsection"><i class="ri-line-chart-fill"></i>
+                <span class="sidetooltip">تحليل إمتحان تقييم المكتسبات</span>
+            </a>
+        </div>
 
         <!--=====================================-->
         <!--=        Header Area Start          =-->
@@ -306,7 +319,7 @@
         <!--=     Or Table  Area Start          =-->
         <!--=====================================-->
         <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div class="container edublink-animated-shape">
+            <div id="Orsection" class="container edublink-animated-shape">
                 <br><br>
                 <div class="row g-5 align-items-center">
                 <a class="edu-btn btn-medium">قاعدة بيانات البطاقة التحليلية</i></a>
@@ -664,6 +677,9 @@
     <script src="assets/js/vendor/plotly.min.js"></script>
     <script src="assets/js/vendor/plotly-locale-ar.js"></script>
     <script src="assets/js/vendor/plotly-locale-ar-dz.js"></script>
+
+    <!-- Sections-->
+    <script src="assets/js/sections.js"></script>
 
     <script src="assets/js/vendor/FileSaver.min.js"></script>
 

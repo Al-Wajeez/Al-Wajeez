@@ -72,6 +72,50 @@
     <div id="main-wrapper" class="main-wrapper">
 
         <!--=====================================-->
+        <!--=    Sidebar Banner Area Start      =-->
+        <!--=====================================-->
+        <div class="section-buttons">
+            <a class="section-button scroll-btn" data-target="Orsection"><i class="ri-table-line"></i>
+                <span class="sidetooltip">قاعدة البيانات</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Analysesection"><i class="ri-line-chart-fill"></i>
+                <span class="sidetooltip">تحليل نتائج الفصل الأول</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Greatersection"><i class="ri-group-2-line"></i>
+                <span class="sidetooltip">تحليل نتائج الفصل الاول حسب الفئات</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Successsection"><i class="ri-percent-line"></i>
+                <span class="sidetooltip">تحليل نتائج الفصل الاول حسب نسبة النجاح</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Gandersection"><i class="ri-genderless-line"></i>
+                <span class="sidetooltip">تحليل نتائج الفصل الاول حسب الجنس</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Failsection"><i class="ri-send-to-back"></i>
+                <span class="sidetooltip">تحليل نتائج الفصل الاول حسب الإعادة</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Outcomesection"><i class="ri-calculator-line"></i>
+                <span class="sidetooltip">حصيلة المعدلات الفصلية</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="CVsection"><i class="ri-hand-coin-line"></i>
+                <span class="sidetooltip">نسبة الإنسجام داخل القسم</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="CVGroupssection"><i class="ri-group-line"></i>
+                <span class="sidetooltip">المعايير الإحصائية بالفئات الخمس</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="discsection"><i class="ri-bar-chart-2-line"></i>
+                <span class="sidetooltip">توزيع أفراد العينة</span>
+            </a>
+        </div>
+        <!--=====================================-->
         <!--=        Header Area Start          =-->
         <!--=====================================-->
         <header class="edu-header header-style-1 header-fullwidth">
@@ -258,7 +302,6 @@
         <!--=====================================-->
         <section class="edu-categorie-area categorie-area-2 edu-section-gap">
             <div class="container">
-
                 <div class="row g-5">
                     <div class="" data-sal-delay="50" data-sal="slide-up" data-sal-duration="800">
                         <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
@@ -306,7 +349,7 @@
         <!--=     Or Table  Area Start          =-->
         <!--=====================================-->
         <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div class="container edublink-animated-shape">
+            <div id="Orsection" class="container edublink-animated-shape">
                 <br><br>
                 <div class="row g-5 align-items-center">
                 <a id="titleElement" class="btn-print edu-btn btn-medium switcher-btn">قاعدة بيانات نتائج الفصل الأول
@@ -2962,7 +3005,7 @@
         <!--=       Gendar Table Area Start     =-->
         <!--=====================================-->
         <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div class="container edublink-animated-shape">
+            <div id="discsection" class="container edublink-animated-shape">
                 <div class="row g-5 align-items-center">
                 <a class="edu-btn btn-medium">توزيع التلاميذ حسب الجنس</i></a>
                     <div class="about-image-gallery">
@@ -3432,6 +3475,9 @@
     <script src="assets/js/vendor/plotly.min.js"></script>
     <script src="assets/js/vendor/plotly-locale-ar.js"></script>
     <script src="assets/js/vendor/plotly-locale-ar-dz.js"></script>
+
+    <!-- Sections-->
+    <script src="assets/js/sections.js"></script>
 
     <script src="assets/js/vendor/FileSaver.min.js"></script>
 

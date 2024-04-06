@@ -28,9 +28,6 @@
     <!-- Site Stylesheet -->
     <link rel="stylesheet" href="assets/css/app.css">
 
-    <!--<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>-->
-
     <style type="text/css">
         .alert{
             display: none;
@@ -251,7 +248,7 @@
                                     </ul>
                                 </div>
                                 <div class="contact-us-info">
-                                    <h3 class="heading-title">سوف نجيب عن الجميع</h3>
+                                    <h3 class="heading-title">لا تترددوا في طرح أي سؤال.</h3>
                                     <ul class="address-list">
                                         <li>
                                             <h5 class="title"><i class="ri-community-line"></i> العنوان</h5>
@@ -290,21 +287,32 @@
                     <div class="col-lg-8">
                         <div class="contact-form">
                             <div class="section-title section-center">
-                                <h3 class="title">أترك رسالة الأن</h3>
+                                <h3 class="title">ل تحتاج إلى الدعم الفني أو لديك طلب خاص؟</h3>
+                                <a>سواء كنت تحتاج إلى دعم فني أو ترغب في طلب خدمة معينة، فنحن هنا لمساعدتك. ما عليك سوى ملء النموذج أدناه وسنقوم بالرد عليك في أقرب وقت ممكن.</a>
                             </div>
                             <form id="contact-form">
                                 <div class="row row--10">
                                     <div class="form-group col-lg-6">
-                                        <input type="text" class="form-controle" name="name" id="name" placeholder="الإسم">
+                                        <input type="text" class="form-controle" name="name" id="name" placeholder="الإسم" required>
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <input type="email" class="form-controle" name="email" id="email" placeholder="البريد الإلكتروني">
+                                        <input type="email" class="form-controle" name="email" id="email" placeholder="البريد الإلكتروني" required>
                                     </div>
                                     <div class="form-group col-12">
                                         <input type="tel" class="form-controle" name="phone" id="phone" placeholder="رقم الهاتف">
                                     </div>
                                     <div class="form-group col-12">
-                                        <textarea name="message" id="message" cols="30" rows="6" placeholder="الرسالة"></textarea>
+                                            <select name="opt" id="opt" required>
+                                                <option>معلومات حول الموقع</option>
+                                                <option>الدعم</option>
+                                                <option>خدمة تحليل النتائج</option>
+                                                <option>مساعدة تقنية</option>
+                                                <option>التواصل مع صاحب المشروع</option>
+                                                <option>اخرى</option>
+                                            </select>
+                                        </div>
+                                    <div class="form-group col-12">
+                                        <textarea name="message" id="message" cols="30" rows="6" placeholder="الرسالة" required></textarea>
                                     </div>
                                     <div class="form-group col-12 text-center">
                                         <button class="edu-btn submit-btn" name="submit" type="submit">إرسال </button>
@@ -375,15 +383,62 @@
     <script src="assets/js/vendor/tipped.min.js"></script>
     <script src="assets/js/vendor/smooth-scroll.min.js"></script>
     <script src="assets/js/vendor/isInViewport.jquery.min.js"></script>
-    <script src="assets/contact-me.js"></script>
-
-
+    
     <!-- Site Scripts -->
     <script src="assets/js/app.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"></script>
-    <script src='https://www.gstatic.com/firebasejs/4.3.0/firebase.js'></script>
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js';
+        import { getFirestore, collection, addDoc } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js';
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyCa9nNnl9InSidlTM0pTzDQ8UmAPKIJ6TM",
+                authDomain: "al-wajeez.firebaseapp.com",
+                projectId: "al-wajeez",
+                storageBucket: "al-wajeez.appspot.com",
+                messagingSenderId: "818986363364",
+                appId: "1:818986363364:web:802162840b903db7777ff1",
+                measurementId: "G-GHF2S5GKLV"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+            const db = getFirestore(app);
+            const ref = collection(db, 'messages');
+
+            const form = document.getElementById('contact-form');
+            const alert = document.querySelector(".alert");
+
+            form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const contactName = document.getElementById('name').value;
+            const contactEmail = document.getElementById('email').value;
+            const contactPhone = document.getElementById('phone').value;
+            const contactMessage = document.getElementById('message').value;
+            const contactOptions = document.getElementById('opt').value;
+
+            try {
+              await addDoc(ref, {
+                contactName: contactName,
+                contactEmail: contactEmail,
+                contactPhone: contactPhone,
+                contactOptions: contactOptions,
+                contactMessage: contactMessage
+              });
+
+              alert.style.display = "block";
+              setTimeout(() => {
+                alert.style.display = "none";
+              }, 5000);
+
+              form.reset();
+            } catch (error) {
+              console.error("Error adding document: ", error);
+            }
+            });
+</script>
 
 
 </body>

@@ -13,14 +13,10 @@ const alert = document.querySelector(".alert");
   };
 
     // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  const app = initializeApp(firebaseConfig);
 
-  // Get a reference to the database service
   const database = firebase.database();
-  const ref = database.ref("messages");
-
-
+  const ref = database.ref("al-wajeez");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();

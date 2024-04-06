@@ -1,5 +1,5 @@
   // Your web app's Firebase configuration
-  const firebaseConfig = {
+  var firebaseConfig = {
     apiKey: "AIzaSyCa9nNnl9InSidlTM0pTzDQ8UmAPKIJ6TM",
     authDomain: "al-wajeez.firebaseapp.com",
     projectId: "al-wajeez",
@@ -12,9 +12,9 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
-  
+
   // Get a reference to the database service
-  const database = firebase.database();
+  const database = Firebase.firestore();
 
   const contactForm = document.getElementById('contact-form');
 

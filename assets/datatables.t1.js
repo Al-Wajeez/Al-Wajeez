@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var currentDateElement = document.getElementById('currentDate');
+    var currentTimeElement = document.getElementById('currentTime');
+
+    function updateDateTime() {
+        var now = new Date();
+        var dateOptions = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
+        var timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        var date = now.toLocaleDateString('ar', dateOptions);
+        var time = now.toLocaleTimeString('ar', timeOptions);
+        currentDateElement.innerText = date;
+        currentTimeElement.innerText = time;
+    }
+
+    updateDateTime(); // Initial update
+    setInterval(updateDateTime, 1000); // Update every second
+});
 
 // Add event listener for when the page is loaded
 window.addEventListener('load', function() {
@@ -7,7 +24,6 @@ window.addEventListener('load', function() {
     $('.edu-Achievement-area').hide();
     $('.edu-Ranking-area').hide();
     $('.section-button').hide();
-
 });
 
 document.addEventListener("DOMContentLoaded", function() {

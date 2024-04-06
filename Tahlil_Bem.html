@@ -91,14 +91,6 @@
                 <span class="sidetooltip">تحليل نتائج الفصل الاول حسب نسبة النجاح</span>
             </a>
 
-            <a class="section-button scroll-btn" data-target="Gandersection"><i class="ri-genderless-line"></i>
-                <span class="sidetooltip">تحليل نتائج الفصل الاول حسب الجنس</span>
-            </a>
-
-            <a class="section-button scroll-btn" data-target="Failsection"><i class="ri-send-to-back"></i>
-                <span class="sidetooltip">تحليل نتائج الفصل الاول حسب الإعادة</span>
-            </a>
-
             <a class="section-button scroll-btn" data-target="Outcomesection"><i class="ri-calculator-line"></i>
                 <span class="sidetooltip">حصيلة المعدلات الفصلية</span>
             </a>
@@ -109,6 +101,10 @@
 
             <a class="section-button scroll-btn" data-target="CVGroupssection"><i class="ri-group-line"></i>
                 <span class="sidetooltip">المعايير الإحصائية بالفئات الخمس</span>
+            </a>
+
+            <a class="section-button scroll-btn" data-target="Differencessection"><i class="ri-git-fork-fill"></i>
+                <span class="sidetooltip">مقارنة النتائج السنوية ونتائج شهادة التعليم المتوسط</span>
             </a>
 
             <a class="section-button scroll-btn" data-target="discsection"><i class="ri-bar-chart-2-line"></i>
@@ -358,7 +354,7 @@
         <!--=     Or Table  Area Start          =-->
         <!--=====================================-->
         <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div class="container edublink-animated-shape">
+            <div id="Orsection" class="container edublink-animated-shape">
                 <br><br>
                 <div class="row g-5 align-items-center">
                 <a class="edu-btn btn-medium">قاعدة بيانات النتائج السنوية</i></a>
@@ -1893,7 +1889,7 @@
         <section class="gap-bottom-equal edu-about-area about-style-1">
             <div id="Differencessection" class="container edublink-animated-shape">
                 <div class="row g-5 align-items-center">
-                <a id="titleElement" class="btn-print edu-btn btn-medium switcher-btn">تحليل نتائج المقارنة بين الفصل الثاني والثالث
+                <a id="titleElement" class="btn-print edu-btn btn-medium switcher-btn">مقارنة النتائج السنوية ونتائج شهادة التعليم المتوسط
                     <i class="ri-printer-line" onclick="printSection('Differencessection')"></i>
                     <i class="ri-file-excel-2-line" onclick="xlsxSection('Differencessection')"></i>
                 </a> 
@@ -2150,7 +2146,7 @@
         <!--=    indicators Table Area Start    =-->
         <!--=====================================-->
         <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div id="indicatorssection" class="container edublink-animated-shape">
+            <div id="discsection" id="indicatorssection" class="container edublink-animated-shape">
                 <div class="row g-5 align-items-center">
                 <a id="titleElement" class="btn-print edu-btn btn-medium switcher-btn">المؤشرات النوعية للنجاح
                     <i class="ri-printer-line" onclick="printSection('indicatorssection')"></i>

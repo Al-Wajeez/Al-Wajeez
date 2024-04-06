@@ -23,6 +23,7 @@ window.addEventListener('load', function() {
     $('.course-details-area').hide();
     $('.edu-Achievement-area').hide();
     $('.edu-Ranking-area').hide();
+    $('.section-button').hide();
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -431,6 +432,7 @@ document.addEventListener("DOMContentLoaded", function() {
         $('.course-details-area').show();
         $('.edu-Achievement-area').show();
         $('.edu-Ranking-area').show();
+        $('.section-button').show();
         // Count the number of values greater than 1
         let countarabicGreaterThanOne = 0;
         let countamazighGreaterThanOne = 0;

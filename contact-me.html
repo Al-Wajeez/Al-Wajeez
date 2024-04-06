@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="ar" dir="rtl">
 
-
-<!-- Mirrored from edublink.html.devsblink.com/contact-me.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Sep 2023 22:52:56 GMT -->
 <head>
     <!-- Meta Data -->
     <meta charset="UTF-8">
@@ -25,13 +23,19 @@
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/tipped.min.css">
 
+
+
     <!-- Site Stylesheet -->
     <link rel="stylesheet" href="assets/css/app.css">
 
-    
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>-->
+
+    <style type="text/css">
+        .alert{
+            display: none;
+        }
+    </style>
 
 </head>
 
@@ -43,10 +47,6 @@
     <div id="edublink-preloader">
         <div class="loading-spinner">
              <div class="loader-square-47"></div>
-        </div>
-        <div class="preloader-close-btn-wraper">
-            <span class="btn btn-primary preloader-close-btn">
-                Cancel Preloader</span>
         </div>
     </div>
 
@@ -292,22 +292,25 @@
                             <div class="section-title section-center">
                                 <h3 class="title">أترك رسالة الأن</h3>
                             </div>
-                            <form class="rnt-contact-form rwt-dynamic-form" id="contact-form" method="POST" action="https://edublink.html.devsblink.com/mail.php">
+                            <form id="contact-form">
                                 <div class="row row--10">
                                     <div class="form-group col-lg-6">
-                                        <input type="text" name="contact-name" id="contact-name" placeholder="الإسم">
+                                        <input type="text" class="form-controle" name="name" id="name" placeholder="الإسم">
                                     </div>
                                     <div class="form-group col-lg-6">
-                                        <input type="email" name="contact-email" id="contact-email" placeholder="البريد الإلكتروني">
+                                        <input type="email" class="form-controle" name="email" id="email" placeholder="البريد الإلكتروني">
                                     </div>
                                     <div class="form-group col-12">
-                                        <input type="tel" name="contact-phone" id="contact-phone" placeholder="رقم الهاتف">
+                                        <input type="tel" class="form-controle" name="phone" id="phone" placeholder="رقم الهاتف">
                                     </div>
                                     <div class="form-group col-12">
-                                        <textarea name="contact-message" id="contact-message" cols="30" rows="6" placeholder="الرسالة"></textarea>
+                                        <textarea name="message" id="message" cols="30" rows="6" placeholder="الرسالة"></textarea>
                                     </div>
                                     <div class="form-group col-12 text-center">
-                                        <button class="rn-btn edu-btn submit-btn" name="submit" type="submit">إرسال </button>
+                                        <button class="edu-btn submit-btn" name="submit" type="submit">إرسال </button>
+                                    </div>
+                                    <div class="alert alert-success p-3 text-center" role="alert">
+                                        لقد تمت العملية بنجاح - نشكرك على تواصلك معنا.
                                     </div>
                                 </div>
                             </form>
@@ -377,8 +380,12 @@
 
     <!-- Site Scripts -->
     <script src="assets/js/app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js"></script>
+    <script src='https://www.gstatic.com/firebasejs/4.3.0/firebase.js'></script>
+
+
 </body>
 
-
-<!-- Mirrored from edublink.html.devsblink.com/contact-me.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 Sep 2023 22:52:57 GMT -->
 </html>

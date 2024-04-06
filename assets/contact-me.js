@@ -1,9 +1,8 @@
-// Import Firebase SDK
-import firebase from 'firebase/app';
-import 'firebase/firestore'; // Import specific Firebase services as needed
 
-// Your Firebase configuration
-const firebaseConfig = {
+const form = document.getElementById('contact-form');
+const alert = document.querySelector(".alert");
+
+  const firebaseConfig = {
     apiKey: "AIzaSyCa9nNnl9InSidlTM0pTzDQ8UmAPKIJ6TM",
     authDomain: "al-wajeez.firebaseapp.com",
     projectId: "al-wajeez",
@@ -13,37 +12,38 @@ const firebaseConfig = {
     measurementId: "G-GHF2S5GKLV"
   };
 
-  // Initialize Firebase
+    // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
   // Get a reference to the database service
-  const database = firebase.firestore();
+  const database = firebase.database();
+  const ref = database.ref("messages");
 
-  const contactForm = document.getElementById('contact-form');
 
-  contactForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
 
-    // Get form data
-    const contactName = contactForm['contact-name'].value;
-    const contactEmail = contactForm['contact-email'].value;
-    const contactPhone = contactForm['contact-phone'].value;
-    const contactMessage = contactForm['contact-message'].value;
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  
+  // Get form data
+  const contactName = document.getElementById('name').value;
+  const contactEmail = document.getElementById('email').value;
+  const contactPhone = document.getElementById('phone').value;
+  const contactMessage = document.getElementById('message').value;
 
-    // Save data to Firebase
-    database.ref('contacts').push({
-      name: contactName,
-      email: contactEmail,
-      phone: contactPhone,
-      message: contactMessage
-    })
-    .then(() => {
-      // Data saved successfully
-      console.log('Data saved to Firebase');
-      // Optionally, you can redirect the user to a thank you page
-    })
-    .catch(error => {
-      // Handle errors
-      console.error('Error saving data to Firebase:', error);
-    });
+  ref.push({
+    contactName:name,
+    contactEmail:email,
+    contactPhone:phone,
+    contactMessage:message
   });
+
+  alert.style.display="block";
+
+  setTimeout(() => {
+    alert.style.display="none";
+  }, 5000);
+
+  form.reset();
+
+});

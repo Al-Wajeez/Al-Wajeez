@@ -1,3 +1,13 @@
+ /*!
+ * All rights reserved.
+ * © Al-Wajeez Inc.
+ *
+ * datatables.5eme.js (1.0.0) - MIT license.
+ * Copyright 2024 Haddadi Abdraouf.
+ */
+ 
+console.log('Copyright 2024 Al-Wajeez, designed by Haddadi Abdraouf. All rights reserved')
+
 document.addEventListener('DOMContentLoaded', function() {
     var currentDateElement = document.getElementById('currentDate');
     var currentTimeElement = document.getElementById('currentTime');
@@ -7408,94 +7418,94 @@ Plotly.newPlot('Analyse-chart', [traceAnalyse], layoutAnalyse, {displaylogo: fal
 var dataGreater = [
     {
         subject: 'اللغة العربية', 
-        GreaterThanTen: percentageArabicGreaterThanTen,
-        BEightAndNine: percentageArabicBetweenEightAndNine,
-        LessThanEight: percentageArabicLessThanEight
+        GreaterThanTen: percentageArabicGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageArabicBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageArabicLessThanEight.toFixed(2)
     },
 
     {
         subject: 'اللغة اﻷمازيغية', 
-        GreaterThanTen: percentageAmazighGreaterThanTen,
-        BEightAndNine: percentageAmazighBetweenEightAndNine,
-        LessThanEight: percentageAmazighLessThanEight
+        GreaterThanTen: percentageAmazighGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageAmazighBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageAmazighLessThanEight.toFixed(2)
         },
     {
         subject: 'اللغة الفرنسية', 
-        GreaterThanTen: percentageFrenchGreaterThanTen,
-        BEightAndNine: percentageFrenchBetweenEightAndNine,
-        LessThanEight: percentageFrenchLessThanEight
+        GreaterThanTen: percentageFrenchGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageFrenchBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageFrenchLessThanEight.toFixed(2)
         },
     {
         subject: 'اللغة الإنجليزية', 
-        GreaterThanTen: percentageEnglishGreaterThanTen,
-        BEightAndNine: percentageEnglishBetweenEightAndNine,
-        LessThanEight: percentageEnglishLessThanEight
+        GreaterThanTen: percentageEnglishGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageEnglishBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageEnglishLessThanEight.toFixed(2)
         },
     {
         subject: 'التربية الإسلامية', 
-        GreaterThanTen: percentageIslamicGreaterThanTen,
-        BEightAndNine: percentageIslamicBetweenEightAndNine,
-        LessThanEight: percentageIslamicLessThanEight
+        GreaterThanTen: percentageIslamicGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageIslamicBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageIslamicLessThanEight.toFixed(2)
         },
     {
         subject: 'التربية المدنية', 
-        GreaterThanTen: percentageCivicsGreaterThanTen,
-        BEightAndNine: percentageCivicsBetweenEightAndNine,
-        LessThanEight: percentageCivicsLessThanEight
+        GreaterThanTen: percentageCivicsGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageCivicsBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageCivicsLessThanEight.toFixed(2)
         },
     {
         subject: 'التاريخ والجغرافيا', 
-        GreaterThanTen: percentageHistoryAndGeographyGreaterThanTen,
-        BEightAndNine: percentageHistoryAndGeographyBetweenEightAndNine,
-        LessThanEight: percentageHistoryAndGeographyLessThanEight
+        GreaterThanTen: percentageHistoryAndGeographyGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageHistoryAndGeographyBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageHistoryAndGeographyLessThanEight.toFixed(2)
         },
     {
         subject: 'الرياضيات', 
-        GreaterThanTen: percentageMathGreaterThanTen,
-        BEightAndNine: percentageMathBetweenEightAndNine,
-        LessThanEight: percentageMathLessThanEight
+        GreaterThanTen: percentageMathGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageMathBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageMathLessThanEight.toFixed(2)
         },
     {
         subject: 'ع الطبيعة و الحياة', 
-        GreaterThanTen: percentageNatureGreaterThanTen,
-        BEightAndNine: percentageNatureBetweenEightAndNine,
-        LessThanEight: percentageNatureLessThanEight
+        GreaterThanTen: percentageNatureGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageNatureBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageNatureLessThanEight.toFixed(2)
         },
     {
         subject: 'ع الفيزيائية والتكنولوجيا', 
-        GreaterThanTen: percentagePhysicalGreaterThanTen,
-        BEightAndNine: percentagePhysicalBetweenEightAndNine,
-        LessThanEight: percentagePhysicalLessThanEight
+        GreaterThanTen: percentagePhysicalGreaterThanTen.toFixed(2),
+        BEightAndNine: percentagePhysicalBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentagePhysicalLessThanEight.toFixed(2)
         },
     {
         subject: 'المعلوماتية', 
-        GreaterThanTen: percentageInformaticsGreaterThanTen,
-        BEightAndNine: percentageInformaticsBetweenEightAndNine,
-        LessThanEight: percentageInformaticsLessThanEight
+        GreaterThanTen: percentageInformaticsGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageInformaticsBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageInformaticsLessThanEight.toFixed(2)
         },
     {
         subject: 'التربية التشكيلية', 
-        GreaterThanTen: percentageFineGreaterThanTen,
-        BEightAndNine: percentageFineBetweenEightAndNine,
-        LessThanEight: percentageFineLessThanEight
+        GreaterThanTen: percentageFineGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageFineBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageFineLessThanEight.toFixed(2)
         },
     {
         subject: 'التربية الموسيقية', 
-        GreaterThanTen: percentageMusicGreaterThanTen,
-        BEightAndNine: percentageMusicBetweenEightAndNine,
-        LessThanEight: percentageMusicLessThanEight
+        GreaterThanTen: percentageMusicGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageMusicBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageMusicLessThanEight.toFixed(2)
         },
     {
         subject: 'ت البدنية و الرياضية', 
-        GreaterThanTen: percentageAthleticGreaterThanTen,
-        BEightAndNine: percentageAthleticBetweenEightAndNine,
-        LessThanEight: percentageAthleticLessThanEight
+        GreaterThanTen: percentageAthleticGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageAthleticBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageAthleticLessThanEight.toFixed(2)
         },
     {
         subject: 'معدل الفصل 1', 
-        GreaterThanTen: percentageRateGreaterThanTen,
-        BEightAndNine: percentageRateBetweenEightAndNine,
-        LessThanEight: percentageRateLessThanEight
+        GreaterThanTen: percentageRateGreaterThanTen.toFixed(2),
+        BEightAndNine: percentageRateBetweenEightAndNine.toFixed(2),
+        LessThanEight: percentageRateLessThanEight.toFixed(2)
         },
 
 ];
@@ -7555,64 +7565,64 @@ Plotly.newPlot('Greater-chart', tracedataGreater, layoutGreater, {displaylogo: f
 var dataSuccessRate = [
     {
         subject: 'اللغة العربية', 
-        SuccessRate: percentageArabicGreaterThanTen,
+        SuccessRate: percentageArabicGreaterThanTen.toFixed(2),
     },
 
     {
         subject: 'اللغة اﻷمازيغية', 
-        SuccessRate: percentageAmazighGreaterThanTen,
+        SuccessRate: percentageAmazighGreaterThanTen.toFixed(2),
         },
     {
         subject: 'اللغة الفرنسية', 
-        SuccessRate: percentageFrenchGreaterThanTen,
+        SuccessRate: percentageFrenchGreaterThanTen.toFixed(2),
         },
     {
         subject: 'اللغة الإنجليزية', 
-        SuccessRate: percentageEnglishGreaterThanTen,
+        SuccessRate: percentageEnglishGreaterThanTen.toFixed(2),
         },
     {
         subject: 'التربية الإسلامية', 
-        SuccessRate: percentageIslamicGreaterThanTen,
+        SuccessRate: percentageIslamicGreaterThanTen.toFixed(2),
         },
     {
         subject: 'التربية المدنية', 
-        SuccessRate: percentageCivicsGreaterThanTen,
+        SuccessRate: percentageCivicsGreaterThanTen.toFixed(2),
         },
     {
         subject: 'التاريخ والجغرافيا', 
-        SuccessRate: percentageHistoryAndGeographyGreaterThanTen,
+        SuccessRate: percentageHistoryAndGeographyGreaterThanTen.toFixed(2),
         },
     {
         subject: 'الرياضيات', 
-        SuccessRate: percentageMathGreaterThanTen,
+        SuccessRate: percentageMathGreaterThanTen.toFixed(2),
         },
     {
         subject: 'ع الطبيعة و الحياة', 
-        SuccessRate: percentageNatureGreaterThanTen,
+        SuccessRate: percentageNatureGreaterThanTen.toFixed(2),
         },
     {
         subject: 'ع الفيزيائية والتكنولوجيا', 
-        SuccessRate: percentagePhysicalGreaterThanTen,
+        SuccessRate: percentagePhysicalGreaterThanTen.toFixed(2),
         },
     {
         subject: 'المعلوماتية', 
-        SuccessRate: percentageInformaticsGreaterThanTen,
+        SuccessRate: percentageInformaticsGreaterThanTen.toFixed(2),
         },
     {
         subject: 'التربية التشكيلية', 
-        SuccessRate: percentageFineGreaterThanTen,
+        SuccessRate: percentageFineGreaterThanTen.toFixed(2),
         },
     {
         subject: 'التربية الموسيقية', 
-        SuccessRate: percentageMusicGreaterThanTen,
+        SuccessRate: percentageMusicGreaterThanTen.toFixed(2),
         },
     {
         subject: 'ت البدنية و الرياضية', 
-        SuccessRate: percentageAthleticGreaterThanTen,
+        SuccessRate: percentageAthleticGreaterThanTen.toFixed(2),
         },
     {
         subject: 'معدل الفصل 1', 
-        SuccessRate: percentageRateGreaterThanTen,
+        SuccessRate: percentageRateGreaterThanTen.toFixed(2),
         },
 
 ];
@@ -7655,94 +7665,94 @@ Plotly.newPlot('SuccessRate-chart', [traceSuccessRate], layoutSuccessRate, {disp
 var dataGreaterMale = [
     {
         subject: 'اللغة العربية',
-        GreaterThanTenMale: percentageArabicGTenMale,
-        BEightAndNineMale: percentageArabicBetweenEightAndNineMale,
-        LessThanEightMale: percentageArabicLessThanEightMale
+        GreaterThanTenMale: percentageArabicGTenMale.toFixed(2),
+        BEightAndNineMale: percentageArabicBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageArabicLessThanEightMale.toFixed(2)
     },
 
     {
         subject: 'اللغة اﻷمازيغية', 
-        GreaterThanTenMale: percentageAmazighGTenMale,
-        BEightAndNineMale: percentageAmazighBetweenEightAndNineMale,
-        LessThanEightMale: percentageAmazighLessThanEightMale
+        GreaterThanTenMale: percentageAmazighGTenMale.toFixed(2),
+        BEightAndNineMale: percentageAmazighBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageAmazighLessThanEightMale.toFixed(2)
         },
     {
         subject: 'اللغة الفرنسية', 
-        GreaterThanTenMale: percentageFrenchGTenMale,
-        BEightAndNineMale: percentageFrenchBetweenEightAndNineMale,
-        LessThanEightMale: percentageFrenchLessThanEightMale
+        GreaterThanTenMale: percentageFrenchGTenMale.toFixed(2),
+        BEightAndNineMale: percentageFrenchBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageFrenchLessThanEightMale.toFixed(2)
         },
     {
         subject: 'اللغة الإنجليزية', 
-        GreaterThanTenMale: percentageEnglishGTenMale,
-        BEightAndNineMale: percentageEnglishBetweenEightAndNineMale,
-        LessThanEightMale: percentageEnglishLessThanEightMale
+        GreaterThanTenMale: percentageEnglishGTenMale.toFixed(2),
+        BEightAndNineMale: percentageEnglishBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageEnglishLessThanEightMale.toFixed(2)
         },
     {
         subject: 'التربية الإسلامية', 
-        GreaterThanTenMale: percentageIslamicGTenMale,
-        BEightAndNineMale: percentageIslamicBetweenEightAndNineMale,
-        LessThanEightMale: percentageIslamicLessThanEightMale
+        GreaterThanTenMale: percentageIslamicGTenMale.toFixed(2),
+        BEightAndNineMale: percentageIslamicBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageIslamicLessThanEightMale.toFixed(2)
         },
     {
         subject: 'التربية المدنية', 
-        GreaterThanTenMale: percentageCivicsGTenMale,
-        BEightAndNineMale: percentageCivicsBetweenEightAndNineMale,
-        LessThanEightMale: percentageCivicsLessThanEightMale
+        GreaterThanTenMale: percentageCivicsGTenMale.toFixed(2),
+        BEightAndNineMale: percentageCivicsBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageCivicsLessThanEightMale.toFixed(2)
         },
     {
         subject: 'التاريخ والجغرافيا', 
-        GreaterThanTenMale: percentageHistoryAndGeographyGTenMale,
-        BEightAndNineMale: percentageHistoryAndGeographyBetweenEightAndNineMale,
-        LessThanEightMale: percentageHistoryAndGeographyLessThanEightMale
+        GreaterThanTenMale: percentageHistoryAndGeographyGTenMale.toFixed(2),
+        BEightAndNineMale: percentageHistoryAndGeographyBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageHistoryAndGeographyLessThanEightMale.toFixed(2)
         },
     {
         subject: 'الرياضيات', 
-        GreaterThanTenMale: percentageMathGTenMale,
-        BEightAndNineMale: percentageMathBetweenEightAndNineMale,
-        LessThanEightMale: percentageMathLessThanEightMale
+        GreaterThanTenMale: percentageMathGTenMale.toFixed(2),
+        BEightAndNineMale: percentageMathBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageMathLessThanEightMale.toFixed(2)
         },
     {
         subject: 'ع الطبيعة و الحياة', 
-        GreaterThanTenMale: percentageNatureGTenMale,
-        BEightAndNineMale: percentageNatureBetweenEightAndNineMale,
-        LessThanEightMale: percentageNatureLessThanEightMale
+        GreaterThanTenMale: percentageNatureGTenMale.toFixed(2),
+        BEightAndNineMale: percentageNatureBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageNatureLessThanEightMale.toFixed(2)
         },
     {
         subject: 'ع الفيزيائية والتكنولوجيا', 
-        GreaterThanTenMale: percentagePhysicalGTenMale,
-        BEightAndNineMale: percentagePhysicalBetweenEightAndNineMale,
-        LessThanEightMale: percentagePhysicalLessThanEightMale
+        GreaterThanTenMale: percentagePhysicalGTenMale.toFixed(2),
+        BEightAndNineMale: percentagePhysicalBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentagePhysicalLessThanEightMale.toFixed(2)
         },
     {
         subject: 'المعلوماتية', 
-        GreaterThanTenMale: percentageInformaticsGTenMale,
-        BEightAndNineMale: percentageInformaticsBetweenEightAndNineMale,
-        LessThanEightMale: percentageInformaticsLessThanEightMale
+        GreaterThanTenMale: percentageInformaticsGTenMale.toFixed(2),
+        BEightAndNineMale: percentageInformaticsBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageInformaticsLessThanEightMale.toFixed(2)
         },
     {
         subject: 'التربية التشكيلية', 
-        GreaterThanTenMale: percentageFineGTenMale,
-        BEightAndNineMale: percentageFineBetweenEightAndNineMale,
-        LessThanEightMale: percentageFineLessThanEightMale
+        GreaterThanTenMale: percentageFineGTenMale.toFixed(2),
+        BEightAndNineMale: percentageFineBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageFineLessThanEightMale.toFixed(2)
         },
     {
         subject: 'التربية الموسيقية', 
-        GreaterThanTenMale: percentageMusicGTenMale,
-        BEightAndNineMale: percentageMusicBetweenEightAndNineMale,
-        LessThanEightMale: percentageMusicLessThanEightMale
+        GreaterThanTenMale: percentageMusicGTenMale.toFixed(2),
+        BEightAndNineMale: percentageMusicBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageMusicLessThanEightMale.toFixed(2)
         },
     {
         subject: 'ت البدنية و الرياضية', 
-        GreaterThanTenMale: percentageAthleticGTenMale,
-        BEightAndNineMale: percentageAthleticBetweenEightAndNineMale,
-        LessThanEightMale: percentageAthleticLessThanEightMale
+        GreaterThanTenMale: percentageAthleticGTenMale.toFixed(2),
+        BEightAndNineMale: percentageAthleticBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageAthleticLessThanEightMale.toFixed(2)
         },
     {
         subject: 'معدل الفصل 1', 
-        GreaterThanTenMale: percentageRateGTenMale,
-        BEightAndNineMale: percentageRateBetweenEightAndNineMale,
-        LessThanEightMale: percentageRateLessThanEightMale
+        GreaterThanTenMale: percentageRateGTenMale.toFixed(2),
+        BEightAndNineMale: percentageRateBetweenEightAndNineMale.toFixed(2),
+        LessThanEightMale: percentageRateLessThanEightMale.toFixed(2)
         },
 
 ];
@@ -7802,94 +7812,94 @@ Plotly.newPlot('GreaterMale-chart', tracedataGreaterMale, layoutGreaterMale, {di
 var dataGreaterFemale = [
     {
         subject: 'اللغة العربية', 
-        GreaterThanTenFemale: percentageArabicGTenFemale,
-        BEightAndNineFemale: percentageArabicBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageArabicLessThanEightFemale
+        GreaterThanTenFemale: percentageArabicGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageArabicBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageArabicLessThanEightFemale.toFixed(2)
     },
 
     {
         subject: 'اللغة اﻷمازيغية', 
-        GreaterThanTenFemale: percentageAmazighGTenFemale,
-        BEightAndNineFemale: percentageAmazighBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageAmazighLessThanEightFemale
+        GreaterThanTenFemale: percentageAmazighGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageAmazighBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageAmazighLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'اللغة الفرنسية', 
-        GreaterThanTenFemale: percentageFrenchGTenFemale,
-        BEightAndNineFemale: percentageFrenchBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageFrenchLessThanEightFemale
+        GreaterThanTenFemale: percentageFrenchGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageFrenchBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageFrenchLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'اللغة الإنجليزية', 
-        GreaterThanTenFemale: percentageEnglishGTenFemale,
-        BEightAndNineFemale: percentageEnglishBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageEnglishLessThanEightFemale
+        GreaterThanTenFemale: percentageEnglishGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageEnglishBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageEnglishLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'التربية الإسلامية', 
-        GreaterThanTenFemale: percentageIslamicGTenFemale,
-        BEightAndNineFemale: percentageIslamicBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageIslamicLessThanEightFemale
+        GreaterThanTenFemale: percentageIslamicGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageIslamicBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageIslamicLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'التربية المدنية', 
-        GreaterThanTenFemale: percentageCivicsGTenFemale,
-        BEightAndNineFemale: percentageCivicsBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageCivicsLessThanEightFemale
+        GreaterThanTenFemale: percentageCivicsGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageCivicsBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageCivicsLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'التاريخ والجغرافيا', 
-        GreaterThanTenFemale: percentageHistoryAndGeographyGTenFemale,
-        BEightAndNineFemale: percentageHistoryAndGeographyBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageHistoryAndGeographyLessThanEightFemale
+        GreaterThanTenFemale: percentageHistoryAndGeographyGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageHistoryAndGeographyBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageHistoryAndGeographyLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'الرياضيات', 
-        GreaterThanTenFemale: percentageMathGTenFemale,
-        BEightAndNineFemale: percentageMathBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageMathLessThanEightFemale
+        GreaterThanTenFemale: percentageMathGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageMathBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageMathLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'ع الطبيعة و الحياة', 
-        GreaterThanTenFemale: percentageNatureGTenFemale,
-        BEightAndNineFemale: percentageNatureBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageNatureLessThanEightFemale
+        GreaterThanTenFemale: percentageNatureGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageNatureBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageNatureLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'ع الفيزيائية والتكنولوجيا', 
-        GreaterThanTenFemale: percentagePhysicalGTenFemale,
-        BEightAndNineFemale: percentagePhysicalBetweenEightAndNineFemale,
-        LessThanEightFemale: percentagePhysicalLessThanEightFemale
+        GreaterThanTenFemale: percentagePhysicalGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentagePhysicalBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentagePhysicalLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'المعلوماتية', 
-        GreaterThanTenFemale: percentageInformaticsGTenFemale,
-        BEightAndNineFemale: percentageInformaticsBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageInformaticsLessThanEightFemale
+        GreaterThanTenFemale: percentageInformaticsGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageInformaticsBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageInformaticsLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'التربية التشكيلية', 
-        GreaterThanTenFemale: percentageFineGTenFemale,
-        BEightAndNineFemale: percentageFineBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageFineLessThanEightFemale
+        GreaterThanTenFemale: percentageFineGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageFineBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageFineLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'التربية الموسيقية', 
-        GreaterThanTenFemale: percentageMusicGTenFemale,
-        BEightAndNineFemale: percentageMusicBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageMusicLessThanEightFemale
+        GreaterThanTenFemale: percentageMusicGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageMusicBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageMusicLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'ت البدنية و الرياضية', 
-        GreaterThanTenFemale: percentageAthleticGTenFemale,
-        BEightAndNineFemale: percentageAthleticBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageAthleticLessThanEightFemale
+        GreaterThanTenFemale: percentageAthleticGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageAthleticBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageAthleticLessThanEightFemale.toFixed(2)
         },
     {
         subject: 'معدل الفصل 1', 
-        GreaterThanTenFemale: percentageRateGTenFemale,
-        BEightAndNineFemale: percentageRateBetweenEightAndNineFemale,
-        LessThanEightFemale: percentageRateLessThanEightFemale
+        GreaterThanTenFemale: percentageRateGTenFemale.toFixed(2),
+        BEightAndNineFemale: percentageRateBetweenEightAndNineFemale.toFixed(2),
+        LessThanEightFemale: percentageRateLessThanEightFemale.toFixed(2)
         },
 
 ];
@@ -7949,94 +7959,94 @@ Plotly.newPlot('GreaterFemale-chart', tracedataGreaterFemale, layoutGreaterFemal
 var dataGreaterFailure = [
     {
         subject: 'اللغة العربية', 
-        GreaterThanTenFailure: percentageArabicGTenFailure,
-        BEightAndNineFailure: percentageArabicBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageArabicLessThanEightFailure
+        GreaterThanTenFailure: percentageArabicGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageArabicBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageArabicLessThanEightFailure.toFixed(2)
     },
 
     {
         subject: 'اللغة اﻷمازيغية', 
-        GreaterThanTenFailure: percentageAmazighGTenFailure,
-        BEightAndNineFailure: percentageAmazighBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageAmazighLessThanEightFailure
+        GreaterThanTenFailure: percentageAmazighGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageAmazighBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageAmazighLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'اللغة الفرنسية', 
-        GreaterThanTenFailure: percentageFrenchGTenFailure,
-        BEightAndNineFailure: percentageFrenchBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageFrenchLessThanEightFailure
+        GreaterThanTenFailure: percentageFrenchGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageFrenchBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageFrenchLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'اللغة الإنجليزية', 
-        GreaterThanTenFailure: percentageEnglishGTenFailure,
-        BEightAndNineFailure: percentageEnglishBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageEnglishLessThanEightFailure
+        GreaterThanTenFailure: percentageEnglishGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageEnglishBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageEnglishLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'التربية الإسلامية', 
-        GreaterThanTenFailure: percentageIslamicGTenFailure,
-        BEightAndNineFailure: percentageIslamicBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageIslamicLessThanEightFailure
+        GreaterThanTenFailure: percentageIslamicGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageIslamicBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageIslamicLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'التربية المدنية', 
-        GreaterThanTenFailure: percentageCivicsGTenFailure,
-        BEightAndNineFailure: percentageCivicsBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageCivicsLessThanEightFailure
+        GreaterThanTenFailure: percentageCivicsGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageCivicsBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageCivicsLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'التاريخ والجغرافيا', 
-        GreaterThanTenFailure: percentageHistoryAndGeographyGTenFailure,
-        BEightAndNineFailure: percentageHistoryAndGeographyBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageHistoryAndGeographyLessThanEightFailure
+        GreaterThanTenFailure: percentageHistoryAndGeographyGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageHistoryAndGeographyBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageHistoryAndGeographyLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'الرياضيات', 
-        GreaterThanTenFailure: percentageMathGTenFailure,
-        BEightAndNineFailure: percentageMathBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageMathLessThanEightFailure
+        GreaterThanTenFailure: percentageMathGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageMathBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageMathLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'ع الطبيعة و الحياة', 
-        GreaterThanTenFailure: percentageNatureGTenFailure,
-        BEightAndNineFailure: percentageNatureBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageNatureLessThanEightFailure
+        GreaterThanTenFailure: percentageNatureGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageNatureBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageNatureLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'ع الفيزيائية والتكنولوجيا', 
-        GreaterThanTenFailure: percentagePhysicalGTenFailure,
-        BEightAndNineFailure: percentagePhysicalBetweenEightAndNineFailure,
-        LessThanEightFailure: percentagePhysicalLessThanEightFailure
+        GreaterThanTenFailure: percentagePhysicalGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentagePhysicalBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentagePhysicalLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'المعلوماتية', 
-        GreaterThanTenFailure: percentageInformaticsGTenFailure,
-        BEightAndNineFailure: percentageInformaticsBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageInformaticsLessThanEightFailure
+        GreaterThanTenFailure: percentageInformaticsGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageInformaticsBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageInformaticsLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'التربية التشكيلية', 
-        GreaterThanTenFailure: percentageFineGTenFailure,
-        BEightAndNineFailure: percentageFineBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageFineLessThanEightFailure
+        GreaterThanTenFailure: percentageFineGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageFineBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageFineLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'التربية الموسيقية', 
-        GreaterThanTenFailure: percentageMusicGTenFailure,
-        BEightAndNineFailure: percentageMusicBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageMusicLessThanEightFailure
+        GreaterThanTenFailure: percentageMusicGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageMusicBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageMusicLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'ت البدنية و الرياضية', 
-        GreaterThanTenFailure: percentageAthleticGTenFailure,
-        BEightAndNineFailure: percentageAthleticBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageAthleticLessThanEightFailure
+        GreaterThanTenFailure: percentageAthleticGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageAthleticBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageAthleticLessThanEightFailure.toFixed(2)
         },
     {
         subject: 'معدل الفصل 1', 
-        GreaterThanTenFailure: percentageRateGTenFailure,
-        BEightAndNineFailure: percentageRateBetweenEightAndNineFailure,
-        LessThanEightFailure: percentageRateLessThanEightFailure
+        GreaterThanTenFailure: percentageRateGTenFailure.toFixed(2),
+        BEightAndNineFailure: percentageRateBetweenEightAndNineFailure.toFixed(2),
+        LessThanEightFailure: percentageRateLessThanEightFailure.toFixed(2)
         },
 
 ];
@@ -8096,94 +8106,94 @@ Plotly.newPlot('GreaterFailure-chart', tracedataGreaterFailure, layoutGreaterFai
 var dataGreaterSuccessful = [
     {
         subject: 'اللغة العربية', 
-        GreaterThanTenSuccessful: percentageArabicGTenSuccessful,
-        BEightAndNineSuccessful: percentageArabicBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageArabicLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageArabicGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageArabicBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageArabicLessThanEightSuccessful.toFixed(2)
     },
 
     {
         subject: 'اللغة اﻷمازيغية', 
-        GreaterThanTenSuccessful: percentageAmazighGTenSuccessful,
-        BEightAndNineSuccessful: percentageAmazighBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageAmazighLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageAmazighGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageAmazighBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageAmazighLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'اللغة الفرنسية', 
-        GreaterThanTenSuccessful: percentageFrenchGTenSuccessful,
-        BEightAndNineSuccessful: percentageFrenchBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageFrenchLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageFrenchGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageFrenchBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageFrenchLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'اللغة الإنجليزية', 
-        GreaterThanTenSuccessful: percentageEnglishGTenSuccessful,
-        BEightAndNineSuccessful: percentageEnglishBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageEnglishLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageEnglishGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageEnglishBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageEnglishLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'التربية الإسلامية', 
-        GreaterThanTenSuccessful: percentageIslamicGTenSuccessful,
-        BEightAndNineSuccessful: percentageIslamicBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageIslamicLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageIslamicGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageIslamicBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageIslamicLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'التربية المدنية', 
-        GreaterThanTenSuccessful: percentageCivicsGTenSuccessful,
-        BEightAndNineSuccessful: percentageCivicsBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageCivicsLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageCivicsGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageCivicsBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageCivicsLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'التاريخ والجغرافيا', 
-        GreaterThanTenSuccessful: percentageHistoryAndGeographyGTenSuccessful,
-        BEightAndNineSuccessful:  percentageHistoryAndGeographyBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful:  percentageHistoryAndGeographyLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageHistoryAndGeographyGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful:  percentageHistoryAndGeographyBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful:  percentageHistoryAndGeographyLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'الرياضيات', 
-        GreaterThanTenSuccessful: percentageMathGTenSuccessful,
-        BEightAndNineSuccessful: percentageMathBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageMathLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageMathGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageMathBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageMathLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'ع الطبيعة و الحياة', 
-        GreaterThanTenSuccessful: percentageNatureGTenSuccessful,
-        BEightAndNineSuccessful: percentageNatureBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageNatureLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageNatureGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageNatureBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageNatureLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'ع الفيزيائية والتكنولوجيا', 
-        GreaterThanTenSuccessful: percentagePhysicalGTenSuccessful,
-        BEightAndNineSuccessful: percentagePhysicalBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentagePhysicalLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentagePhysicalGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentagePhysicalBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentagePhysicalLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'المعلوماتية', 
-        GreaterThanTenSuccessful: percentageInformaticsGTenSuccessful,
-        BEightAndNineSuccessful: percentageInformaticsBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageInformaticsLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageInformaticsGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageInformaticsBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageInformaticsLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'التربية التشكيلية', 
-        GreaterThanTenSuccessful: percentageFineGTenSuccessful,
-        BEightAndNineSuccessful: percentageFineBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageFineLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageFineGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageFineBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageFineLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'التربية الموسيقية', 
-        GreaterThanTenSuccessful: percentageMusicGTenSuccessful,
-        BEightAndNineSuccessful: percentageMusicBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageMusicLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageMusicGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageMusicBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageMusicLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'ت البدنية و الرياضية', 
-        GreaterThanTenSuccessful: percentageAthleticGTenSuccessful,
-        BEightAndNineSuccessful: percentageAthleticBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageAthleticLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageAthleticGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageAthleticBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageAthleticLessThanEightSuccessful.toFixed(2)
         },
     {
         subject: 'معدل الفصل 1', 
-        GreaterThanTenSuccessful: percentageRateGTenSuccessful,
-        BEightAndNineSuccessful: percentageRateBetweenEightAndNineSuccessful,
-        LessThanEightSuccessful: percentageRateLessThanEightSuccessful
+        GreaterThanTenSuccessful: percentageRateGTenSuccessful.toFixed(2),
+        BEightAndNineSuccessful: percentageRateBetweenEightAndNineSuccessful.toFixed(2),
+        LessThanEightSuccessful: percentageRateLessThanEightSuccessful.toFixed(2)
         },
 
 ];
@@ -8236,6 +8246,245 @@ var layoutGreaterSuccessful = {
         // Initialize the chart when the accordion item is shown
 Plotly.newPlot('GreaterSuccessful-chart', tracedataGreaterSuccessful, layoutGreaterSuccessful, {displaylogo: false});
 });
+
+ /////////////////////////////
+//CV Table Area chart
+/////////////////////////////
+var datacv = [
+    { subject: 'اللغة العربية', cv: cvArabic.toFixed(2)},
+    { subject: 'اللغة اﻷمازيغية', cv: cvAmazigh.toFixed(2)},
+    { subject: 'اللغة الفرنسية', cv: cvFrench.toFixed(2)},
+    { subject: 'اللغة الإنجليزية', cv: cvEnglish.toFixed(2)},
+    { subject: 'التربية الإسلامية', cv: cvIslamic.toFixed(2)},
+    { subject: 'التربية المدنية', cv: cvCivics.toFixed(2)},
+    { subject: 'التاريخ والجغرافيا', cv: cvHistoryAndGeography.toFixed(2)},
+    { subject: 'الرياضيات', cv: cvMath.toFixed(2)},
+    { subject: 'ع الطبيعة و الحياة', cv: cvNature.toFixed(2)},
+    { subject: 'ع الفيزيائية والتكنولوجيا', cv: cvPhysical.toFixed(2)},
+    { subject: 'المعلوماتية', cv: cvInformatics.toFixed(2)},
+    { subject: 'التربية التشكيلية', cv: cvFine.toFixed(2)},
+    { subject: 'التربية الموسيقية', cv: cvMusic.toFixed(2)},
+    { subject: 'ت البدنية و الرياضية', cv: cvAthletic.toFixed(2)},
+    { subject: 'المعدل', cv: cvRate.toFixed(2)},
+];
+
+// Extract subject names and cv values
+var subjectscv = datacv.map(item => item.subject);
+var cvsAnalyse = datacv.map(item => item.cv);
+
+// Create Bar Chart
+var tracecv = {
+    x: subjectscv,
+    y: cvsAnalyse,
+    type: 'bar'
+};
+
+var layoutcv = {
+    title: 'رسم بياني يمثل نسبة الانسجام داخل القسم',
+    xaxis: {
+        title: 'المواد'
+    },
+    yaxis: {
+        title: ''
+    }
+};
+ $('#collapse8').on('shown.bs.collapse', function () {
+        // Initialize the chart when the accordion item is shown
+Plotly.newPlot('cv-chart', [tracecv], layoutcv, {displaylogo: false});
+});
+
+ /////////////////////////////
+//cv group Table Area chart
+/////////////////////////////
+var datacvgroup = [
+    {
+        subject: 'اللغة العربية', 
+        percentageG1: ArabicpercentageG1.toFixed(2),
+        percentageG2: ArabicpercentageG2.toFixed(2),
+        percentageG3: ArabicpercentageG3.toFixed(2),
+        percentageG4: ArabicpercentageG4.toFixed(2),
+        percentageG5: ArabicpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'اللغة اﻷمازيغية', 
+        percentageG1: AmazighpercentageG1.toFixed(2),
+        percentageG2: AmazighpercentageG2.toFixed(2),
+        percentageG3: AmazighpercentageG3.toFixed(2),
+        percentageG4: AmazighpercentageG4.toFixed(2),
+        percentageG5: AmazighpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'اللغة الفرنسية', 
+        percentageG1: FrenchpercentageG1.toFixed(2),
+        percentageG2: FrenchpercentageG2.toFixed(2),
+        percentageG3: FrenchpercentageG3.toFixed(2),
+        percentageG4: FrenchpercentageG4.toFixed(2),
+        percentageG5: FrenchpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'اللغة الإنجليزية', 
+        percentageG1: EnglishpercentageG1.toFixed(2),
+        percentageG2: EnglishpercentageG2.toFixed(2),
+        percentageG3: EnglishpercentageG3.toFixed(2),
+        percentageG4: EnglishpercentageG4.toFixed(2),
+        percentageG5: EnglishpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'التربية الإسلامية', 
+        percentageG1: IslamicpercentageG1.toFixed(2),
+        percentageG2: IslamicpercentageG2.toFixed(2),
+        percentageG3: IslamicpercentageG3.toFixed(2),
+        percentageG4: IslamicpercentageG4.toFixed(2),
+        percentageG5: IslamicpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'التربية المدنية', 
+        percentageG1: CivicspercentageG1.toFixed(2),
+        percentageG2: CivicspercentageG2.toFixed(2),
+        percentageG3: CivicspercentageG3.toFixed(2),
+        percentageG4: CivicspercentageG4.toFixed(2),
+        percentageG5: CivicspercentageG5.toFixed(2)
+        },
+    {
+        subject: 'التاريخ والجغرافيا', 
+        percentageG1: HistoryAndGeographypercentageG1.toFixed(2),
+        percentageG2: HistoryAndGeographypercentageG2.toFixed(2),
+        percentageG3: HistoryAndGeographypercentageG3.toFixed(2),
+        percentageG4: HistoryAndGeographypercentageG4.toFixed(2),
+        percentageG5: HistoryAndGeographypercentageG5.toFixed(2)
+        },
+    {
+        subject: 'الرياضيات', 
+        percentageG1: MathpercentageG1.toFixed(2),
+        percentageG2: MathpercentageG2.toFixed(2),
+        percentageG3: MathpercentageG3.toFixed(2),
+        percentageG4: MathpercentageG4.toFixed(2),
+        percentageG5: MathpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'ع الطبيعة و الحياة', 
+        percentageG1: NaturepercentageG1.toFixed(2),
+        percentageG2: NaturepercentageG2.toFixed(2),
+        percentageG3: NaturepercentageG3.toFixed(2),
+        percentageG4: NaturepercentageG4.toFixed(2),
+        percentageG5: NaturepercentageG5.toFixed(2)
+        },
+    {
+        subject: 'ع الفيزيائية والتكنولوجيا', 
+        percentageG1: PhysicalpercentageG1.toFixed(2),
+        percentageG2: PhysicalpercentageG2.toFixed(2),
+        percentageG3: PhysicalpercentageG3.toFixed(2),
+        percentageG4: PhysicalpercentageG4.toFixed(2),
+        percentageG5: PhysicalpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'المعلوماتية', 
+        percentageG1: InformaticspercentageG1.toFixed(2),
+        percentageG2: InformaticspercentageG2.toFixed(2),
+        percentageG3: InformaticspercentageG3.toFixed(2),
+        percentageG4: InformaticspercentageG4.toFixed(2),
+        percentageG5: InformaticspercentageG5.toFixed(2)
+        },
+    {
+        subject: 'التربية التشكيلية', 
+        percentageG1: FinepercentageG1.toFixed(2),
+        percentageG2: FinepercentageG2.toFixed(2),
+        percentageG3: FinepercentageG3.toFixed(2),
+        percentageG4: FinepercentageG4.toFixed(2),
+        percentageG5: FinepercentageG5.toFixed(2)
+        },
+    {
+        subject: 'التربية الموسيقية', 
+        percentageG1: MusicpercentageG1.toFixed(2),
+        percentageG2: MusicpercentageG2.toFixed(2),
+        percentageG3: MusicpercentageG3.toFixed(2),
+        percentageG4: MusicpercentageG4.toFixed(2),
+        percentageG5: MusicpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'ت البدنية و الرياضية', 
+        percentageG1: AthleticpercentageG1.toFixed(2),
+        percentageG2: AthleticpercentageG2.toFixed(2),
+        percentageG3: AthleticpercentageG3.toFixed(2),
+        percentageG4: AthleticpercentageG4.toFixed(2),
+        percentageG5: AthleticpercentageG5.toFixed(2)
+        },
+    {
+        subject: 'المعدل', 
+        percentageG1: RatepercentageG1.toFixed(2),
+        percentageG2: RatepercentageG2.toFixed(2),
+        percentageG3: RatepercentageG3.toFixed(2),
+        percentageG4: RatepercentageG4.toFixed(2),
+        percentageG5: RatepercentageG5.toFixed(2)
+        },
+
+];
+
+// Extract subject names and GreaterThanTen values
+var subjectscvgroup = datacvgroup.map(item => item.subject);
+var percentageG1 = datacvgroup.map(item => item.percentageG1);
+var percentageG2 = datacvgroup.map(item => item.percentageG2);
+var percentageG3 = datacvgroup.map(item => item.percentageG3);
+var percentageG4 = datacvgroup.map(item => item.percentageG4);
+var percentageG5 = datacvgroup.map(item => item.percentageG5);
+
+// Create Bar Chart
+var tracepercentageG1 = {
+    x: subjectscvgroup,
+    y: percentageG1,
+    type: 'bar',
+    name: 'الفئة الضعيفة'
+};
+
+var tracepercentageG2 = {
+    x: subjectscvgroup,
+    y: percentageG2,
+    type: 'bar',
+    name: 'الفئة القريبة من المتوسط'
+};
+
+var tracepercentageG3 = {
+    x: subjectscvgroup,
+    y: percentageG3,
+    type: 'bar',
+    name: 'الفئة المتوسطة'
+};
+
+var tracepercentageG4 = {
+    x: subjectscvgroup,
+    y: percentageG4,
+    type: 'bar',
+    name: 'الفئة الحسنة'
+};
+
+var tracepercentageG5 = {
+    x: subjectscvgroup,
+    y: percentageG5,
+    type: 'bar',
+    name: 'الفئة الجيدة'
+};
+
+var tracedatacvgroup = [tracepercentageG1, tracepercentageG2, tracepercentageG3, tracepercentageG4, tracepercentageG5];
+
+var layoutcvgroup = {
+    title: 'رسم بياني يمثل المعايير الإحصائية بالفئات الخمس',
+    xaxis: {
+        title: 'المواد'
+    },
+    yaxis: {
+        title: ''
+    },
+    legend: {
+        orientation: 'h', // Horizontal orientation
+        x: 0.32, // Adjust as needed
+        y: -0.2 // Position below the plot area
+    }
+};
+ $('#collapse9').on('shown.bs.collapse', function () {
+        // Initialize the chart when the accordion item is shown
+Plotly.newPlot('cvgroup-chart', tracedatacvgroup, layoutcvgroup, {displaylogo: false});
+});
+
 }
 
 // Attach an event listener to the button

@@ -1,3 +1,13 @@
+ /*!
+ * All rights reserved.
+ * © Al-Wajeez Inc.
+ *
+ * datatables.5eme.js (1.0.0) - MIT license.
+ * Copyright 2024 Haddadi Abdraouf.
+ */
+
+console.log('Copyright 2024 Al-Wajeez, designed by Haddadi Abdraouf. All rights reserved')
+
 document.addEventListener('DOMContentLoaded', function() {
     var currentDateElement = document.getElementById('currentDate');
     var currentTimeElement = document.getElementById('currentTime');
@@ -932,7 +942,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var tracedataGreater = [traceA, traceB, traceC, traceD];
 
                 var layoutGreater = {
-                    title: 'رسم بياني يمثل نتائج الفصل الأول حسب الفئات',
+                    title: 'رسم بياني يمثل فئات تحليل إمتحان تقييم المكتسبات',
                     xaxis: {
                         title: 'المواد'
                     },

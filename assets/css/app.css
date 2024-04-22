@@ -28425,6 +28425,10 @@ blockquote .author {
     padding: 120px 0;
 }
 
+.section-gap-equal-certificate {
+    padding: 60px 0;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .section-gap-equal {
         padding: 100px 0;

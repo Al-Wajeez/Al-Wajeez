@@ -23,36 +23,50 @@
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/vendor/tipped.min.css">
 
-    <!-- Site Stylesheet -->
+     <!-- Site Stylesheet -->
     <link rel="stylesheet" href="assets/css/app.css">
 
-    <!-- drag and drop Stylesheet -->
-    <link rel="stylesheet" href="assets/DrgD.css">
+        <style>
+        @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Kufi+Arabic:wght@100..900&display=swap");
 
-    <!-- dataTables Stylesheet -->
-    <link rel="stylesheet" href="assets/css/vendor/dataTables.bootstrap5.min.css">
-
-    <!--row Group Stylesheet-->   
-    <link rel="stylesheet" href="assets/css/vendor/rowGroup.bootstrap5.min.css">
-
-    <!--fixed Header Stylesheet-->
-    <link rel="stylesheet" href="assets/css/vendor/fixedHeader.bootstrap5.min.css">
-
-    <!--buttons Stylesheet-->
-    <link rel="stylesheet" href="assets/css/vendor/buttons.bootstrap5.min.css">
-
-    <!--colReorder Stylesheet-->
-    <link rel="stylesheet" href="assets/css/vendor/colReorder.bootstrap5.min.css" >
-
-    <!--Moving nodes (no clone)-->
-    <link rel="stylesheet" href="assets/css/vendor/rowReorder.dataTables.css">
-    <link rel="stylesheet" href="assets/css/vendor/responsive.dataTables.css">
-    <link rel="stylesheet" href="assets/css/vendor/responsive.bootstrap5.min.css" >
-    <link rel="stylesheet" href="assets/css/vendor/dataTables.dataTables.css" >
-    <link rel="stylesheet" href="assets/css/vendor/buttons.dataTables.css" >
-
-    <link rel="stylesheet" href="assets/css/vendor/datatables.min.css" >
-
+        :root {
+        --font-primary: 'Cairo', sans-serif;
+        --font-secondary: 'Noto Kufi Arabic', sans-serif;
+        }
+        body {    
+        font-family: var(--font-primary);
+        }
+ 
+      .center-div {
+        width: 100vw;
+        height: 100vh;
+        /*background-color: rgb(102, 71, 255);*/
+        border-radius: 15px;
+        padding: 5px;
+        box-sizing: border-box;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+ 
+      @media only screen and (max-width: 600px) {
+        .center-div {
+          height: 100vh;
+          width: 100vw;
+          /*background-color: rgb(102, 71, 255);*/
+          border-radius: 15px;
+          padding: 5px;
+          box-sizing: border-box;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+      }
+    </style>
 </head>
 
 <body class="sticky-header ">
@@ -62,596 +76,205 @@
 
     <div id="edublink-preloader">
         <div class="loading-spinner">
-            <div class="preloader-spin-1"></div>
-            <div class="preloader-spin-2"></div>
-        </div>
-        <div class="preloader-close-btn-wraper">
-            <!-- <span class="btn btn-primary preloader-close-btn">
-                Cancel Preloader</span> -->
+             <div class="loader-square-47"></div>
         </div>
     </div>
 
     <div id="main-wrapper" class="main-wrapper">
-        <!-- End Title Banner Area  -->
-        <!--=====================================-->
-        <!--=          Drop Area Start          =-->
-        <!--=====================================-->
-        <section class="edu-categorie-area categorie-area-2 edu-section-gap">
-            <div class="container">
 
-                <div class="row g-5">
-                    <div class="" data-sal-delay="50" data-sal="slide-up" data-sal-duration="800">
-                        <div class="section-title section-center" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                            <h2 class="title">رفع ملفات نتائج التلاميذ</h2>
-                            <span class="shape-line"><i class="icon-19"></i></span>
-                            <p>عند رفع الملفات على موقعنا لا تبقى لفترة طويلة ولا يتم حفظها نهائيا اي انها تحذف تلقائيا بعد تحديث الصفحة</p>
-                        </div>
-                        
-                        <div class="sub-drop-area">
-                            <div id="dropArea" class="drop-area" accept=".xlsx, .xls">
-                                <div id="uploadIcon" class="icon">
-                                    <img src="add-new-file-document.jpg" alt="File Upload">
-                                </div>
-                                <div id="successIcon" class="successIcon hidden">
-                                    <img src="assets/images/improvement-96.png">
-                                </div>
-                                  <p id="uploadText">
-                                  <span style="font-weight: bold;">اسحب الملفات  هنا مباشرة لرفعها</span> 
-                                  <br>
-                                  <span style="font-style: italic;">او اضغط على الصندوق لاختيار الملفات</span>
-                                  </p>
-                            <div id="progressCircle" class="progress-circle hidden"></div>
-
-                            </div>
-                            <div id="popupModal" class="popupmodal">
-                                <div class="popupmodal-content">
-                                    <p>في حالة ظهور الجداول بشكل غير طبيعي، يرجى التأكد من الملفات مرة أخرى وتحميلها من جديد.</p>
-                                    <button id="calculate-button" class="edu-btn btn-secondary btn-medium">تمت عمليت إستيراد النتائج بنجاح</button>
-                                </div>
+         <!--=====================================-->
+        <!--=        Header Area Start          =-->
+        <!--=====================================-->
+        <header class="edu-header header-style-1 header-fullwidth">
+            <div id="edu-sticky-placeholder"></div>
+            <div class="header-mainmenu">
+                <div class="container-fluid">
+                    <div class="header-navbar">
+                        <div class="header-brand">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img class="logo-light" src="assets/images/logo/logo-dark.png" alt="Corporate Logo">
+                                    <img class="logo-dark" src="assets/images/logo/logo-white.png" alt="Corporate Logo">
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="course-details-content-alert">
-                        <div class="course-enroll-box-alert">
-                            <div class="single-item">
-                                <span class="enroll-status-alert">تنويه هام: السادة المستخدمين... نود تذكيركم أن عميلة تحليل النتائج لا تقبل إلا الملفات الأصلية لمنصة الرقمنة</span>
-                            </div>
+                        <div class="header-mainnav">
+                            <nav class="mainmenu-nav">
+                                <ul class="mainmenu">
+                                    <li class="has-droupdown"><a href="index.html">الرئيسية</a>
+                                        <ul class="mega-menu mega-menu-one">
+                                            <li>
+                                                <ul class="submenu mega-sub-menu mega-sub-menu-01">
+                                                    <li><a href="Tahlil_T1.html">تحليل نتائج الفصل الأول </a></li>
+                                                    <li><a href="Tahlil_T2.html">تحليل نتائج الفصل الثاني</a></li>
+                                                    <li><a href="Tahlil_T3.html">تحليل نتائج الفصل الثالث </a></li>
+                                                    <li><a href="Tahlil_All.html">تحليل النتائج السنوية <span class="badge">جديد</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="submenu mega-sub-menu mega-sub-menu-01">
+                                                    <li><a href="Tahlil_Bem.html">شهادة التعليم المتوسط <span class="badge">جديد</span></a></li>
+                                                    <li><a href="Tahlil_5eme.html">إمتحان تقييم المكتسبات  <span class="badge">جديد</span></a></li>
+                                                    <li><a href="coming-soon.html">صانع الشهادة المجاني  <span class="badge-1">متوقف</span></a></li>
+                                                    <li><a href="coming-soon.html">تحميل برنامج الوجيز</a></li>
+                                                    <li><a href="coming-soon.html">تحميل تطبيق  <span class="badge-1">متوقف</span></a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <ul class="submenu mega-sub-menu-01">
+                                                    <li>
+                                                        <a href="https://t.me/Al_Wajeez_topic">
+                                                            <img src="assets/images/others/mega-menu-image.png" alt="advertising Image">
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class=""><a href="course.html">الدروس</a>
+                                    </li>
+                                    <li class=""><a href="terms-condition.html">سياسة خصوصية</a>
+                                    </li>
+                                    <li class=""><a href="faq.html">أسئلة شائعة</a>
+                                    </li>
+                                    <li class=""><a href="contact-me.html">تواصل معنا</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Hero Banner Area  -->
-        <!--=====================================-->
-        <!--=     Or Table  Area Start          =-->
-        <!--=====================================-->
-        <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div class="container edublink-animated-shape">
-                <br><br>
-                <div class="row g-5 align-items-center">
-                <a id="titleElement" class="btn-print edu-btn btn-medium switcher-btn">قاعدة بيانات نتائج الفصل الأول
-                </a>
-                    <div class="about-image-gallery">
-                        
-                        <table id="data-table" class="table table-striped display nowrap" width="100%">
-                            <thead>
-                                <tr>
-                                    <th>الرقم</th>
-                                    <th>اللقب و الاسم</th>
-                                    <th>تاريخ الميلاد</th>
-                                    <th>الجنس</th>
-                                    <th>الإعادة</th>
-                                    <th>اللغة العربية</th>
-                                    <th>اللغة اﻷمازيغية</th>
-                                    <th>اللغة الفرنسية</th>
-                                    <th>اللغة الإنجليزية</th>
-                                    <th>التربية الإسلامية</th>
-                                    <th>التربية المدنية</th>
-                                    <th>التاريخ والجغرافيا</th>
-                                    <th>الرياضيات</th>
-                                    <th>ع الطبيعة و الحياة</th>
-                                    <th>ع الفيزيائية والتكنولوجيا</th>
-                                    <th>المعلوماتية</th>
-                                    <th>التربية التشكيلية</th>
-                                    <th>التربية الموسيقية</th>
-                                    <th>ت البدنية و الرياضية</th>
-                                    <th>معدل الفصل 1</th>
-                                    <th>جذع مشترك علوم وتكنولوجيا</th>
-                                    <th>جذع مشترك آداب</th>
-                                    <th>التوجيه التدريجي</th>
-                                    <th>القسم</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                    <td>0</td>
-                                </tr>
-                            </tbody>
-                            <tfoot>
-                                <tr>
-                                    <th>الرقم</th>
-                                    <th>اللقب و الاسم</th>
-                                    <th>تاريخ الميلاد</th>
-                                    <th>الجنس</th>
-                                    <th>الإعادة</th>
-                                    <th>اللغة العربية</th>
-                                    <th>اللغة اﻷمازيغية</th>
-                                    <th>اللغة الفرنسية</th>
-                                    <th>اللغة الإنجليزية</th>
-                                    <th>التربية الإسلامية</th>
-                                    <th>التربية المدنية</th>
-                                    <th>التاريخ والجغرافيا</th>
-                                    <th>الرياضيات</th>
-                                    <th>ع الطبيعة و الحياة</th>
-                                    <th>ع الفيزيائية والتكنولوجيا</th>
-                                    <th>المعلوماتية</th>
-                                    <th>التربية التشكيلية</th>
-                                    <th>التربية الموسيقية</th>
-                                    <th>ت البدنية و الرياضية</th>
-                                    <th>معدل الفصل 1</th>
-                                    <th>جذع مشترك علوم وتكنولوجيا</th>
-                                    <th>جذع مشترك آداب</th>
-                                    <th>التوجيه التدريجي</th>
-                                    <th>القسم</th>
-                                </tr>
-                            </tfoot>>
-                        </table>
-
-                        <ul class="shape-group">
-                            <li class="shape-1 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                <img data-depth="1" src="assets/images/about/shape-36.png" alt="Shape">
-                            </li>
-                            <li class="shape-2 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                <img data-depth="-1" src="assets/images/about/shape-37.png" alt="Shape">
-                            </li>
-                            <li class="shape-3 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                <img data-depth="1" src="assets/images/about/shape-02.png" alt="Shape">
-                            </li>
-                        </ul>     
-                    </div>
-                </div>
-                <ul class="shape-group">
-                    <li class="shape-1 circle scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                        <span data-depth="-2.3"></span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <!-- End Or Table Area  -->
-        <!--=====================================-->
-        <!--=      CV Table Area Start          =-->
-        <!--=====================================-->
-        <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div id="CVsection" class="container edublink-animated-shape">
-                <div class="row g-5 align-items-center">
-                <a id="titleElement" class="btn-print edu-btn btn-medium switcher-btn">نسبة الإنسجام داخل القسم
-                    <i class="ri-printer-line" onclick="printSection('CVsection')"></i>
-                    <i class="ri-file-excel-2-line" onclick="xlsxSection('CVsection')"></i>
-                </a>
-                    <div class="about-image-gallery">
-                        <div class="scroll-container">    
-                            <table id="data-table" class="table display nowrap" width="auto">
-                                <thead>
-                                        <tr>
-                                            <th>المواد</th>
-                                            <th>نسبة الإنسجام</th>
-                                            <th>ملاحظة</th>
-                                        </tr> 
-                                </thead>
-
-                                <tbody>
-                                        <tr>
-                                            <td>اللغة العربية</td>
-                                            <td id="arabic-cv"></td>
-                                            <td id="arabic-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>اللغة الأمازيغية</td>
-                                            <td id="Amazigh-cv"></td>
-                                            <td id="amazigh-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>اللغة الفرنسية</td>
-                                            <td id="french-cv"></td>
-                                            <td id="french-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>اللغة الإنجليزية</td>
-                                            <td id="english-cv"></td>
-                                            <td id="english-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية الإسلامية</td>
-                                            <td id="islamic-cv"></td>
-                                            <td id="islamic-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية المدنية</td>
-                                            <td id="civics-cv"></td>
-                                            <td id="civics-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التاريخ والجغرافيا</td>
-                                            <td id="historyandgeography-cv"></td>
-                                            <td id="historyandgeography-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>الرياضيات</td>
-                                            <td id="math-cv"></td>
-                                            <td id="math-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>العلوم الطبيعية والحياة</td>
-                                            <td id="nature-cv"></td>
-                                            <td id="nature-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>العلوم الفزيائية</td>
-                                            <td id="physical-cv"></td>
-                                            <td id="physical-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>الإعلام الآلي</td>
-                                            <td id="informatics-cv"></td>
-                                            <td id="informatics-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية التشكيلية</td>
-                                            <td id="fine-cv"></td>
-                                            <td id="fine-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية الموسيقية</td>
-                                            <td id="music-cv"></td>
-                                            <td id="music-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية البدنية</td>
-                                            <td id="athletic-cv"></td>
-                                            <td id="athletic-cvNote"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>المعدل</td>
-                                            <td id="rate-cv"></td>
-                                            <td id="rate-cvNote"></td>
-                                        </tr>
-                                </tbody>
-                            </table>
-                        </div> 
-                            
-                            <div class="accordion edu-accordion" id="accordionExample" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                                أنقر هنا لإظهار الرسم البياني الخاص بالجدول أعلاه ...
-                                            </button>
-                                        </h3>
-                                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            
-                                          <div id="Analyse-chart" style="width: auto; height: 600px;">
-                                                </div>      
-                                            
-                                        </div>
-                                    </div>
-                            </div>
-                            <ul class="shape-group">
-                                <li class="shape-1 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                    <img data-depth="1" src="assets/images/about/shape-36.png" alt="Shape">
-                                </li>
-                                <li class="shape-2 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                    <img data-depth="-1" src="assets/images/about/shape-37.png" alt="Shape">
-                                </li>
-                                <li class="shape-3 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                    <img data-depth="1" src="assets/images/about/shape-02.png" alt="Shape">
+                        <div class="header-right">
+                            <ul class="header-action">
+                                <li class="mobile-menu-bar d-block d-xl-none">
+                                    <button class="hamberger-button">
+                                        <i class="icon-54"></i>
+                                    </button>
                                 </li>
                             </ul>
                         </div>
+                    </div>
                 </div>
-
-                <ul class="shape-group">
-                    <li class="shape-1 circle scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                        <span data-depth="-2.3"></span>
-                    </li>
-                </ul>
             </div>
-        </section>
-        <!-- End CV Table Area  -->
-        <!--=====================================-->
-        <!--=    CV Groups Table Area Start     =-->
-        <!--=====================================-->
-        <section class="gap-bottom-equal edu-about-area about-style-1">
-            <div id="CVGroupssection" class="container edublink-animated-shape">
-                <div class="row g-5 align-items-center">
-                <a id="titleElement" class="btn-print edu-btn btn-medium switcher-btn">نسبة الإنسجام بالفئات الخمس
-                    <i class="ri-printer-line" onclick="printSection('CVGroupssection')"></i>
-                    <i class="ri-file-excel-2-line" onclick="xlsxSection('CVGroupssection')"></i>
-                </a>
-                    <div class="about-image-gallery">
-                        <div class="scroll-container">    
-                            <table id="data-table" class="table display nowrap" width="auto">
-                                <thead>
-                                        <tr>
-                                            <th rowspan="2">المواد</th>
-                                            <th colspan="2">الفئة الضعيفة</th>
-                                            <th colspan="2">الفئة القريبة من المتوسط</th>
-                                            <th colspan="2">الفئة المتوسطة</th>
-                                            <th colspan="2">الفئة الحسنة</th>
-                                            <th colspan="2">الفئة الجيدة</th>
-                                        </tr>
-                                        <tr>
-                                            <th colspan="1">العدد</th>
-                                            <th colspan="1">النسبة</th>
-                                            <th colspan="1">العدد</th>
-                                            <th colspan="1">النسبة</th>
-                                            <th colspan="1">العدد</th>
-                                            <th colspan="1">النسبة</th>
-                                            <th colspan="1">العدد</th>
-                                            <th colspan="1">النسبة</th>
-                                            <th colspan="1">العدد</th>
-                                            <th colspan="1">النسبة</th>
-                                        </tr>
-                                </thead>
-
-                                <tbody>
-                                        <tr>
-                                            <td>اللغة العربية</td>
-                                            <td id="arabic-countG1"></td>
-                                            <td id="arabic-percentageG1"></td>
-                                            <td id="arabic-countG2"></td>
-                                            <td id="arabic-percentageG2"></td>
-                                            <td id="arabic-countG3"></td>
-                                            <td id="arabic-percentageG3"></td>
-                                            <td id="arabic-countG4"></td>
-                                            <td id="arabic-percentageG4"></td>
-                                            <td id="arabic-countG5"></td>
-                                            <td id="arabic-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>اللغة الأمازيغية</td>
-                                            <td id="Amazigh-countG1"></td>
-                                            <td id="amazigh-percentageG1"></td>
-                                            <td id="Amazigh-countG2"></td>
-                                            <td id="amazigh-percentageG2"></td>
-                                            <td id="Amazigh-countG3"></td>
-                                            <td id="amazigh-percentageG3"></td>
-                                            <td id="Amazigh-countG4"></td>
-                                            <td id="amazigh-percentageG4"></td>
-                                            <td id="Amazigh-countG5"></td>
-                                            <td id="amazigh-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>اللغة الفرنسية</td>
-                                            <td id="french-countG1"></td>
-                                            <td id="french-percentageG1"></td>
-                                            <td id="french-countG2"></td>
-                                            <td id="french-percentageG2"></td>
-                                            <td id="french-countG3"></td>
-                                            <td id="french-percentageG3"></td>
-                                            <td id="french-countG4"></td>
-                                            <td id="french-percentageG4"></td>
-                                            <td id="french-countG5"></td>
-                                            <td id="french-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>اللغة الإنجليزية</td>
-                                            <td id="english-countG1"></td>
-                                            <td id="english-percentageG1"></td>
-                                            <td id="english-countG2"></td>
-                                            <td id="english-percentageG2"></td>
-                                            <td id="english-countG3"></td>
-                                            <td id="english-percentageG3"></td>
-                                            <td id="english-countG4"></td>
-                                            <td id="english-percentageG4"></td>
-                                            <td id="english-countG5"></td>
-                                            <td id="english-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية الإسلامية</td>
-                                            <td id="islamic-countG1"></td>
-                                            <td id="islamic-percentageG1"></td>
-                                            <td id="islamic-countG2"></td>
-                                            <td id="islamic-percentageG2"></td>
-                                            <td id="islamic-countG3"></td>
-                                            <td id="islamic-percentageG3"></td>
-                                            <td id="islamic-countG4"></td>
-                                            <td id="islamic-percentageG4"></td>
-                                            <td id="islamic-countG5"></td>
-                                            <td id="islamic-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية المدنية</td>
-                                            <td id="civics-countG1"></td>
-                                            <td id="civics-percentageG1"></td>
-                                            <td id="civics-countG2"></td>
-                                            <td id="civics-percentageG2"></td>
-                                            <td id="civics-countG3"></td>
-                                            <td id="civics-percentageG3"></td>
-                                            <td id="civics-countG4"></td>
-                                            <td id="civics-percentageG4"></td>
-                                            <td id="civics-countG5"></td>
-                                            <td id="civics-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التاريخ والجغرافيا</td>
-                                            <td id="historyandgeography-countG1"></td>
-                                            <td id="historyandgeography-percentageG1"></td>
-                                            <td id="historyandgeography-countG2"></td>
-                                            <td id="historyandgeography-percentageG2"></td>
-                                            <td id="historyandgeography-countG3"></td>
-                                            <td id="historyandgeography-percentageG3"></td>
-                                            <td id="historyandgeography-countG4"></td>
-                                            <td id="historyandgeography-percentageG4"></td>
-                                            <td id="historyandgeography-countG5"></td>
-                                            <td id="historyandgeography-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>الرياضيات</td>
-                                            <td id="math-countG1"></td>
-                                            <td id="math-percentageG1"></td>
-                                            <td id="math-countG2"></td>
-                                            <td id="math-percentageG2"></td>
-                                            <td id="math-countG3"></td>
-                                            <td id="math-percentageG3"></td>
-                                            <td id="math-countG4"></td>
-                                            <td id="math-percentageG4"></td>
-                                            <td id="math-countG5"></td>
-                                            <td id="math-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>العلوم الطبيعية والحياة</td>
-                                            <td id="nature-countG1"></td>
-                                            <td id="nature-percentageG1"></td>
-                                            <td id="nature-countG2"></td>
-                                            <td id="nature-percentageG2"></td>
-                                            <td id="nature-countG3"></td>
-                                            <td id="nature-percentageG3"></td>
-                                            <td id="nature-countG4"></td>
-                                            <td id="nature-percentageG4"></td>
-                                            <td id="nature-countG5"></td>
-                                            <td id="nature-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>العلوم الفزيائية</td>
-                                            <td id="physical-countG1"></td>
-                                            <td id="physical-percentageG1"></td>
-                                            <td id="physical-countG2"></td>
-                                            <td id="physical-percentageG2"></td>
-                                            <td id="physical-countG3"></td>
-                                            <td id="physical-percentageG3"></td>
-                                            <td id="physical-countG4"></td>
-                                            <td id="physical-percentageG4"></td>
-                                            <td id="physical-countG5"></td>
-                                            <td id="physical-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>الإعلام الآلي</td>
-                                            <td id="informatics-countG1"></td>
-                                            <td id="informatics-percentageG1"></td>
-                                            <td id="informatics-countG2"></td>
-                                            <td id="informatics-percentageG2"></td>
-                                            <td id="informatics-countG3"></td>
-                                            <td id="informatics-percentageG3"></td>
-                                            <td id="informatics-countG4"></td>
-                                            <td id="informatics-percentageG4"></td>
-                                            <td id="informatics-countG5"></td>
-                                            <td id="informatics-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية التشكيلية</td>
-                                            <td id="fine-countG1"></td>
-                                            <td id="fine-percentageG1"></td>
-                                            <td id="fine-countG2"></td>
-                                            <td id="fine-percentageG2"></td>
-                                            <td id="fine-countG3"></td>
-                                            <td id="fine-percentageG3"></td>
-                                            <td id="fine-countG4"></td>
-                                            <td id="fine-percentageG4"></td>
-                                            <td id="fine-countG5"></td>
-                                            <td id="fine-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية الموسيقية</td>
-                                            <td id="music-countG1"></td>
-                                            <td id="music-percentageG1"></td>
-                                            <td id="music-countG2"></td>
-                                            <td id="music-percentageG2"></td>
-                                            <td id="music-countG3"></td>
-                                            <td id="music-percentageG3"></td>
-                                            <td id="music-countG4"></td>
-                                            <td id="music-percentageG4"></td>
-                                            <td id="music-countG5"></td>
-                                            <td id="music-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>التربية البدنية</td>
-                                            <td id="athletic-countG1"></td>
-                                            <td id="athletic-percentageG1"></td>
-                                            <td id="athletic-countG2"></td>
-                                            <td id="athletic-percentageG2"></td>
-                                            <td id="athletic-countG3"></td>
-                                            <td id="athletic-percentageG3"></td>
-                                            <td id="athletic-countG4"></td>
-                                            <td id="athletic-percentageG4"></td>
-                                            <td id="athletic-countG5"></td>
-                                            <td id="athletic-percentageG5"></td>
-                                        </tr>
-                                        <tr>
-                                            <td>المعدل</td>
-                                            <td id="rate-countG1"></td>
-                                            <td id="rate-percentageG1"></td>
-                                            <td id="rate-countG2"></td>
-                                            <td id="rate-percentageG2"></td>
-                                            <td id="rate-countG3"></td>
-                                            <td id="rate-percentageG3"></td>
-                                            <td id="rate-countG4"></td>
-                                            <td id="rate-percentageG4"></td>
-                                            <td id="rate-countG5"></td>
-                                            <td id="rate-percentageG5"></td>
-                                        </tr>
-                                </tbody>
-                            </table>
-                        </div> 
-                            
-                            <div class="accordion edu-accordion" id="accordionExample" data-sal-delay="150" data-sal="slide-up" data-sal-duration="800">
-                                    <div class="accordion-item">
-                                        <h3 class="accordion-header" id="headingOne">
-                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                                                أنقر هنا لإظهار الرسم البياني الخاص بالجدول أعلاه ...
-                                            </button>
-                                        </h3>
-                                        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                            
-                                          <div id="Analyse-chart" style="width: auto; height: 600px;">
-                                                </div>      
-                                            
-                                        </div>
-                                    </div>
-                            </div>
-                            <ul class="shape-group">
-                                <li class="shape-1 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                    <img data-depth="1" src="assets/images/about/shape-36.png" alt="Shape">
+            <div class="popup-mobile-menu">
+                <div class="inner">
+                    <div class="header-top">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img class="logo-light" src="assets/images/logo/logo-dark.png" alt="Corporate Logo">
+                                <img class="logo-dark" src="assets/images/logo/logo-white.png" alt="Corporate Logo">
+                            </a>
+                        </div>
+                        <div class="close-menu">
+                            <button class="close-button">
+                                <i class="icon-73"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="mainmenu">
+                        <li class="has-droupdown"><a href="index.html">الرئيسية</a>
+                            <ul class="mega-menu mega-menu-one">
+                                <li>
+                                    <ul class="submenu mega-sub-menu mega-sub-menu-01">
+                                        <li><a href="Tahlil_T1.html">تحليل نتائج الفصل الاول </a></li>
+                                        <li><a href="Tahlil_T2.html">تحليل نتائج الفصل الثني</a></li>
+                                        <li><a href="Tahlil_T3.html">تحليل نتائج الفصل الثالث</a></li>
+                                        <li><a href="Tahlil_All.html">تحليل النتائج السنوية <span class="badge">جديد</span></a></li>
+                                    </ul>
                                 </li>
-                                <li class="shape-2 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                    <img data-depth="-1" src="assets/images/about/shape-37.png" alt="Shape">
+                                <li>
+                                    <ul class="submenu mega-sub-menu mega-sub-menu-01">
+                                        <li><a href="Tahlil_Bem.html">شهادة التعليم المتوسط <span class="badge">جديد</span></a></li>
+                                        <li><a href="Tahlil_5eme.html">إمتحان تقييم المكتسبات <span class="badge">جديد</span></a></li>
+                                        <li><a href="coming-soon.html">صانع الشهادات المجاني <span class="badge-1">متوقف</span></a></li>
+                                        <li><a href="coming-soon.html">تحميل برامج الوجيز</a></li>
+                                        <li><a href="coming-soon.html">تحميل تطبيق <span class="badge-1">متوقف</span></a></li>
+                                    </ul>
                                 </li>
-                                <li class="shape-3 scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                                    <img data-depth="1" src="assets/images/about/shape-02.png" alt="Shape">
+                                <li>
+                                    <ul class="submenu mega-sub-menu-01">
+                                        <li>
+                                            <a href="https://t.me/Al_Wajeez_topic">
+                                                <img src="assets/images/others/mega-menu-image.png" alt="advertising Image">
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
                             </ul>
-                        </div>
+                        </li>
+                        <li class=""><a href="course.html">الدروس</a>
+                        </li>
+                        <li class=""><a href="terms-condition.html">سياسة خصوصية</a>
+                        </li>
+                        <li class=""><a href="faq.html">أسئلة شائعة</a>
+                        </li>
+                        <li class=""><a href="contact-me.html">تواصل معنا</a>
+                        </li>
+                    </ul>
                 </div>
-
-                <ul class="shape-group">
-                    <li class="shape-1 circle scene" data-sal-delay="500" data-sal="fade" data-sal-duration="200">
-                        <span data-depth="-2.3"></span>
-                    </li>
-                </ul>
             </div>
-        </section>
-        <!-- End CV Groups Table Area  -->
-
+            <!-- Start Search Popup  -->
+            <div class="edu-search-popup">
+                <div class="content-wrap">
+                    <div class="site-logo">
+                        <img class="logo-light" src="assets/images/logo/logo-dark.png" alt="Corporate Logo">
+                        <img class="logo-dark" src="assets/images/logo/logo-white.png" alt="Corporate Logo">
+                    </div>
+                    <div class="close-button">
+                        <button class="close-trigger"><i class="icon-73"></i></button>
+                    </div>
+                    <div class="inner">
+                        <form class="search-form" action="#">
+                            <input type="text" class="edublink-search-popup-field" placeholder="Search Here...">
+                            <button class="submit-button"><i class="icon-2"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Popup  -->
+        </header>
+        <!--=====================================-->
+        <!--=       Breadcrumb Area Start      =-->
+        <!--=====================================-->
+        <!-- Add a container element for the chatbot -->
+            <div>
+              <div class="absolute inset-4 ">
+                <div
+                  class="center-div relative h-full w-full overflow-clip rounded-md border border-zinc-200 bg-white p-2 px-0 py-0"
+                >
+                  <iframe
+                    style="border: none;"
+                    srcdoc="<body><script src='https://cdn.botpress.cloud/webchat/v0/inject.js'></script>
+                    <script>
+                      window.botpressWebChat.init({
+                          'composerPlaceholder': 'سئل المساعد ما تريد ...',
+                          'botConversationDescription': 'برنامج الدردشة الآلية لمنصة الوجيز.',
+                          'botName': 'ساعد منصة الوجيز',
+                          'botId': '23c837a1-e0f3-4211-a88c-20c8562a986a',
+                          'hostUrl': 'https://cdn.botpress.cloud/webchat/v0',
+                          'messagingUrl': 'https://messaging.botpress.cloud',
+                          'clientId': '23c837a1-e0f3-4211-a88c-20c8562a986a',
+                          'enableConversationDeletion': true,
+                          'showPoweredBy': false,
+                          'className': 'webchatIframe',
+                          'containerWidth': '100%25',
+                          'layoutWidth': '100%25',
+                          'hideWidget': true,
+                          'showCloseButton': false,
+                          'disableAnimations': false,
+                          'closeOnEscape': false,
+                          'showConversationsButton': true,
+                          'enableTranscriptDownload': false,
+                          'stylesheet':'https://webchat-styler-css.botpress.app/prod/code/ae1531a7-724c-4f6d-a96e-ebe6d90a769a/v6109/style.css'
+                          
+                      });
+                    window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+                    </script></body>"
+                    width="90%"
+                    height="85%"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
 
     <!-- JS
     ============================================ -->
@@ -680,49 +303,19 @@
     <!-- Site Scripts -->
     <script src="assets/js/app.js"></script>
 
-    <!-- Table Scripts -->
-    <script src="assets/test.js"></script>
-    <script src="assets/printadd.js"></script>
-
-    <!-- Fixed Header-->
-    <script src="assets/js/vendor/dataTables.fixedHeader.min.js"></script>
-
     <!-- dataTables Scripts -->
     <script src="assets/js/vendor/jquery-3.7.1.js"></script>
     <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
     <script src="assets/js/vendor/dataTables.min.js"></script>  
     <script src="assets/js/vendor/dataTables.bootstrap5.min.js"></script>
 
-    <!-- Import data button-->
-    <script src="assets/js/vendor/xlsx.full.min.js"></script>
 
-    <!-- Export data button-->
-    <script src="assets/js/vendor/dataTables.buttons.min.js"></script>
-    <script src="assets/js/vendor/buttons.bootstrap5.min.js"></script>
-    <script src="assets/js/vendor/buttons.html5.min.js"></script>
-    <script src="assets/js/vendor/buttons.colVis.min.js"></script>
-    <script src="assets/js/vendor/buttons.dataTables.js"></script>
-    <script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.print.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
 
-    <!-- Row Group-->
-    <script src="assets/js/vendor/dataTables.rowGroup.min.js"></script>
-    <script src="assets/js/vendor/dataTables.rowReorder.js"></script>
-    <script src="assets/js/vendor/rowReorder.dataTables.js"></script>
-    <script src="assets/js/vendor/dataTables.responsive.js"></script>
-    <script src="assets/js/vendor/responsive.dataTables.js"></script>
+    <script>
 
-    <!-- Plotly-->
-    <script src="assets/js/vendor/plotly.js"></script>
-    <script src="assets/js/vendor/plotly.min.js"></script>
-    <script src="assets/js/vendor/plotly-locale-ar.js"></script>
-    <script src="assets/js/vendor/plotly-locale-ar-dz.js"></script>
-
-    <script src="assets/js/vendor/FileSaver.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    </script>
+ 
 
 
 </body>

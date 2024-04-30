@@ -1616,7 +1616,7 @@ h6,
 .h5,
 .h6 {
     word-break: break-word;
-    /*font-family: var(--font-primary);*/
+    font-family: var(--font-primary);
     color: var(--color-heading);
 }
 

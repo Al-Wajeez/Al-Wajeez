@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<title>الوجيز  (Al-Wajeez) | تحليل نتائج شهادة التعليم المتوسط</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+		setTheme(getPreferredTheme())
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+			showActiveTheme(getPreferredTheme())
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+			}
+		})
+	</script>
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="assets/css/magnifypopup.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/animation.min.css">
+    <link rel="stylesheet" href="assets/css/jqueru-ui-min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/tipped.min.css">
+	<link rel="stylesheet" href="assets/css/remixicon.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="assets/css/datatables.min.css" >
+    <link rel="stylesheet" href="assets/css/rowGroup.bootstrap5.min.css"> 
+    <link rel="stylesheet" href="assets/css/fixedHeader.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/css/rowReorder.dataTables.css">
+    <link rel="stylesheet" href="assets/css/responsive.dataTables.css">
+    <link rel="stylesheet" href="assets/css/responsive.bootstrap5.min.css" >
+    <link rel="stylesheet" href="assets/css/buttons.dataTables.css" >
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-rtl.css">
+</head>
+<body>
+<header class="navbar-light navbar-sticky">
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item h-50px" src="assets/images/logo.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item h-50px" src="assets/images/logo-light.png" alt="logo">
+			</a>
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تحليل النتائج</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T1.html">الفصل الأول</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T2.html">الفصل الثاني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T3.html">الفصل الثالث</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-All.html">النتائج السنوية</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-Bem.html">شهادة التعليم المتوسط</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-5eme.html">تقييم المكتسبات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">متابعة نتائج التلاميذ</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="Moutabaa-T1.html">متابعة نتائج الفصل الاول</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T2.html">متابعة نتائج الفصل الثاني</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T3.html">متابعة نتائج الفصل الثالث</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">وثائق</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Ministerial-circular.html">المناشير الوزارية الخاصة بالإعلام ...</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="coming-soon.html">مطويات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Structure-of-the-educational-system.html">هيكلـة النظـام التـربوي</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">بطاقات</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-2.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-1-1.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/01/fiche-de-voeux-003.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الرابعة متوسط</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCL.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCST.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-1-AS.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الأولى ثانوي</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">خدمات</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">فضاءات قطاع التربية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://awlyaa.education.dz/" target="_blank">فضاء الاولياء</a></li>
+									<li> <a class="dropdown-item" href="https://amatti.education.gov.dz/" target="_blank">الأرضية الرقمية + فضاء مستشار التوجية</a></li>
+									<li> <a class="dropdown-item" href="https://ostad.education.gov.dz/auth" target="_blank">فضاء الأساتذة</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/" target="_blank">موقع وزارة التربية</a></li>
+									<li> <a class="dropdown-item" href="https://www.a-onec.com/" target="_blank">مدونة التربية والتعليم</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="http://inscriptic.onefd.edu.dz/" target="_blank">التسجيل الإلكتروني في ONEFD</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">نتائج الإمتحانات الرسمية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://bem.onec.dz/" target="_blank">شهادة التعليم التوسط</a></li>
+									<li> <a class="dropdown-item" href="https://bac.onec.dz/" target="_blank">شهادة البكالوريا</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="rate-calculator.html">حساب المعدلات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="https://onps.com.dz/" target="_blank">البيع الإلكتروني للكتب</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Professional-training.html">مدونة الشعب و تخصصات التكوين المهني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown"><a class="nav-link" href="coming-soon-blog.html">مدونة</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="advanceMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-ellipsis-h"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end min-w-auto" data-bs-popper="none">
+							<li> 
+								<a class="dropdown-item" href="faq.html">
+									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>أسئلة شائعة
+								</a> 
+							</li>
+							<li> 
+								<a class="dropdown-item" href="privacy-policy.html">
+									<i class="text-danger fa-fw bi bi-card-text me-2"></i>سياسة خصوصية
+								</a> 
+							</li>
+							<li> <hr class="dropdown-divider"></li>
+							<li> 
+								<a class="dropdown-item" href="contact-us.html">
+									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>تواصل معنا
+								</a> 
+							</li>
+						</ul>
+					</li>
+				</ul>
+				</ul>
+			</div>
+			<div class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+						<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+			</div>
+		</div>
+	</nav>
+    <hr class="my-0">
+	<nav class="navbar navbar-expand-xl nav-category navbar-area">
+		<div class="container px-0">
+			<button class="navbar-toggler m-auto w-100" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse2" aria-controls="navbarCollapse2" aria-expanded="false" aria-label="Toggle navigation">
+				<i class="bi bi-grid-fill"></i> Category
+			</button>
+			<div class="navbar-collapse w-100 collapse" id="navbarCollapse2">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+					<li class="nav-item"><a class="nav-link"><i class="fas fa-map-signs scroll-btn" data-target="Orsection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="نتائج شهادة التعليم المتوسط"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-chart-line scroll-btn" data-target="Analysesection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="تحليل النتائج"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-sitemap scroll-btn" data-target="Greatersection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="تحليل النتائج حسب الفئات"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-graduation-cap scroll-btn" data-target="Successsection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="تحليل النتائج حسب نسبة النجاح"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-file-alt scroll-btn" data-target="Outcomesection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="حصيلة المعدلات الفصلية"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-check-circle scroll-btn" data-target="CVsection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="نسبة الإنسجام داخل القسم"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-receipt scroll-btn" data-target="CVGroupssection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="المعايير الإحصائية بالفئات الخمس"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="bi bi-diagram-2-fill scroll-btn" data-target="Differencessection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="المعايير الإحصائية بالفئات الخمس"></i></a></li>
+                    <li class="nav-item"><a class="nav-link"><i class="fas fa-chalkboard-teacher scroll-btn" data-target="discsection" data-bs-toggle="tooltip" data-bs-placement="bottom" title="المؤشرات النوعية"></i></a></li>
+				</ul>
+			</div>
+		</div> 
+	</nav>
+</header>
+<main>
+<section>
+	<div class="container">
+		<div class="row g-4 g-md-5 justify-content-center">
+			<div class="col-lg-8 mx-auto text-center">
+				<h1>شهادة التعليم المتوسط.</h1>
+				<div class="d-sm-flex justify-content-between align-items-center mb-2">
+					<div class="mt-2 mt-sm-2 d-flex mx-auto text-center">
+						<p id="currentDate" class="text-danger mb-0 me-3">
+							<i class="bi bi-clock-history me-0"></i>
+						</p>
+						<p id="currentTime" class="text-danger mb-0">
+							<i class="bi bi-clock-history me-0"></i>
+						</p>
+					</div>
+				</div>
+				<p class="mb-0">عند رفع الملفات على موقعنا لا تبقى لفترة طويلة ولا يتم حفظها نهائيا اي انها تحذف تلقائيا بعد تحديث الصفحة.</p>
+      		</div>
+		</div>
+	</div>
+</section>
+<section class="Import-area">
+	<div class="container">
+		<div class="alert alert-warning text-center" role="alert">
+			عند رفع الملفات على موقعنا لا تبقى لفترة طويلة ولا يتم حفظها نهائيا اي انها <a class="alert-link">تحذف </a> تلقائيا بعد تحديث الصفحة.
+		</div>
+        <div class="alert alert-info text-center" role="alert">
+        <p>من المهم جدا ... معالجة الملف قبل رفعه على الموقع وحذف التلاميذ المقصيين أو التلاميذ الذين قامو بتغيير المؤسسة</p>
+        <p>في حالة إظافة النتائج السنوية في الخانات الفارغة داخل ملف شهادة التعليم المتوسط بعد تحميله من الرقمنة، سيقوم الموقع بإستخراج جدول مقارنة النتائج السنوية ونتائج شهادة التعليم المتوسط</p>
+		</div>
+		<div class="row g-4 g-md-2 sub-drop-area">
+			<div class="col-lg-5" style="width:auto">
+				<div class="card card-body p-5 text-center">
+					<div id="dropArea" class="card card-body p-5 text-center drop-area" accept=".xlsx, .xls">
+						<div id="uploadIcon">
+							<p id="uploadText">
+                                    <ul class="avatar-group mb-4 justify-content-center h-132px" style="font-size: 5rem">
+                                        <img src="assets/images/new/checklist.png">
+                                        </li>
+                                    </ul>
+								<h6 class="fw-normal mb-2">اسحب الملفات  هنا لبدء التحميل</h6>
+								<div class="hr-sect mb-2">او</div>
+								<h6 class="fw-normal mb-2">اضغط على الصندوق لاختيار الملفات</h6>
+							</p>
+						</div>
+						<div id="successIcon" class="successIcon hidden">
+							<img src="assets/images/improvement-96.png">
+						</div>
+						<div id="progressCircle" class="progress-circle hidden"></div>
+					</div>
+						<div class="popupmodal-content">
+							<p>في حالة ظهور الجداول بشكل غير طبيعي، يرجى التأكد من الملفات مرة أخرى وتحميلها من جديد.</p>
+							<button id="calculate-button" class="btn btn-primary-soft mb-0 mt-3 mt-lg-4">تمت عمليت إستيراد النتائج بنجاح</button>
+						</div>
+				</div>
+			</div>
+		</div>
+			<div class="alert alert-danger" role="alert">
+				<h6 class="alert-heading">تنويه هام!</h6>
+				<p>السادة المستخدمين... نود تذكيركم أن عميلة تحليل النتائج لا تقبل إلا الملفات الأصلية لمنصة الرقمنة الخاصة بوزارة التربية والتعليم الجزائرية.</p>
+				<hr>
+				<p class="mb-0">يرجى تحميل ورفع الملفات الأصلية للرقمنة فقط ولا غير..</p>
+			</div>
+	</div>
+</section>
+        <section class="section-area">
+            <div id="Orsection" class="container">
+                <br><br>
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">نتائج شهادة التعليم المتوسط
+                </a>
+                    <div class="about-image-gallery">
+						<div class="scroll-container">
+							<table id="data-table" class="table table-striped display nowrap" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>اللقب و الإسم</th>
+                                        <th>تاريخ الميلاد</th>
+                                        <th>المعدل السنوي</th>
+                                        <th>معدل ش ت م</th>
+                                        <th>معدل الإنتقال</th>
+                                        <th>رياضيات</th>
+                                        <th>رياضيات ش ت م</th>
+                                        <th>العربية</th>
+                                        <th>العربية ش ت م</th>
+                                        <th>الفرنسية</th>
+                                        <th>الفرنسية ش ت م</th>
+                                        <th>الإنجليزية</th>
+                                        <th>الإنجليزية ش ت م</th>
+                                        <th>الأمازيغية</th>
+                                        <th>الأمازيغية ش ت م</th>
+                                        <th>ت إسلامية</th>
+                                        <th>ت إسلامية ش ت م</th>
+                                        <th>ت مدنية</th>
+                                        <th>ت مدنية ش ت م</th>
+                                        <th>تاريخ جغرافيا</th>
+                                        <th>تاريخ جغرافيا ش ت م</th>
+                                        <th>علوم ط</th>
+                                        <th>علوم ط ش ت م</th>
+                                        <th>فيزياء</th>
+                                        <th>فيزياء ش ت م</th>
+                                        <th>معلوماتية</th>
+                                        <th>معلوماتية ش ت م</th>
+                                        <th>ت تشكيلية</th>
+                                        <th>ت تشكيلية ش ت م</th>
+                                        <th>ت موسيقية</th>
+                                        <th>ت موسيقية ش ت م</th>
+                                        <th>ت بدنية</th>
+                                        <th>ت بدنية ش ت م</th>
+                                        <th>ملاحظة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+    					</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="dataModal" tabindex="-1" role="dialog" aria-labelledby="dataModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        <div class="modal-body">
+                            <section class="pt-0">
+                                <div class="container-fluid px-0">
+                                    <div class="card bg-blue h-100px h-md-200px rounded-0" style="background:url(assets/images/pattern/03.png) no-repeat center center; background-size:cover;">
+                                    </div>
+                                </div>
+                                <div class="container mt-n4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card bg-transparent card-body pb-0 px-0 mt-2 mt-sm-0">
+                                                <div class="row d-sm-flex justify-sm-content-between mt-2 mt-md-0">
+                                                    <div class="col-auto">
+                                                        <div class="avatar avatar-xxl position-relative mt-n4">
+                                                            <img class="avatar-img rounded-circle border border-white border-3 shadow" src="assets/images/avatar/13.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-sm-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <h1 class="my-1 fs-4 mt-4" id="name"></h1>
+                                                            <span id="NF"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="col">
+                                            <ul class="list-inline mb-4">
+                                                <li class="list-inline-item">
+                                                    <input type="radio" class="btn-check" name="options" id="option1" checked>
+                                                    <label class="btn btn-primary-soft-check d-flex flex-wrap p-3" for="option1">
+                                                        <span class="mb-2 h6 fw-light">المعدل السنوي</span>
+                                                        <span class="d-flex align-items-center col-lg-12">
+                                                            <span id="annualGrade" class="mb-0 h5 me-2 text-primary"></span>
+                                                            <span id="annualGradeBadge" class="badge text-bg-primary text-primary bg-opacity-10 mb-0"></span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <input type="radio" class="btn-check" name="options" id="option2">
+                                                    <label class="btn btn-primary-soft-check d-flex flex-wrap p-3" for="option2">
+                                                        <span class="mb-2 h6 fw-light">معدل شهادة التعليم المتوسط</span>
+                                                    <span class="d-flex align-items-center col-lg-12">
+                                                        <span id="bemGrade" class="mb-0 h5 me-2 text-primary"></span>
+                                                        <span id="bemGradeBadge" class="badge text-bg-primary text-primary bg-opacity-10 mb-0"></span>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <input type="radio" class="btn-check" name="options" id="option3">
+                                                    <label class="btn btn-primary-soft-check d-flex flex-wrap p-3" for="option3">
+                                                        <span class="mb-2 h6 fw-light">معدل الإنتقال</span>
+                                                    <span class="d-flex align-items-center col-lg-12">
+                                                        <span id="successGrade" class="mb-0 h5 me-2 text-primary"></span>
+                                                        <span id="successGradeBadge" class="badge text-bg-primary text-primary bg-opacity-10 mb-0">الإقتراح</span>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12"> 
+                                                <div class="card card-body bg-transparent pb-0 mb-4">
+                                                    <div class="table-responsive border-0">
+                                                        <table class="table align-middle p-4 mb-0 table-hover">
+                                                            <thead class="align-middle">
+                                                                <tr>
+                                                                    <th scope="col" class="border-0 rounded-start" style="width: 5%;">#</th>
+                                                                    <th scope="col" class="border-0">المادة</th>
+                                                                    <th scope="col" class="border-0">النقطة</th>
+                                                                    <th scope="col" class="border-0">ملاحظة</th>
+                                                                    <th scope="col" class="border-0 rounded-start" style="width: 5%;">#</th>
+                                                                    <th scope="col" class="border-0">المادة</th>
+                                                                    <th scope="col" class="border-0">النقطة</th>
+                                                                    <th scope="col" class="border-0">ملاحظة</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">01</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة العربية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="arabic"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="arabicBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">08</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-calculator	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">الرياضيات</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="mathematics"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="mathematicsBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>02</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة الأمازيغية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="amazigh"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="amazighBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">09</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-seedling	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">العلوم الطبيعية والحياة</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="lifeScience"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="lifeScienceBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">03</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة الفرنسية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="french"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="frenchBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">10</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-atom"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">العلوم الفيزيائية والتكنولوجيا</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="physicsTechnology"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="physicsTechnologyBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">04</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة الإنجليزية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="english"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="englishBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>11</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-laptop"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">المعلوماتية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="informatics"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="informaticsBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>05</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-mosque"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية الإسلامية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="islamicEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="islamicEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>12</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-palette	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية التشكيلية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="artEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="artEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>06</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-balance-scale	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية المدنية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="civicEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="civicEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>13</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-music"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية الموسيقية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="musicEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="musicEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">07</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-street-view	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التاريخ والجغرافيا</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="historyGeography"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="historyGeographyBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>14</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-dumbbell"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية البدنية والرياضية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="physicalEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="physicalEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Analysesection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn btn-primary-soft">تحليل نتائج شهادة التعليم المتوسط
+                    <div class="btn-drop">
+						<i class="bi bi-printer-fill" onclick="printSection('Analysesection')"></i>
+						<i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('Analysesection')"></i>
+						<i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#AnalyseBackdrop"></i>
+					</div>
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container">    
+                            <table id="data-table" class="table display nowrap" width="100%">
+                                <thead>
+                                        <tr>
+                                            <th>المواد</th>
+                                            <th>الحاضرون</th>
+                                            <th>معدل القسم</th>
+                                            <th>الإنحراف المعياري</th>
+                                            <th>ملاحظة</th>
+                                        </tr> 
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>اللغة العربية</td>
+                                            <td id="arabic-count"></td>
+                                            <td id="arabic-mean"></td>
+                                            <td id="arabic-stdv"></td>
+                                            <td id="arabic-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الأمازيغية</td>
+                                            <td id="Amazigh-count"></td>
+                                            <td id="amazigh-mean"></td>
+                                            <td id="amazigh-stdv"></td>
+                                            <td id="amazigh-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الفرنسية</td>
+                                            <td id="french-count"></td>
+                                            <td id="french-mean"></td>
+                                            <td id="french-stdv"></td>
+                                            <td id="french-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الإنجليزية</td>
+                                            <td id="english-count"></td>
+                                            <td id="english-mean"></td>
+                                            <td id="english-stdv"></td>
+                                            <td id="english-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الإسلامية</td>
+                                            <td id="islamic-count"></td>
+                                            <td id="islamic-mean"></td>
+                                            <td id="islamic-stdv"></td>
+                                            <td id="islamic-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية المدنية</td>
+                                            <td id="civics-count"></td>
+                                            <td id="civics-mean"></td>
+                                            <td id="civics-stdv"></td>
+                                            <td id="civics-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التاريخ والجغرافيا</td>
+                                            <td id="historyandgeography-count"></td>
+                                            <td id="historyandgeography-mean"></td>
+                                            <td id="historyandgeography-stdv"></td>
+                                            <td id="historyandgeography-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرياضيات</td>
+                                            <td id="math-count"></td>
+                                            <td id="math-mean"></td>
+                                            <td id="math-stdv"></td>
+                                            <td id="math-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الطبيعية والحياة</td>
+                                            <td id="nature-count"></td>
+                                            <td id="nature-mean"></td>
+                                            <td id="nature-stdv"></td>
+                                            <td id="nature-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الفزيائية</td>
+                                            <td id="physical-count"></td>
+                                            <td id="physical-mean"></td>
+                                            <td id="physical-stdv"></td>
+                                            <td id="physical-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الإعلام الآلي</td>
+                                            <td id="informatics-count"></td>
+                                            <td id="informatics-mean"></td>
+                                            <td id="informatics-stdv"></td>
+                                            <td id="informatics-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية التشكيلية</td>
+                                            <td id="fine-count"></td>
+                                            <td id="fine-mean"></td>
+                                            <td id="fine-stdv"></td>
+                                            <td id="fine-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الموسيقية</td>
+                                            <td id="music-count"></td>
+                                            <td id="music-mean"></td>
+                                            <td id="music-stdv"></td>
+                                            <td id="music-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية البدنية</td>
+                                            <td id="athletic-count"></td>
+                                            <td id="athletic-mean"></td>
+                                            <td id="athletic-stdv"></td>
+                                            <td id="athletic-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">المعدل السنوي</td>
+                                            <td style="font-weight: bold;" id="rate-count"></td>
+                                            <td style="font-weight: bold;" id="rate-mean"></td>
+                                            <td style="font-weight: bold;" id="rate-stdv"></td>
+                                            <td id="rate-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">معدل ث.ت.م</td>
+                                            <td style="font-weight: bold;" id="ratebem-count"></td>
+                                            <td style="font-weight: bold;" id="ratebem-mean"></td>
+                                            <td style="font-weight: bold;" id="ratebem-stdv"></td>
+                                            <td id="ratebem-ms-note"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">معدل الإنتقال</td>
+                                            <td style="font-weight: bold;" id="rateup-count"></td>
+                                            <td style="font-weight: bold;" id="rateup-mean"></td>
+                                            <td style="font-weight: bold;" id="rateup-stdv"></td>
+                                            <td id="rateup-ms-note"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>              
+							<div class="modal fade" id="AnalyseBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+								<div class="modal-dialog modal-fullscreen">
+									<div class="modal-content">
+										<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<div id="Analyse-chart" style="width: auto; height: auto;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Greatersection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">تحليل شهادة التعليم المتوسط حسب الفئات
+					<div class="btn-drop">
+						<i class="bi bi-printer-fill" onclick="printSection('Greatersection')"></i>
+						<i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('Greatersection')"></i>
+						<i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#GreaterBackdrop"></i>
+					</div>
+                </a>
+                    <div class="about-image-gallery">
+                    <div class="scroll-container"> 
+                        <table id="data-table" class="table display nowrap" width="100%">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">المادة</th>
+                                    <th colspan="2"> 10 ≤</th>
+                                    <th colspan="2">من 8 إلى 9,99</th>
+                                    <th colspan="2">أقل من 08</th>
+                                    <th rowspan="2">ملاحظة</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>اللغة العربية</td>
+                                    <td id="arabic-countGTen"></td>
+                                    <td id="arabic-percentageGTen"></td>
+                                    <td id="arabic-countBEightAndNine"></td>
+                                    <td id="arabic-percentageBEightAndNine"></td>
+                                    <td id="arabic-countLEight"></td>
+                                    <td id="arabic-percentageLEight"></td>
+                                    <td id="arabic-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الأمازيغية</td>
+                                    <td id="amazigh-countGTen"></td>
+                                    <td id="amazigh-percentageGTen"></td>
+                                    <td id="amazigh-countBEightAndNine"></td>
+                                    <td id="amazigh-percentageBEightAndNine"></td>
+                                    <td id="amazigh-countLEight"></td>
+                                    <td id="amazigh-percentageLEight"></td>
+                                    <td id="amazigh-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الفرنسية</td>
+                                    <td id="french-countGTen"></td>
+                                    <td id="french-percentageGTen"></td>
+                                    <td id="french-countBEightAndNine"></td>
+                                    <td id="french-percentageBEightAndNine"></td>
+                                    <td id="french-countLEight"></td>
+                                    <td id="french-percentageLEight"></td>
+                                    <td id="french-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الإنجليزية</td>
+                                    <td id="english-countGTen"></td>
+                                    <td id="english-percentageGTen"></td>
+                                    <td id="english-countBEightAndNine"></td>
+                                    <td id="english-percentageBEightAndNine"></td>
+                                    <td id="english-countLEight"></td>
+                                    <td id="english-percentageLEight"></td>
+                                    <td id="english-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية الإسلامية</td>
+                                    <td id="islamic-countGTen"></td>
+                                    <td id="islamic-percentageGTen"></td>
+                                    <td id="islamic-countBEightAndNine"></td>
+                                    <td id="islamic-percentageBEightAndNine"></td>
+                                    <td id="islamic-countLEight"></td>
+                                    <td id="islamic-percentageLEight"></td>
+                                    <td id="islamic-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية المدنية</td>
+                                    <td id="civics-countGTen"></td>
+                                    <td id="civics-percentageGTen"></td>
+                                    <td id="civics-countBEightAndNine"></td>
+                                    <td id="civics-percentageBEightAndNine"></td>
+                                    <td id="civics-countLEight"></td>
+                                    <td id="civics-percentageLEight"></td>
+                                    <td id="civics-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>التاريخ والجغرافيا</td>
+                                    <td id="historyandgeography-countGTen"></td>
+                                    <td id="historyandgeography-percentageGTen"></td>
+                                    <td id="historyandgeography-countBEightAndNine"></td>
+                                    <td id="historyandgeography-percentageBEightAndNine"></td>
+                                    <td id="historyandgeography-countLEight"></td>
+                                    <td id="historyandgeography-percentageLEight"></td>
+                                    <td id="historyandgeography-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>الرياضيات</td>
+                                    <td id="math-countGTen"></td>
+                                    <td id="math-percentageGTen"></td>
+                                    <td id="math-countBEightAndNine"></td>
+                                    <td id="math-percentageBEightAndNine"></td>
+                                    <td id="math-countLEight"></td>
+                                    <td id="math-percentageLEight"></td>
+                                    <td id="math-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>العلوم الطبيعية والحياة</td>
+                                    <td id="nature-countGTen"></td>
+                                    <td id="nature-percentageGTen"></td>
+                                    <td id="nature-countBEightAndNine"></td>
+                                    <td id="nature-percentageBEightAndNine"></td>
+                                    <td id="nature-countLEight"></td>
+                                    <td id="nature-percentageLEight"></td>
+                                    <td id="nature-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>العلوم الفزيائية</td>
+                                    <td id="physical-countGTen"></td>
+                                    <td id="physical-percentageGTen"></td>
+                                    <td id="physical-countBEightAndNine"></td>
+                                    <td id="physical-percentageBEightAndNine"></td>
+                                    <td id="physical-countLEight"></td>
+                                    <td id="physical-percentageLEight"></td>
+                                    <td id="physical-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>الإعلام الآلي</td>
+                                    <td id="informatics-countGTen"></td>
+                                    <td id="informatics-percentageGTen"></td>
+                                    <td id="informatics-countBEightAndNine"></td>
+                                    <td id="informatics-percentageBEightAndNine"></td>
+                                    <td id="informatics-countLEight"></td>
+                                    <td id="informatics-percentageLEight"></td>
+                                    <td id="informatics-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية التشكيلية</td>
+                                    <td id="fine-countGTen"></td>
+                                    <td id="fine-percentageGTen"></td>
+                                    <td id="fine-countBEightAndNine"></td>
+                                    <td id="fine-percentageBEightAndNine"></td>
+                                    <td id="fine-countLEight"></td>
+                                    <td id="fine-percentageLEight"></td>
+                                    <td id="fine-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية الموسيقية</td>
+                                    <td id="music-countGTen"></td>
+                                    <td id="music-percentageGTen"></td>
+                                    <td id="music-countBEightAndNine"></td>
+                                    <td id="music-percentageBEightAndNine"></td>
+                                    <td id="music-countLEight"></td>
+                                    <td id="music-percentageLEight"></td>
+                                    <td id="music-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية البدنية</td>
+                                    <td id="athletic-countGTen"></td>
+                                    <td id="athletic-percentageGTen"></td>
+                                    <td id="athletic-countBEightAndNine"></td>
+                                    <td id="athletic-percentageBEightAndNine"></td>
+                                    <td id="athletic-countLEight"></td>
+                                    <td id="athletic-percentageLEight"></td>
+                                    <td id="athletic-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">المعدل السنوي</td>
+                                    <td style="font-weight: bold;" id="rate-countGTen"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageGTen"></td>
+                                    <td style="font-weight: bold;" id="rate-countBEightAndNine"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageBEightAndNine"></td>
+                                    <td style="font-weight: bold;" id="rate-countLEight"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageLEight"></td>
+                                    <td style="font-weight: bold;" id="rate-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">معدل ث.ت.م</td>
+                                    <td style="font-weight: bold;" id="ratebem-countGTen"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageGTen"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countBEightAndNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageBEightAndNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countLEight"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageLEight"></td>
+                                    <td style="font-weight: bold;" id="ratebem-Note"></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">معدل الإنتقال</td>
+                                    <td style="font-weight: bold;" id="rateup-countGTen"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageGTen"></td>
+                                    <td style="font-weight: bold;" id="rateup-countBEightAndNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageBEightAndNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-countLEight"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageLEight"></td>
+                                    <td style="font-weight: bold;" id="rateup-Note"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+					<div class="modal fade" id="GreaterBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+						<div class="modal-dialog modal-fullscreen">
+							<div class="modal-content">
+								<div class="modal-header">
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<div id="Greater-chart" style="width: auto; height: auto;"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Successsection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">تحليل نتائج شهادة التعليم المتوسط حسب نسبة النجاح
+					<div class="btn-drop">
+						<i class="bi bi-printer-fill" onclick="printSection('Successsection')"></i>
+						<i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('Successsection')"></i>
+						<i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#SuccessRateBackdrop"></i>
+					</div>
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container">
+                            <table id="data-table" class="table display nowrap" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">المادة</th>
+                                        <th colspan="2">عدد التلاميذ المتحصلين على معدل فصلي ≥ 20/10 حسب المواد</th>
+                                        <th rowspan="2">ملاحظة</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1" width="25%">العدد</th>
+                                        <th colspan="1" width="25%">نسبة النجاح في المادة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>اللغة العربية</td>
+                                        <td id="arabic-countGTenSucces"></td>
+                                        <td id="arabic-percentageGTenSucces"></td>
+                                        <td id="arabic-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللغة الأمازيغية</td>
+                                        <td id="amazigh-countGTenSucces"></td>
+                                        <td id="amazigh-percentageGTenSucces"></td>
+                                        <td id="amazigh-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللغة الفرنسية</td>
+                                        <td id="french-countGTenSucces"></td>
+                                        <td id="french-percentageGTenSucces"></td>
+                                        <td id="french-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللغة الإنجليزية</td>
+                                        <td id="english-countGTenSucces"></td>
+                                        <td id="english-percentageGTenSucces"></td>
+                                        <td id="english-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التربية الإسلامية</td>
+                                        <td id="islamic-countGTenSucces"></td>
+                                        <td id="islamic-percentageGTenSucces"></td>
+                                        <td id="islamic-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التربية المدنية</td>
+                                        <td id="civics-countGTenSucces"></td>
+                                        <td id="civics-percentageGTenSucces"></td>
+                                        <td id="civics-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التاريخ والجغرافيا</td>
+                                        <td id="historyandgeography-countGTenSucces"></td>
+                                        <td id="historyandgeography-percentageGTenSucces"></td>
+                                        <td id="historyandgeography-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الرياضيات</td>
+                                        <td id="math-countGTenSucces"></td>
+                                        <td id="math-percentageGTenSucces"></td>
+                                        <td id="math-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>العلوم الطبيعية والحياة</td>
+                                        <td id="nature-countGTenSucces"></td>
+                                        <td id="nature-percentageGTenSucces"></td>
+                                        <td id="nature-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>العلوم الفزيائية</td>
+                                        <td id="physical-countGTenSucces"></td>
+                                        <td id="physical-percentageGTenSucces"></td>
+                                        <td id="physical-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الإعلام الآلي</td>
+                                        <td id="informatics-countGTenSucces"></td>
+                                        <td id="informatics-percentageGTenSucces"></td>
+                                        <td id="informatics-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التربية التشكيلية</td>
+                                        <td id="fine-countGTenSucces"></td>
+                                        <td id="fine-percentageGTenSucces"></td>
+                                        <td id="fine-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التربية الموسيقية</td>
+                                        <td id="music-countGTenSucces"></td>
+                                        <td id="music-percentageGTenSucces"></td>
+                                        <td id="music-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التربية البدنية</td>
+                                        <td id="athletic-countGTenSucces"></td>
+                                        <td id="athletic-percentageGTenSucces"></td>
+                                        <td id="athletic-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">نسبة النجاح  لمعدل السنوي</td>
+                                        <td style="font-weight: bold;" id="rate-countGTenSucces"></td>
+                                        <td style="font-weight: bold;" id="rate-percentageGTenSucces"></td>
+                                        <td style="font-weight: bold;" id="rate-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">نسبة النجاح معدل ش.ت.م</td>
+                                        <td style="font-weight: bold;" id="ratebem-countGTenSucces"></td>
+                                        <td style="font-weight: bold;" id="ratebem-percentageGTenSucces"></td>
+                                        <td style="font-weight: bold;" id="ratebem-NoteSucces"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">نسبة النجاح معدل الإنتقال</td>
+                                        <td style="font-weight: bold;" id="rateup-countGTenSucces"></td>
+                                        <td style="font-weight: bold;" id="rateup-percentageGTenSucces"></td>
+                                        <td style="font-weight: bold;" id="rateup-NoteSucces"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+						<div class="modal fade" id="SuccessRateBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+							<div class="modal-dialog modal-fullscreen">
+								<div class="modal-content">
+									<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div id="SuccessRate-chart" style="width: auto; height: auto;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Outcomesection" class="container">
+                <div class="row g-5 align-items-center">
+                    <a id="titleElement" class="btn-print btn btn-primary-soft">حصيلة المعدلات الفصلية
+						<div class="btn-drop">
+							<i class="bi bi-printer-fill" onclick="printSection('Outcomesection')"></i>
+							<i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('Outcomesection')"></i>
+							<i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#analyseBackdrop"></i>
+						</div>
+                    </a>        
+                    <div class="about-image-gallery">
+                    <div class="scroll-container">      
+                        <table id="data-table" class="table display nowrap" width="100%">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">المادة</th>
+                                    <th colspan="2">0 - 8.99</th>
+                                    <th colspan="2">9 - 9.99</th>
+                                    <th colspan="2">10 - 11.99</th>
+                                    <th colspan="2">12 - 13.99</th>
+                                    <th colspan="2">14 - 15.99</th>
+                                    <th colspan="2">16 - 17.99</th>
+                                    <th colspan="2">18 - 20</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>اللغة العربية</td>
+                                    <td id="arabic-countZeroToEight"></td>
+                                    <td id="arabic-percentageZeroToEight"></td>
+                                    <td id="arabic-countNineToNinePointNine"></td>
+                                    <td id="arabic-percentageNineToNinePointNine"></td>
+                                    <td id="arabic-countTenToElevenPointNine"></td>
+                                    <td id="arabic-percentageTenToElevenPointNine"></td>
+                                    <td id="arabic-countTwelveToThirteenPointNine"></td>
+                                    <td id="arabic-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="arabic-countFourteenToFifteenPointNine"></td>
+                                    <td id="arabic-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="arabic-countSixteenToSeventeenPointNine"></td>
+                                    <td id="arabic-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="arabic-countEighteenToTwenty"></td>
+                                    <td id="arabic-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الأمازيغية</td>
+                                    <td id="amazigh-countZeroToEight"></td>
+                                    <td id="amazigh-percentageZeroToEight"></td>
+                                    <td id="amazigh-countNineToNinePointNine"></td>
+                                    <td id="amazigh-percentageNineToNinePointNine"></td>
+                                    <td id="amazigh-countTenToElevenPointNine"></td>
+                                    <td id="amazigh-percentageTenToElevenPointNine"></td>
+                                    <td id="amazigh-countTwelveToThirteenPointNine"></td>
+                                    <td id="amazigh-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="amazigh-countFourteenToFifteenPointNine"></td>
+                                    <td id="amazigh-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="amazigh-countSixteenToSeventeenPointNine"></td>
+                                    <td id="amazigh-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="amazigh-countEighteenToTwenty"></td>
+                                    <td id="amazigh-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الفرنسية</td>
+                                    <td id="french-countZeroToEight"></td>
+                                    <td id="french-percentageZeroToEight"></td>
+                                    <td id="french-countNineToNinePointNine"></td>
+                                    <td id="french-percentageNineToNinePointNine"></td>
+                                    <td id="french-countTenToElevenPointNine"></td>
+                                    <td id="french-percentageTenToElevenPointNine"></td>
+                                    <td id="french-countTwelveToThirteenPointNine"></td>
+                                    <td id="french-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="french-countFourteenToFifteenPointNine"></td>
+                                    <td id="french-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="french-countSixteenToSeventeenPointNine"></td>
+                                    <td id="french-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="french-countEighteenToTwenty"></td>
+                                    <td id="french-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الإنجليزية</td>
+                                    <td id="english-countZeroToEight"></td>
+                                    <td id="english-percentageZeroToEight"></td>
+                                    <td id="english-countNineToNinePointNine"></td>
+                                    <td id="english-percentageNineToNinePointNine"></td>
+                                    <td id="english-countTenToElevenPointNine"></td>
+                                    <td id="english-percentageTenToElevenPointNine"></td>
+                                    <td id="english-countTwelveToThirteenPointNine"></td>
+                                    <td id="english-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="english-countFourteenToFifteenPointNine"></td>
+                                    <td id="english-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="english-countSixteenToSeventeenPointNine"></td>
+                                    <td id="english-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="english-countEighteenToTwenty"></td>
+                                    <td id="english-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية الإسلامية</td>
+                                    <td id="islamic-countZeroToEight"></td>
+                                    <td id="islamic-percentageZeroToEight"></td>
+                                    <td id="islamic-countNineToNinePointNine"></td>
+                                    <td id="islamic-percentageNineToNinePointNine"></td>
+                                    <td id="islamic-countTenToElevenPointNine"></td>
+                                    <td id="islamic-percentageTenToElevenPointNine"></td>
+                                    <td id="islamic-countTwelveToThirteenPointNine"></td>
+                                    <td id="islamic-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="islamic-countFourteenToFifteenPointNine"></td>
+                                    <td id="islamic-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="islamic-countSixteenToSeventeenPointNine"></td>
+                                    <td id="islamic-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="islamic-countEighteenToTwenty"></td>
+                                    <td id="islamic-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية المدنية</td>
+                                    <td id="civics-countZeroToEight"></td>
+                                    <td id="civics-percentageZeroToEight"></td>
+                                    <td id="civics-countNineToNinePointNine"></td>
+                                    <td id="civics-percentageNineToNinePointNine"></td>
+                                    <td id="civics-countTenToElevenPointNine"></td>
+                                    <td id="civics-percentageTenToElevenPointNine"></td>
+                                    <td id="civics-countTwelveToThirteenPointNine"></td>
+                                    <td id="civics-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="civics-countFourteenToFifteenPointNine"></td>
+                                    <td id="civics-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="civics-countSixteenToSeventeenPointNine"></td>
+                                    <td id="civics-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="civics-countEighteenToTwenty"></td>
+                                    <td id="civics-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>التاريخ والجغرافيا</td>
+                                    <td id="historyandgeography-countZeroToEight"></td>
+                                    <td id="historyandgeography-percentageZeroToEight"></td>
+                                    <td id="historyandgeography-countNineToNinePointNine"></td>
+                                    <td id="historyandgeography-percentageNineToNinePointNine"></td>
+                                    <td id="historyandgeography-countTenToElevenPointNine"></td>
+                                    <td id="historyandgeography-percentageTenToElevenPointNine"></td>
+                                    <td id="historyandgeography-countTwelveToThirteenPointNine"></td>
+                                    <td id="historyandgeography-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="historyandgeography-countFourteenToFifteenPointNine"></td>
+                                    <td id="historyandgeography-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="historyandgeography-countSixteenToSeventeenPointNine"></td>
+                                    <td id="historyandgeography-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="historyandgeography-countEighteenToTwenty"></td>
+                                    <td id="historyandgeography-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>الرياضيات</td>
+                                    <td id="math-countZeroToEight"></td>
+                                    <td id="math-percentageZeroToEight"></td>
+                                    <td id="math-countNineToNinePointNine"></td>
+                                    <td id="math-percentageNineToNinePointNine"></td>
+                                    <td id="math-countTenToElevenPointNine"></td>
+                                    <td id="math-percentageTenToElevenPointNine"></td>
+                                    <td id="math-countTwelveToThirteenPointNine"></td>
+                                    <td id="math-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="math-countFourteenToFifteenPointNine"></td>
+                                    <td id="math-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="math-countSixteenToSeventeenPointNine"></td>
+                                    <td id="math-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="math-countEighteenToTwenty"></td>
+                                    <td id="math-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>العلوم الطبيعية والحياة</td>
+                                    <td id="nature-countZeroToEight"></td>
+                                    <td id="nature-percentageZeroToEight"></td>
+                                    <td id="nature-countNineToNinePointNine"></td>
+                                    <td id="nature-percentageNineToNinePointNine"></td>
+                                    <td id="nature-countTenToElevenPointNine"></td>
+                                    <td id="nature-percentageTenToElevenPointNine"></td>
+                                    <td id="nature-countTwelveToThirteenPointNine"></td>
+                                    <td id="nature-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="nature-countFourteenToFifteenPointNine"></td>
+                                    <td id="nature-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="nature-countSixteenToSeventeenPointNine"></td>
+                                    <td id="nature-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="nature-countEighteenToTwenty"></td>
+                                    <td id="nature-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>العلوم الفزيائية</td>
+                                    <td id="physical-countZeroToEight"></td>
+                                    <td id="physical-percentageZeroToEight"></td>
+                                    <td id="physical-countNineToNinePointNine"></td>
+                                    <td id="physical-percentageNineToNinePointNine"></td>
+                                    <td id="physical-countTenToElevenPointNine"></td>
+                                    <td id="physical-percentageTenToElevenPointNine"></td>
+                                    <td id="physical-countTwelveToThirteenPointNine"></td>
+                                    <td id="physical-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="physical-countFourteenToFifteenPointNine"></td>
+                                    <td id="physical-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="physical-countSixteenToSeventeenPointNine"></td>
+                                    <td id="physical-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="physical-countEighteenToTwenty"></td>
+                                    <td id="physical-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>الإعلام الآلي</td>
+                                    <td id="informatics-countZeroToEight"></td>
+                                    <td id="informatics-percentageZeroToEight"></td>
+                                    <td id="informatics-countNineToNinePointNine"></td>
+                                    <td id="informatics-percentageNineToNinePointNine"></td>
+                                    <td id="informatics-countTenToElevenPointNine"></td>
+                                    <td id="informatics-percentageTenToElevenPointNine"></td>
+                                    <td id="informatics-countTwelveToThirteenPointNine"></td>
+                                    <td id="informatics-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="informatics-countFourteenToFifteenPointNine"></td>
+                                    <td id="informatics-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="informatics-countSixteenToSeventeenPointNine"></td>
+                                    <td id="informatics-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="informatics-countEighteenToTwenty"></td>
+                                    <td id="informatics-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية التشكيلية</td>
+                                    <td id="fine-countZeroToEight"></td>
+                                    <td id="fine-percentageZeroToEight"></td>
+                                    <td id="fine-countNineToNinePointNine"></td>
+                                    <td id="fine-percentageNineToNinePointNine"></td>
+                                    <td id="fine-countTenToElevenPointNine"></td>
+                                    <td id="fine-percentageTenToElevenPointNine"></td>
+                                    <td id="fine-countTwelveToThirteenPointNine"></td>
+                                    <td id="fine-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="fine-countFourteenToFifteenPointNine"></td>
+                                    <td id="fine-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="fine-countSixteenToSeventeenPointNine"></td>
+                                    <td id="fine-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="fine-countEighteenToTwenty"></td>
+                                    <td id="fine-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية الموسيقية</td>
+                                    <td id="music-countZeroToEight"></td>
+                                    <td id="music-percentageZeroToEight"></td>
+                                    <td id="music-countNineToNinePointNine"></td>
+                                    <td id="music-percentageNineToNinePointNine"></td>
+                                    <td id="music-countTenToElevenPointNine"></td>
+                                    <td id="music-percentageTenToElevenPointNine"></td>
+                                    <td id="music-countTwelveToThirteenPointNine"></td>
+                                    <td id="music-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="music-countFourteenToFifteenPointNine"></td>
+                                    <td id="music-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="music-countSixteenToSeventeenPointNine"></td>
+                                    <td id="music-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="music-countEighteenToTwenty"></td>
+                                    <td id="music-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية البدنية</td>
+                                    <td id="athletic-countZeroToEight"></td>
+                                    <td id="athletic-percentageZeroToEight"></td>
+                                    <td id="athletic-countNineToNinePointNine"></td>
+                                    <td id="athletic-percentageNineToNinePointNine"></td>
+                                    <td id="athletic-countTenToElevenPointNine"></td>
+                                    <td id="athletic-percentageTenToElevenPointNine"></td>
+                                    <td id="athletic-countTwelveToThirteenPointNine"></td>
+                                    <td id="athletic-percentageTwelveToThirteenPointNine"></td>
+                                    <td id="athletic-countFourteenToFifteenPointNine"></td>
+                                    <td id="athletic-percentageFourteenToFifteenPointNine"></td>
+                                    <td id="athletic-countSixteenToSeventeenPointNine"></td>
+                                    <td id="athletic-percentageSixteenToSeventeenPointNine"></td>
+                                    <td id="athletic-countEighteenToTwenty"></td>
+                                    <td id="athletic-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">المعدل السنوي </td>
+                                    <td style="font-weight: bold;" id="rate-countZeroToEight"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageZeroToEight"></td>
+                                    <td style="font-weight: bold;" id="rate-countNineToNinePointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageNineToNinePointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-countTenToElevenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageTenToElevenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-countTwelveToThirteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageTwelveToThirteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-countFourteenToFifteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageFourteenToFifteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-countSixteenToSeventeenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageSixteenToSeventeenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rate-countEighteenToTwenty"></td>
+                                    <td style="font-weight: bold;" id="rate-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">معدل ش.ت.م</td>
+                                    <td style="font-weight: bold;" id="ratebem-countZeroToEight"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageZeroToEight"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countNineToNinePointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageNineToNinePointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countTenToElevenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageTenToElevenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countTwelveToThirteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageTwelveToThirteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countFourteenToFifteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageFourteenToFifteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countSixteenToSeventeenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageSixteenToSeventeenPointNine"></td>
+                                    <td style="font-weight: bold;" id="ratebem-countEighteenToTwenty"></td>
+                                    <td style="font-weight: bold;" id="ratebem-percentageEighteenToTwenty"></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">معدل الإنتقال</td>
+                                    <td style="font-weight: bold;" id="rateup-countZeroToEight"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageZeroToEight"></td>
+                                    <td style="font-weight: bold;" id="rateup-countNineToNinePointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageNineToNinePointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-countTenToElevenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageTenToElevenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-countTwelveToThirteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageTwelveToThirteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-countFourteenToFifteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageFourteenToFifteenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-countSixteenToSeventeenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageSixteenToSeventeenPointNine"></td>
+                                    <td style="font-weight: bold;" id="rateup-countEighteenToTwenty"></td>
+                                    <td style="font-weight: bold;" id="rateup-percentageEighteenToTwenty"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="CVsection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">نسبة الإنسجام داخل القسم
+					<div class="btn-drop">
+						<i class="bi bi-printer-fill" onclick="printSection('CVsection')"></i>
+						<i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('CVsection')"></i>
+						<i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#cvBackdrop"></i>
+					</div>
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container">    
+                            <table id="data-table" class="table display nowrap" width="auto">
+                                <thead>
+                                        <tr>
+                                            <th>المواد</th>
+                                            <th>نسبة الإنسجام</th>
+                                            <th>ملاحظة</th>
+                                        </tr> 
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>اللغة العربية</td>
+                                            <td id="arabic-cv"></td>
+                                            <td id="arabic-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الأمازيغية</td>
+                                            <td id="Amazigh-cv"></td>
+                                            <td id="amazigh-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الفرنسية</td>
+                                            <td id="french-cv"></td>
+                                            <td id="french-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الإنجليزية</td>
+                                            <td id="english-cv"></td>
+                                            <td id="english-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الإسلامية</td>
+                                            <td id="islamic-cv"></td>
+                                            <td id="islamic-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية المدنية</td>
+                                            <td id="civics-cv"></td>
+                                            <td id="civics-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التاريخ والجغرافيا</td>
+                                            <td id="historyandgeography-cv"></td>
+                                            <td id="historyandgeography-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرياضيات</td>
+                                            <td id="math-cv"></td>
+                                            <td id="math-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الطبيعية والحياة</td>
+                                            <td id="nature-cv"></td>
+                                            <td id="nature-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الفزيائية</td>
+                                            <td id="physical-cv"></td>
+                                            <td id="physical-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الإعلام الآلي</td>
+                                            <td id="informatics-cv"></td>
+                                            <td id="informatics-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية التشكيلية</td>
+                                            <td id="fine-cv"></td>
+                                            <td id="fine-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الموسيقية</td>
+                                            <td id="music-cv"></td>
+                                            <td id="music-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية البدنية</td>
+                                            <td id="athletic-cv"></td>
+                                            <td id="athletic-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">المعدل السنوي</td>
+                                            <td style="font-weight: bold;" id="rate-cv"></td>
+                                            <td style="font-weight: bold;" id="rate-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">معدل ث.ت.م</td>
+                                            <td style="font-weight: bold;" id="ratebem-cv"></td>
+                                            <td style="font-weight: bold;" id="ratebem-cvNote"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">معدل الإنتقال</td>
+                                            <td style="font-weight: bold;" id="rateup-cv"></td>
+                                            <td style="font-weight: bold;" id="rateup-cvNote"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+						<div class="modal fade" id="cvBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+							<div class="modal-dialog modal-fullscreen">
+								<div class="modal-content">
+									<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div id="cv-chart" style="width: auto; height: auto;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="CVGroupssection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">المعايير الإحصائية بالفئات الخمس
+					<div class="btn-drop">
+						<i class="bi bi-printer-fill" onclick="printSection('CVGroupssection')"></i>
+						<i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('CVGroupssection')"></i>
+						<i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#cvgroupBackdrop"></i>
+					</div>
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container">    
+                            <table id="data-table" class="table display nowrap" width="auto">
+                                <thead>
+                                        <tr>
+                                            <th rowspan="2">المواد</th>
+                                            <th colspan="2">الفئة الضعيفة</th>
+                                            <th colspan="2">الفئة القريبة من المتوسط</th>
+                                            <th colspan="2">الفئة المتوسطة</th>
+                                            <th colspan="2">الفئة الحسنة</th>
+                                            <th colspan="2">الفئة الجيدة</th>
+                                        </tr>
+                                        <tr>
+                                            <th colspan="1">العدد</th>
+                                            <th colspan="1">النسبة</th>
+                                            <th colspan="1">العدد</th>
+                                            <th colspan="1">النسبة</th>
+                                            <th colspan="1">العدد</th>
+                                            <th colspan="1">النسبة</th>
+                                            <th colspan="1">العدد</th>
+                                            <th colspan="1">النسبة</th>
+                                            <th colspan="1">العدد</th>
+                                            <th colspan="1">النسبة</th>
+                                        </tr>
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>اللغة العربية</td>
+                                            <td id="arabic-countG1"></td>
+                                            <td id="arabic-percentageG1"></td>
+                                            <td id="arabic-countG2"></td>
+                                            <td id="arabic-percentageG2"></td>
+                                            <td id="arabic-countG3"></td>
+                                            <td id="arabic-percentageG3"></td>
+                                            <td id="arabic-countG4"></td>
+                                            <td id="arabic-percentageG4"></td>
+                                            <td id="arabic-countG5"></td>
+                                            <td id="arabic-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الأمازيغية</td>
+                                            <td id="Amazigh-countG1"></td>
+                                            <td id="amazigh-percentageG1"></td>
+                                            <td id="Amazigh-countG2"></td>
+                                            <td id="amazigh-percentageG2"></td>
+                                            <td id="Amazigh-countG3"></td>
+                                            <td id="amazigh-percentageG3"></td>
+                                            <td id="Amazigh-countG4"></td>
+                                            <td id="amazigh-percentageG4"></td>
+                                            <td id="Amazigh-countG5"></td>
+                                            <td id="amazigh-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الفرنسية</td>
+                                            <td id="french-countG1"></td>
+                                            <td id="french-percentageG1"></td>
+                                            <td id="french-countG2"></td>
+                                            <td id="french-percentageG2"></td>
+                                            <td id="french-countG3"></td>
+                                            <td id="french-percentageG3"></td>
+                                            <td id="french-countG4"></td>
+                                            <td id="french-percentageG4"></td>
+                                            <td id="french-countG5"></td>
+                                            <td id="french-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الإنجليزية</td>
+                                            <td id="english-countG1"></td>
+                                            <td id="english-percentageG1"></td>
+                                            <td id="english-countG2"></td>
+                                            <td id="english-percentageG2"></td>
+                                            <td id="english-countG3"></td>
+                                            <td id="english-percentageG3"></td>
+                                            <td id="english-countG4"></td>
+                                            <td id="english-percentageG4"></td>
+                                            <td id="english-countG5"></td>
+                                            <td id="english-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الإسلامية</td>
+                                            <td id="islamic-countG1"></td>
+                                            <td id="islamic-percentageG1"></td>
+                                            <td id="islamic-countG2"></td>
+                                            <td id="islamic-percentageG2"></td>
+                                            <td id="islamic-countG3"></td>
+                                            <td id="islamic-percentageG3"></td>
+                                            <td id="islamic-countG4"></td>
+                                            <td id="islamic-percentageG4"></td>
+                                            <td id="islamic-countG5"></td>
+                                            <td id="islamic-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية المدنية</td>
+                                            <td id="civics-countG1"></td>
+                                            <td id="civics-percentageG1"></td>
+                                            <td id="civics-countG2"></td>
+                                            <td id="civics-percentageG2"></td>
+                                            <td id="civics-countG3"></td>
+                                            <td id="civics-percentageG3"></td>
+                                            <td id="civics-countG4"></td>
+                                            <td id="civics-percentageG4"></td>
+                                            <td id="civics-countG5"></td>
+                                            <td id="civics-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التاريخ والجغرافيا</td>
+                                            <td id="historyandgeography-countG1"></td>
+                                            <td id="historyandgeography-percentageG1"></td>
+                                            <td id="historyandgeography-countG2"></td>
+                                            <td id="historyandgeography-percentageG2"></td>
+                                            <td id="historyandgeography-countG3"></td>
+                                            <td id="historyandgeography-percentageG3"></td>
+                                            <td id="historyandgeography-countG4"></td>
+                                            <td id="historyandgeography-percentageG4"></td>
+                                            <td id="historyandgeography-countG5"></td>
+                                            <td id="historyandgeography-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرياضيات</td>
+                                            <td id="math-countG1"></td>
+                                            <td id="math-percentageG1"></td>
+                                            <td id="math-countG2"></td>
+                                            <td id="math-percentageG2"></td>
+                                            <td id="math-countG3"></td>
+                                            <td id="math-percentageG3"></td>
+                                            <td id="math-countG4"></td>
+                                            <td id="math-percentageG4"></td>
+                                            <td id="math-countG5"></td>
+                                            <td id="math-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الطبيعية والحياة</td>
+                                            <td id="nature-countG1"></td>
+                                            <td id="nature-percentageG1"></td>
+                                            <td id="nature-countG2"></td>
+                                            <td id="nature-percentageG2"></td>
+                                            <td id="nature-countG3"></td>
+                                            <td id="nature-percentageG3"></td>
+                                            <td id="nature-countG4"></td>
+                                            <td id="nature-percentageG4"></td>
+                                            <td id="nature-countG5"></td>
+                                            <td id="nature-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الفزيائية</td>
+                                            <td id="physical-countG1"></td>
+                                            <td id="physical-percentageG1"></td>
+                                            <td id="physical-countG2"></td>
+                                            <td id="physical-percentageG2"></td>
+                                            <td id="physical-countG3"></td>
+                                            <td id="physical-percentageG3"></td>
+                                            <td id="physical-countG4"></td>
+                                            <td id="physical-percentageG4"></td>
+                                            <td id="physical-countG5"></td>
+                                            <td id="physical-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الإعلام الآلي</td>
+                                            <td id="informatics-countG1"></td>
+                                            <td id="informatics-percentageG1"></td>
+                                            <td id="informatics-countG2"></td>
+                                            <td id="informatics-percentageG2"></td>
+                                            <td id="informatics-countG3"></td>
+                                            <td id="informatics-percentageG3"></td>
+                                            <td id="informatics-countG4"></td>
+                                            <td id="informatics-percentageG4"></td>
+                                            <td id="informatics-countG5"></td>
+                                            <td id="informatics-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية التشكيلية</td>
+                                            <td id="fine-countG1"></td>
+                                            <td id="fine-percentageG1"></td>
+                                            <td id="fine-countG2"></td>
+                                            <td id="fine-percentageG2"></td>
+                                            <td id="fine-countG3"></td>
+                                            <td id="fine-percentageG3"></td>
+                                            <td id="fine-countG4"></td>
+                                            <td id="fine-percentageG4"></td>
+                                            <td id="fine-countG5"></td>
+                                            <td id="fine-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الموسيقية</td>
+                                            <td id="music-countG1"></td>
+                                            <td id="music-percentageG1"></td>
+                                            <td id="music-countG2"></td>
+                                            <td id="music-percentageG2"></td>
+                                            <td id="music-countG3"></td>
+                                            <td id="music-percentageG3"></td>
+                                            <td id="music-countG4"></td>
+                                            <td id="music-percentageG4"></td>
+                                            <td id="music-countG5"></td>
+                                            <td id="music-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية البدنية</td>
+                                            <td id="athletic-countG1"></td>
+                                            <td id="athletic-percentageG1"></td>
+                                            <td id="athletic-countG2"></td>
+                                            <td id="athletic-percentageG2"></td>
+                                            <td id="athletic-countG3"></td>
+                                            <td id="athletic-percentageG3"></td>
+                                            <td id="athletic-countG4"></td>
+                                            <td id="athletic-percentageG4"></td>
+                                            <td id="athletic-countG5"></td>
+                                            <td id="athletic-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">المعدل السنوي</td>
+                                            <td style="font-weight: bold;" id="rate-countG1"></td>
+                                            <td style="font-weight: bold;" id="rate-percentageG1"></td>
+                                            <td style="font-weight: bold;" id="rate-countG2"></td>
+                                            <td style="font-weight: bold;" id="rate-percentageG2"></td>
+                                            <td style="font-weight: bold;" id="rate-countG3"></td>
+                                            <td style="font-weight: bold;" id="rate-percentageG3"></td>
+                                            <td style="font-weight: bold;" id="rate-countG4"></td>
+                                            <td style="font-weight: bold;" id="rate-percentageG4"></td>
+                                            <td style="font-weight: bold;" id="rate-countG5"></td>
+                                            <td style="font-weight: bold;" id="rate-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">معدل ث.ت.م</td>
+                                            <td style="font-weight: bold;" id="ratebem-countG1"></td>
+                                            <td style="font-weight: bold;" id="ratebem-percentageG1"></td>
+                                            <td style="font-weight: bold;" id="ratebem-countG2"></td>
+                                            <td style="font-weight: bold;" id="ratebem-percentageG2"></td>
+                                            <td style="font-weight: bold;" id="ratebem-countG3"></td>
+                                            <td style="font-weight: bold;" id="ratebem-percentageG3"></td>
+                                            <td style="font-weight: bold;" id="ratebem-countG4"></td>
+                                            <td style="font-weight: bold;" id="ratebem-percentageG4"></td>
+                                            <td style="font-weight: bold;" id="ratebem-countG5"></td>
+                                            <td style="font-weight: bold;" id="ratebem-percentageG5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-weight: bold;">معدل الإنتقال</td>
+                                            <td style="font-weight: bold;" id="rateup-countG1"></td>
+                                            <td style="font-weight: bold;" id="rateup-percentageG1"></td>
+                                            <td style="font-weight: bold;" id="rateup-countG2"></td>
+                                            <td style="font-weight: bold;" id="rateup-percentageG2"></td>
+                                            <td style="font-weight: bold;" id="rateup-countG3"></td>
+                                            <td style="font-weight: bold;" id="rateup-percentageG3"></td>
+                                            <td style="font-weight: bold;" id="rateup-countG4"></td>
+                                            <td style="font-weight: bold;" id="rateup-percentageG4"></td>
+                                            <td style="font-weight: bold;" id="rateup-countG5"></td>
+                                            <td style="font-weight: bold;" id="rateup-percentageG5"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+						<div class="modal fade" id="cvgroupBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+							<div class="modal-dialog modal-fullscreen">
+								<div class="modal-content">
+									<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div id="cvgroup-chart" style="width: auto; height: auto;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Differencessection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">تحليل نتائج المقارنة بين النتائج السنوية ونتائج الشهادة
+                    <div class="btn-drop">
+                        <i class="bi bi-printer-fill" onclick="printSection('Differencessection')"></i>
+                        <i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('Differencessection')"></i>
+                        <i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#PairedsimpleBackdrop"></i>
+                    </div>
+                </a> 
+                    <div class="about-image-gallery">
+                    <div class="scroll-container"> 
+                        <table id="data-table" class="table display nowrap" width="100%">
+                            <thead>
+                                <tr>
+                                    <th rowspan="3">المادة</th>
+                                    <th colspan="3">النتائج السنوية</th>
+                                    <th colspan="3">نتائج الشهادة</th>
+                                    <th colspan="3">الفروق</th>
+                                </tr>
+                                <tr>
+                                    <th rowspan="2">المعدل</th>
+                                    <th colspan="2"> 10 ≤</th>
+                                    <th rowspan="2">المعدل</th>
+                                    <th colspan="2"> 10 ≤</th>
+                                    <th rowspan="2">متوسط الفروق</th>
+                                    <th rowspan="2">مستوى الدلالة</th>
+                                    <th rowspan="2">الملاحظة</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                    <th colspan="1">العدد</th>
+                                    <th colspan="1">النسبة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>اللغة العربية</td>
+                                    <td id="arabic-meanAnnualDiff"></td>
+                                    <td id="arabic-countGTenAnnualDiff"></td>
+                                    <td id="arabic-percentageGTenAnnualDiff"></td>
+                                    <td id="arabic-meanDiff"></td>
+                                    <td id="arabic-countGTenDiff"></td>
+                                    <td id="arabic-percentageGTenDiff"></td>
+                                    <td id="arabic-percentageGTenAnnualbemDiff"></td>
+                                    <td id="arabic-pValue"></td>
+                                    <td id="arabic-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الأمازيغية</td>
+                                    <td id="amazigh-meanAnnualDiff"></td>
+                                    <td id="amazigh-countGTenAnnualDiff"></td>
+                                    <td id="amazigh-percentageGTenAnnualDiff"></td>
+                                    <td id="amazigh-meanDiff"></td>
+                                    <td id="amazigh-countGTenDiff"></td>
+                                    <td id="amazigh-percentageGTenDiff"></td>
+                                    <td id="amazigh-percentageGTenAnnualbemDiff"></td>
+                                    <td id="amazigh-pValue"></td>
+                                    <td id="amazigh-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الفرنسية</td>
+                                    <td id="french-meanAnnualDiff"></td>
+                                    <td id="french-countGTenAnnualDiff"></td>
+                                    <td id="french-percentageGTenAnnualDiff"></td>
+                                    <td id="french-meanDiff"></td>
+                                    <td id="french-countGTenDiff"></td>
+                                    <td id="french-percentageGTenDiff"></td>
+                                    <td id="french-percentageGTenAnnualbemDiff"></td>
+                                    <td id="french-pValue"></td>
+                                    <td id="french-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>اللغة الإنجليزية</td>
+                                    <td id="english-meanAnnualDiff"></td>
+                                    <td id="english-countGTenAnnualDiff"></td>
+                                    <td id="english-percentageGTenAnnualDiff"></td>
+                                    <td id="english-meanDiff"></td>
+                                    <td id="english-countGTenDiff"></td>
+                                    <td id="english-percentageGTenDiff"></td>
+                                    <td id="english-percentageGTenAnnualbemDiff"></td>
+                                    <td id="english-pValue"></td>
+                                    <td id="english-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية الإسلامية</td>
+                                    <td id="islamic-meanAnnualDiff"></td>
+                                    <td id="islamic-countGTenAnnualDiff"></td>
+                                    <td id="islamic-percentageGTenAnnualDiff"></td>
+                                    <td id="islamic-meanDiff"></td>
+                                    <td id="islamic-countGTenDiff"></td>
+                                    <td id="islamic-percentageGTenDiff"></td>
+                                    <td id="islamic-percentageGTenAnnualbemDiff"></td>
+                                    <td id="islamic-pValue"></td>
+                                    <td id="islamic-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية المدنية</td>
+                                    <td id="civics-meanAnnualDiff"></td>
+                                    <td id="civics-countGTenAnnualDiff"></td>
+                                    <td id="civics-percentageGTenAnnualDiff"></td>
+                                    <td id="civics-meanDiff"></td>
+                                    <td id="civics-countGTenDiff"></td>
+                                    <td id="civics-percentageGTenDiff"></td>
+                                    <td id="civics-percentageGTenAnnualbemDiff"></td>
+                                    <td id="civics-pValue"></td>
+                                    <td id="civics-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>التاريخ والجغرافيا</td>
+                                    <td id="historyandgeography-meanAnnualDiff"></td>
+                                    <td id="historyandgeography-countGTenAnnualDiff"></td>
+                                    <td id="historyandgeography-percentageGTenAnnualDiff"></td>
+                                    <td id="historyandgeography-meanDiff"></td>
+                                    <td id="historyandgeography-countGTenDiff"></td>
+                                    <td id="historyandgeography-percentageGTenDiff"></td>
+                                    <td id="historyandgeography-percentageGTenAnnualbemDiff"></td>
+                                    <td id="historyandgeography-pValue"></td>
+                                    <td id="historyandgeography-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>الرياضيات</td>
+                                    <td id="math-meanAnnualDiff"></td>
+                                    <td id="math-countGTenAnnualDiff"></td>
+                                    <td id="math-percentageGTenAnnualDiff"></td>
+                                    <td id="math-meanDiff"></td>
+                                    <td id="math-countGTenDiff"></td>
+                                    <td id="math-percentageGTenDiff"></td>
+                                    <td id="math-percentageGTenAnnualbemDiff"></td>
+                                    <td id="math-pValue"></td>
+                                    <td id="math-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>العلوم الطبيعية والحياة</td>
+                                    <td id="nature-meanAnnualDiff"></td>
+                                    <td id="nature-countGTenAnnualDiff"></td>
+                                    <td id="nature-percentageGTenAnnualDiff"></td>
+                                    <td id="nature-meanDiff"></td>
+                                    <td id="nature-countGTenDiff"></td>
+                                    <td id="nature-percentageGTenDiff"></td>
+                                    <td id="nature-percentageGTenAnnualbemDiff"></td>
+                                    <td id="nature-pValue"></td>
+                                    <td id="nature-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>العلوم الفزيائية</td>
+                                    <td id="physical-meanAnnualDiff"></td>
+                                    <td id="physical-countGTenAnnualDiff"></td>
+                                    <td id="physical-percentageGTenAnnualDiff"></td>
+                                    <td id="physical-meanDiff"></td>
+                                    <td id="physical-countGTenDiff"></td>
+                                    <td id="physical-percentageGTenDiff"></td>
+                                    <td id="physical-percentageGTenAnnualbemDiff"></td>
+                                    <td id="physical-pValue"></td>
+                                    <td id="physical-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>الإعلام الآلي</td>
+                                    <td id="informatics-meanAnnualDiff"></td>
+                                    <td id="informatics-countGTenAnnualDiff"></td>
+                                    <td id="informatics-percentageGTenAnnualDiff"></td>
+                                    <td id="informatics-meanDiff"></td>
+                                    <td id="informatics-countGTenDiff"></td>
+                                    <td id="informatics-percentageGTenDiff"></td>
+                                    <td id="informatics-percentageGTenAnnualbemDiff"></td>
+                                    <td id="informatics-pValue"></td>
+                                    <td id="informatics-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية التشكيلية</td>
+                                    <td id="fine-meanAnnualDiff"></td>
+                                    <td id="fine-countGTenAnnualDiff"></td>
+                                    <td id="fine-percentageGTenAnnualDiff"></td>
+                                    <td id="fine-meanDiff"></td>
+                                    <td id="fine-countGTenDiff"></td>
+                                    <td id="fine-percentageGTenDiff"></td>
+                                    <td id="fine-percentageGTenAnnualbemDiff"></td>
+                                    <td id="fine-pValue"></td>
+                                    <td id="fine-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية الموسيقية</td>
+                                    <td id="music-meanAnnualDiff"></td>
+                                    <td id="music-countGTenAnnualDiff"></td>
+                                    <td id="music-percentageGTenAnnualDiff"></td>
+                                    <td id="music-meanDiff"></td>
+                                    <td id="music-countGTenDiff"></td>
+                                    <td id="music-percentageGTenDiff"></td>
+                                    <td id="music-percentageGTenAnnualbemDiff"></td>
+                                    <td id="music-pValue"></td>
+                                    <td id="music-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>التربية البدنية</td>
+                                    <td id="athletic-meanAnnualDiff"></td>
+                                    <td id="athletic-countGTenAnnualDiff"></td>
+                                    <td id="athletic-percentageGTenAnnualDiff"></td>
+                                    <td id="athletic-meanDiff"></td>
+                                    <td id="athletic-countGTenDiff"></td>
+                                    <td id="athletic-percentageGTenDiff"></td>
+                                    <td id="athletic-percentageGTenAnnualbemDiff"></td>
+                                    <td id="athletic-pValue"></td>
+                                    <td id="athletic-pValueNote"></td>
+                                </tr>
+                                <tr>
+                                    <td>المعدل</td>
+                                    <td id="rate-meanAnnualDiff"></td>
+                                    <td id="rate-countGTenAnnualDiff"></td>
+                                    <td id="rate-percentageGTenAnnualDiff"></td>
+                                    <td id="ratebem-meanDiff"></td>
+                                    <td id="ratebem-countGTenDiff"></td>
+                                    <td id="ratebem-percentageGTenDiff"></td>
+                                    <td id="rate-percentageGTenAnnualbemDiff"></td>
+                                    <td id="rate-pValue"></td>
+                                    <td id="rate-pValueNote"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+						<div class="modal fade" id="PairedsimpleBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+							<div class="modal-dialog modal-fullscreen">
+								<div class="modal-content">
+									<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+									</div>
+									<div class="modal-body">
+										<div id="Pairedsimplettest-chart" style="width: auto; height: auto;"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+                <div class="alert alert-info" role="alert">
+                    <strong>ملاحظة:</strong> تم استخدام اختبار ت ستودنت لتحليل الفروق بين المجموعات. إذا كانت قيمة p أقل من 0.05، فهذا يعني أن هناك فرقًا ذا دلالة إحصائية بين المجموعات. بينما إذا كانت القيمة أكبر من 0.05، فهذا يشير إلى عدم وجود فرق ذو دلالة إحصائية بين المجموعات.
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="discsection"  class="container">
+                <div class="row g-5 align-items-center">
+                <a class="btn btn-primary-soft">المؤشرات النوعية للنجاح</i></a>
+                    <div class="about-image-gallery">
+                        <table id="data-table" class="table display nowrap" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>المؤشرات</th>
+                                    <th>العدد</th>
+                                    <th>النسبة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>إمتياز</td>
+                                    <td id="countAbove18"></td>
+                                    <td id="percentageAbove18"></td>
+                                </tr>
+                                <tr>
+                                    <td>تهنئة</td>
+                                    <td id="countBetween15And17"></td>
+                                    <td id="percentageBetween15And17"></td>
+                                </tr>
+                                <tr>
+                                    <td>تشجيع</td>
+                                    <td id="countBetween14And14_99"></td>
+                                    <td id="percentageBetween14And14_99"></td>
+                                </tr>
+                                <tr>
+                                    <td>لوحة شرف</td>
+                                    <td id="countBetween12And13_99"></td>
+                                    <td id="percentageBetween12And13_99"></td>
+                                </tr>
+                                <tr>
+                                    <td>ملاحظة</td>
+                                    <td id="countBelow12"></td>
+                                    <td id="percentageBelow12"></td>
+                                </tr>
+                                <tr>
+                                    <td style="font-weight: bold;">لمجموع</td>
+                                    <td id="totalindicators"></td>
+                                    <td id="percentagetotalindicators"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+				<div class="alert alert-info text-center" role="alert">
+					قد تختلف فئات المؤشرات النوعية للنجاح بإختلاف المناشير الوزارية
+				</div>
+            </div>
+        </section>
+</main>
+<footer>
+	<div class="container">
+		<div class="row mx-auto">
+			<div class="col-lg-6 mx-auto text-center my-5">
+				<div class="text-primary-hover mt-3">حقوق النشر 2024. تصميم <a href="#" target="_blank" class="text-reset">قاسي صارة</a>.</div>
+			</div>
+		</div>
+	</div>
+</footer>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/sal.min.js"></script>
+    <script src="assets/js/magnifypopup.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/isotop.min.js"></script>
+    <script src="assets/js/imageloaded.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/paralax.min.js"></script>
+    <script src="assets/js/paralax-scroll.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/svg-inject.min.js"></script>
+    <script src="assets/js/vivus.min.js"></script>
+    <script src="assets/js/tipped.min.js"></script>
+    <script src="assets/js/smooth-scroll.min.js"></script>
+    <script src="assets/js/isInViewport.jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/tiny-slider/tiny-slider-rtl.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/Calc/datatables.bem.js"></script>
+<script src="assets/js/simple-statistics.js"></script>
+<script src="assets/js/jstat.min.js"></script>
+<script src="assets/js/Section/scrool.js"></script>
+<script src="assets/js/Print/printadd.js"></script>
+<script src="assets/js/xlsx.full.min.js"></script>
+<script src="assets/js/plotly.js"></script>
+<script src="assets/js/plotly.min.js"></script>
+<script src="assets/js/dataTables.fixedHeader.min.js"></script>
+<script src="assets/js/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+<script src="assets/js/dataTables.buttons.min.js"></script>
+<script src="assets/js/buttons.bootstrap5.min.js"></script>
+<script src="assets/js/buttons.colVis.min.js"></script>
+<script src="assets/js/buttons.dataTables.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script src="assets/js/dataTables.rowGroup.min.js"></script>
+<script src="assets/js/dataTables.rowReorder.js"></script>
+<script src="assets/js/rowReorder.dataTables.js"></script>
+<script src="assets/js/dataTables.responsive.js"></script>
+<script src="assets/js/responsive.dataTables.js"></script>
+</body>
+</html>

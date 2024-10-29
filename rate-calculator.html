@@ -1,0 +1,2902 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<title>الوجيز  (Al-Wajeez) | حساب المعدلات</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+		setTheme(getPreferredTheme())
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+			showActiveTheme(getPreferredTheme())
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+			}
+		})
+	</script>
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/apexcharts/css/apexcharts.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/overlay-scrollbar/css/overlayscrollbars.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-rtl.css">
+</head>
+<body>
+<header class="navbar-light navbar-sticky">
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item h-50px" src="assets/images/logo.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item h-50px" src="assets/images/logo-light.png" alt="logo">
+			</a>
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تحليل النتائج</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T1.html">الفصل الأول</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T2.html">الفصل الثاني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T3.html">الفصل الثالث</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-All.html">النتائج السنوية</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-Bem.html">شهادة التعليم المتوسط</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-5eme.html">تقييم المكتسبات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">متابعة نتائج التلاميذ</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="Moutabaa-T1.html">متابعة نتائج الفصل الاول</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T2.html">متابعة نتائج الفصل الثاني</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T3.html">متابعة نتائج الفصل الثالث</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">وثائق</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Ministerial-circular.html">المناشير الوزارية الخاصة بالإعلام ...</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="coming-soon.html">مطويات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Structure-of-the-educational-system.html">هيكلـة النظـام التـربوي</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">بطاقات</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-2.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-1-1.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/01/fiche-de-voeux-003.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الرابعة متوسط</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCL.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCST.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-1-AS.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الأولى ثانوي</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">خدمات</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">فضاءات قطاع التربية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://awlyaa.education.dz/" target="_blank">فضاء الاولياء</a></li>
+									<li> <a class="dropdown-item" href="https://amatti.education.gov.dz/" target="_blank">الأرضية الرقمية + فضاء مستشار التوجية</a></li>
+									<li> <a class="dropdown-item" href="https://ostad.education.gov.dz/auth" target="_blank">فضاء الأساتذة</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/" target="_blank">موقع وزارة التربية</a></li>
+									<li> <a class="dropdown-item" href="https://www.a-onec.com/" target="_blank">مدونة التربية والتعليم</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="http://inscriptic.onefd.edu.dz/" target="_blank">التسجيل الإلكتروني في ONEFD</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">نتائج الإمتحانات الرسمية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://bem.onec.dz/" target="_blank">شهادة التعليم التوسط</a></li>
+									<li> <a class="dropdown-item" href="https://bac.onec.dz/" target="_blank">شهادة البكالوريا</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="rate-calculator.html">حساب المعدلات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="https://onps.com.dz/" target="_blank">البيع الإلكتروني للكتب</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Professional-training.html">مدونة الشعب و تخصصات التكوين المهني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown"><a class="nav-link" href="coming-soon-blog.html">مدونة</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="advanceMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-ellipsis-h"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end min-w-auto" data-bs-popper="none">
+							<li> 
+								<a class="dropdown-item" href="faq.html">
+									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>أسئلة شائعة
+								</a> 
+							</li>
+							<li> 
+								<a class="dropdown-item" href="privacy-policy.html">
+									<i class="text-danger fa-fw bi bi-card-text me-2"></i>سياسة خصوصية
+								</a> 
+							</li>
+							<li> <hr class="dropdown-divider"></li>
+							<li> 
+								<a class="dropdown-item" href="contact-us.html">
+									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>تواصل معنا
+								</a> 
+							</li>
+						</ul>
+					</li>
+				</ul>
+				</ul>
+			</div>
+			<div class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+						<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+			</div>
+		</div>
+	</nav>
+</header>
+<main>
+<div class="page-content">
+	<div class="row g-4 position-relative mt-6 mb-6">
+		<figure class="position-absolute top-0 start-0 d-none d-sm-block">	
+		  <svg width="22px" height="22px" viewBox="0 0 22 22">
+			<polygon class="fill-purple" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+		  </svg>
+		</figure>
+		<div class="col-lg-10 mx-auto text-center position-relative">
+		  	<figure class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+				<svg width="27px" height="27px">
+					<path class="fill-orange" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+				</svg>
+		  	</figure>
+		  	<h1>حساب المعدلات</h1>
+			<p class="mb-4 pb-1">إلى جميع من ينتظرون النتائج، يمكنكم الآن حساب معدل الفصل الأول، الثاني، أو الثالث بسهولة. فقط قوموا بإدخال تقديراتكم للعلامات التي تتوقعون الحصول عليها، وسيقوم البرنامج بحساب المعدل بشكل تلقائي.</p>
+		</div>
+	</div>
+	<div class="page-content-wrapper border">
+		<div class="row g-4">
+			<div class="col-xl-3">
+				<ul class="nav nav-pills nav-tabs-bg-dark flex-column">
+					<li class="nav-item"> <a class="nav-link active" data-bs-toggle="tab" href="#tab-1"><i class="bi bi-patch-check-fill me-2"></i>السنة الاولى</a> </li>
+					<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-2"><i class="bi bi-patch-check-fill me-2"></i>السنة الثانية</a> </li>
+					<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-3"><i class="bi bi-patch-check-fill me-2"></i>السنة الثالثة</a> </li>
+					<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-4"><i class="bi bi-patch-check-fill me-2"></i>السنة الرابعة</a> </li>
+					<li class="nav-item"> <a class="nav-link" data-bs-toggle="tab" href="#tab-5"><i class="bi bi-patch-check-fill me-2"></i>شهادة التعليم المتوسط</a> </li>
+				</ul>
+			</div>
+			<div class="col-xl-9">
+				<div class="tab-content">
+					<div class="tab-pane show active" id="tab-1">
+						<div class="card">
+							<div class="card-header border-bottom d-sm-flex justify-content-between align-items-center">
+								<h5 class="card-header-title mb-0">حساب معدل السنة الاولى متوسط</h5>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive border-0 rounded-3">
+									<table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+										<thead>
+											<tr>
+												<th scope="col" class="border-0 text-center rounded-start">المادة</th>
+												<th scope="col" class="border-0 text-center"></th>
+												<th scope="col" class="border-0 text-center">الفرض</th>
+												<th scope="col" class="border-0 text-center">التقويم</th>
+												<th scope="col" class="border-0 text-center">الإختبار</th>
+												<th scope="col" class="border-0 text-center">معدل المادة</th>
+												<th scope="col" class="border-0 text-center">المعامل</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة العربية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">الرياضيات</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_1" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_1" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_1" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_1" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_1" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الفرنسية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">تاريخ وجغرافيا</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الطبيعية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_5" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_5" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_5" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_5" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_5" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الفيزيائية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_6" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_6" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_6" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_6" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_6" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية الإسلامية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_7" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_7" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_7" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_7" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_7" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الإنجليزية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_8" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_8" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_8" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_8" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_8" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية المدنية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_9" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_9" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_9" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_9" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_9" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="ar" class="stretched-link">التربية التشكيلية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="ar" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية التشكيلية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_10" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_10" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_10" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_10" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_10" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="mus" class="stretched-link">التربية الموسيقية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="mus" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_11" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_11" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_11" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_11" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_11" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="inf" class="stretched-link">المعلوماتية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="inf" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_12" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_12" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_12" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_12" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_12" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="spo" class="stretched-link">التربية البدنية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="spo" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية البدنية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_13" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_13" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_13" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_13" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_13" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="tam" class="stretched-link">اللغة الامازيغية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="tam" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة اللغة الأمازيغية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_14" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_14" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_14" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_14" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_14" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المجموع</a>
+													</h6>
+												</td>
+												<td colspan="2"></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="sum" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coefficients" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المعدل</a>
+													</h6>
+												</td>
+												<td colspan="4">
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="average" type="text" class="form-control text-center" disabled="disabled" oninput="updateBadge('mode')">
+													</div>
+												</td>
+												<td> <span id="modeBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب معدل المادة: لحساب معدل المادة، يمكن استخدام الصيغة التالية:</p>
+							<p>
+								معدل المادة = ((الفرض + التقويم المستمر)/2 + الاختبار*2 )/3 ، في حالة وجود فرضين تجمعهما وتقسم النتيجة على 2
+								<br>
+								في حالة وجود فرضين، يجب جمع درجات الفرضين ثم تقسيم النتيجة على 2 للحصول على قيمة الفرض.
+							</p>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب المعدل العام: لحساب المعدل العام، يتم استخدام الصيغة التالية:</p>
+							<p>المعدل = (معدل كل مادة x معاملها )/ مجموع المعاملات</p>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-2">
+						<div class="card">
+							<div class="card-header border-bottom d-sm-flex justify-content-between align-items-center">
+								<h5 class="card-header-title mb-0">حساب معدل السنة الثانية متوسط</h5>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive border-0 rounded-3">
+									<table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+										<thead>
+											<tr>
+												<th scope="col" class="border-0 text-center rounded-start">المادة</th>
+												<th scope="col" class="border-0 text-center"></th>
+												<th scope="col" class="border-0 text-center">الفرض</th>
+												<th scope="col" class="border-0 text-center">التقويم</th>
+												<th scope="col" class="border-0 text-center">الإختبار</th>
+												<th scope="col" class="border-0 text-center">معدل المادة</th>
+												<th scope="col" class="border-0 text-center">المعامل</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة العربية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_2_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_2_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_2_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_2_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_2_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="3">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">الرياضيات</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_1_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_1_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_1_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_1_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_1_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="3">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الفرنسية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_3_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_3_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_3_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_3_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_3_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">تاريخ وجغرافيا</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_4_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_4_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_4_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_4_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_4_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الطبيعية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_5_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_5_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_5_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_5_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_5_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الفيزيائية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_6_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_6_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_6_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_6_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_6_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية الإسلامية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_7_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_7_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_7_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_7_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_7_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الإنجليزية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_8_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_8_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_8_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_8_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_8_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية المدنية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_9_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_9_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_9_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_9_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_9_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="ar" class="stretched-link">التربية التشكيلية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="ar" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية التشكيلية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_10_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_10_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_10_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_10_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_10_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="mus" class="stretched-link">التربية الموسيقية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="mus" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_11_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_11_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_11_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_11_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_11_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="inf" class="stretched-link">المعلوماتية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="inf" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_12_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_12_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_12_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_12_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_12_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="spo" class="stretched-link">التربية البدنية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="spo" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية البدنية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_13_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_13_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_13_2" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_13_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_13_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="tam" class="stretched-link">اللغة الامازيغية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="tam" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة اللغة الأمازيغية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_14_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_14_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_14_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_14_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_14_2" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المجموع</a>
+													</h6>
+												</td>
+												<td colspan="2"></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="sum_2" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coefficients_2" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المعدل</a>
+													</h6>
+												</td>
+												<td colspan="4">
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="average_2" type="text" class="form-control text-center" disabled="disabled" oninput="updateBadge('mode')">
+													</div>
+												</td>
+												<td> <span id="modeBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب معدل المادة: لحساب معدل المادة، يمكن استخدام الصيغة التالية:</p>
+							<p>
+								معدل المادة = ((الفرض + التقويم المستمر)/2 + الاختبار*2 )/3 ، في حالة وجود فرضين تجمعهما وتقسم النتيجة على 2
+								<br>
+								في حالة وجود فرضين، يجب جمع درجات الفرضين ثم تقسيم النتيجة على 2 للحصول على قيمة الفرض.
+							</p>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب المعدل العام: لحساب المعدل العام، يتم استخدام الصيغة التالية:</p>
+							<p>المعدل = (معدل كل مادة x معاملها )/ مجموع المعاملات</p>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-3">
+						<div class="card">
+							<div class="card-header border-bottom d-sm-flex justify-content-between align-items-center">
+								<h5 class="card-header-title mb-0">حساب معدل السنة الثالثة متوسط</h5>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive border-0 rounded-3">
+									<table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+										<thead>
+											<tr>
+												<th scope="col" class="border-0 text-center rounded-start">المادة</th>
+												<th scope="col" class="border-0 text-center"></th>
+												<th scope="col" class="border-0 text-center">الفرض</th>
+												<th scope="col" class="border-0 text-center">التقويم</th>
+												<th scope="col" class="border-0 text-center">الإختبار</th>
+												<th scope="col" class="border-0 text-center">معدل المادة</th>
+												<th scope="col" class="border-0 text-center">المعامل</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة العربية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_2_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_2_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_2_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_2_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_2_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="3">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">الرياضيات</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_1_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_1_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_1_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_1_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_1_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="3">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الفرنسية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_3_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_3_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_3_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_3_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_3_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">تاريخ وجغرافيا</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_4_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_4_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_4_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_4_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_4_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الطبيعية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_5_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_5_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_5_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_5_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_5_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الفيزيائية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_6_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_6_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_6_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_6_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_6_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية الإسلامية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_7_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_7_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_7_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_7_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_7_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الإنجليزية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_8_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_8_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_8_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_8_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_8_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية المدنية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_9_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_9_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_9_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_9_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_9_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="ar" class="stretched-link">التربية التشكيلية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="ar" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية التشكيلية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_10_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_10_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_10_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_10_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_10_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="mus" class="stretched-link">التربية الموسيقية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="mus" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_11_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_11_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_11_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_11_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_11_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="inf" class="stretched-link">المعلوماتية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="inf" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_12_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_12_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_12_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_12_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_12_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="spo" class="stretched-link">التربية البدنية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="spo" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية البدنية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_13_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_13_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_13_3" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_13_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_13_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="tam" class="stretched-link">اللغة الامازيغية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="tam" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة اللغة الأمازيغية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_14_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_14_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_14_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_14_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_14_3" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المجموع</a>
+													</h6>
+												</td>
+												<td colspan="2"></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="sum_3" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coefficients_3" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المعدل</a>
+													</h6>
+												</td>
+												<td colspan="4">
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="average_3" type="text" class="form-control text-center" disabled="disabled" oninput="updateBadge('mode')">
+													</div>
+												</td>
+												<td> <span id="modeBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب معدل المادة: لحساب معدل المادة، يمكن استخدام الصيغة التالية:</p>
+							<p>
+								معدل المادة = ((الفرض + التقويم المستمر)/2 + الاختبار*2 )/3 ، في حالة وجود فرضين تجمعهما وتقسم النتيجة على 2
+								<br>
+								في حالة وجود فرضين، يجب جمع درجات الفرضين ثم تقسيم النتيجة على 2 للحصول على قيمة الفرض.
+							</p>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب المعدل العام: لحساب المعدل العام، يتم استخدام الصيغة التالية:</p>
+							<p>المعدل = (معدل كل مادة x معاملها )/ مجموع المعاملات</p>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-4">
+						<div class="card">
+							<div class="card-header border-bottom d-sm-flex justify-content-between align-items-center">
+								<h5 class="card-header-title mb-0">حساب معدل السنة الرابعة متوسط</h5>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive border-0 rounded-3">
+									<table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+										<thead>
+											<tr>
+												<th scope="col" class="border-0 text-center rounded-start">المادة</th>
+												<th scope="col" class="border-0 text-center"></th>
+												<th scope="col" class="border-0 text-center">الفرض</th>
+												<th scope="col" class="border-0 text-center">التقويم</th>
+												<th scope="col" class="border-0 text-center">الإختبار</th>
+												<th scope="col" class="border-0 text-center">معدل المادة</th>
+												<th scope="col" class="border-0 text-center">المعامل</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة العربية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_2_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_2_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_2_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_2_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_2_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="5">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">الرياضيات</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_1_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_1_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_1_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_1_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_1_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="4">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الفرنسية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_3_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_3_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_3_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_3_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_3_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="3">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">تاريخ وجغرافيا</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_4_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_4_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_4_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_4_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_4_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="3">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الطبيعية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_5_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_5_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_5_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_5_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_5_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الفيزيائية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_6_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_6_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_6_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_6_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_6_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية الإسلامية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_7_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_7_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_7_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_7_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_7_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الإنجليزية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_8_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_8_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_8_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_8_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_8_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="2">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية المدنية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_9_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_9_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_9_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_9_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_9_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="ar" class="stretched-link">التربية التشكيلية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="ar" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية التشكيلية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_10_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_10_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_10_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_10_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_10_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="mus" class="stretched-link">التربية الموسيقية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="mus" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_11_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_11_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_11_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_11_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_11_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="inf" class="stretched-link">المعلوماتية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="inf" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية الموسيقية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_12_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_12_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_12_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_12_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_12_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="spo" class="stretched-link">التربية البدنية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="spo" class="form-check-input" type="checkbox" checked="checked" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية البدنية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_13_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_13_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_13_4" type="text" class="form-control text-center" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_13_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_13_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value="1">
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="tam" class="stretched-link">اللغة الامازيغية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="tam" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة اللغة الأمازيغية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="d_14_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="t_14_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="e_14_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="r_14_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="c_14_4" type="text" class="form-control text-center" disabled="disabled" placeholder="0" value>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المجموع</a>
+													</h6>
+												</td>
+												<td colspan="2"></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="sum_4" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coefficients_4" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المعدل</a>
+													</h6>
+												</td>
+												<td colspan="4">
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="average_4" type="text" class="form-control text-center" disabled="disabled" oninput="updateBadge('mode')">
+													</div>
+												</td>
+												<td> <span id="modeBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب معدل المادة: لحساب معدل المادة، يمكن استخدام الصيغة التالية:</p>
+							<p>
+								معدل المادة = ((الفرض + التقويم المستمر)/2 + الاختبار*2 )/3 ، في حالة وجود فرضين تجمعهما وتقسم النتيجة على 2
+								<br>
+								في حالة وجود فرضين، يجب جمع درجات الفرضين ثم تقسيم النتيجة على 2 للحصول على قيمة الفرض.
+							</p>
+						</div>
+						<div class="alert alert-info" role="alert">
+							<p>طريقة حساب المعدل العام: لحساب المعدل العام، يتم استخدام الصيغة التالية:</p>
+							<p>المعدل = (معدل كل مادة x معاملها )/ مجموع المعاملات</p>
+						</div>
+					</div>
+					<div class="tab-pane" id="tab-5">
+						<div class="card">
+							<div class="card-header border-bottom d-sm-flex justify-content-between align-items-center">
+								<h5 class="card-header-title mb-0">حساب معدل شهادة التعليم المتوسط</h5>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive border-0 rounded-3">
+									<table class="table table-dark-gray align-middle p-4 mb-0 table-hover">
+										<thead>
+											<tr>
+												<th scope="col" class="border-0 text-center rounded-start">المادة</th>
+												<th scope="col" class="border-0 text-center"></th>
+												<th scope="col" class="border-0 text-center">النقطة</th>
+												<th scope="col" class="border-0 text-center">المعامل</th>
+												<th scope="col" class="border-0 text-center">الناتج</th>
+												<th scope="col" class="border-0 text-center">الملاحظة</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة العربية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="arabic" type="text" class="form-control text-center" placeholder="0" oninput="updateBadge('arabic')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_arabic" type="text" class="form-control text-center" disabled="disabled" value="5">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_arabic" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="arabicBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">الرياضيات</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="math" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('math')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_math" type="text" class="form-control text-center" disabled="disabled" value="4">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_math" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="mathBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الفرنسية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="french" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('french')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_french" type="text" class="form-control text-center" disabled="disabled" value="3">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_french" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="frenchBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">تاريخ وجغرافيا</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="his_geo" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('his_geo')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_his_geo" type="text" class="form-control text-center" disabled="disabled" value="3">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_his_geo" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="his_geoBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الطبيعية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="science" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('science')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_science" type="text" class="form-control text-center" disabled="disabled" value="2">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_science" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="scienceBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">العلوم الفيزيائية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="physic" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('physic')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_physic" type="text" class="form-control text-center" disabled="disabled" value="2">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_physic" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="physicBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية الإسلامية</a>
+													</h6>
+												</td>
+												<td></td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="islamic" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('islamic')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_islamic" type="text" class="form-control text-center" disabled="disabled" value="2">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_islamic" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="islamicBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">اللغة الإنجليزية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="english" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('english')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_english" type="text" class="form-control text-center" disabled="disabled" value="2">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_english" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="englishBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية المدنية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="civic" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('civic')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_civic" type="text" class="form-control text-center" disabled="disabled" value="1">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_civic" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="civicBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية التشكيلية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="art" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('art')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_art" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_art" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="artBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a class="stretched-link">التربية الموسيقية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="music" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('music')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_music" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_music" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="musicBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="spo" class="stretched-link">التربية البدنية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="spo" class="form-check-input" checked="checked" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة التربية البدنية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="sport" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('sport')">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_sport" type="text" class="form-control text-center" disabled="disabled" value="1">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_sport" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td>
+													<span id="sportBadge" class="badge text-bg-primary"></span>
+												</td>
+											</tr>
+											<tr>
+												<td style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2">	
+														<a for="tam" class="stretched-link">اللغة الأمازيغية</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="tam" class="form-check-input" type="checkbox" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="check" data-bs-original-title="إذا كنت معني بمادة اللغة الأمازيغية قم بتحديد المربع">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="tamazight" type="text" class="form-control text-center" placeholder="0"  oninput="updateBadge('tamazight')" disabled="disabled">
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_tamazight" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="result_tamazight" type="text" class="form-control text-center" disabled="disabled">
+													</div>
+												</td>
+												<td> <span id="tamazightBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المجموع</a>
+													</h6>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="coeff_total" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td>
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="moy" type="text" class="form-control text-center" disabled="disabled" value>
+													</div>
+												</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td colspan="3" style="white-space: nowrap;">
+													<h6 class="table-responsive-title mb-0 ms-2 text-center">	
+														<a class="stretched-link">المعدل</a>
+													</h6>
+												</td>
+												<td colspan="2">
+													<div class="d-flex align-items-center justify-content-center">
+														<input id="mode" type="text" class="form-control text-center" disabled="disabled" oninput="updateBadge('mode')">
+													</div>
+												</td>
+												<td> <span id="modeBadge" class="badge text-bg-primary"></span> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="alert alert-warning" role="alert">
+							<h4 class="alert-heading">ملاحظة!</h4>
+							<p>بالنسبة لمادتي التربية التشكيلية والتربية الموسيقية، يتم احتساب النقاط التي تفوق 10 فقط كنقاط إضافية لصالح المترشح. تجدر الإشارة إلى أن هاتين المادتين ليس لهما معامل. على سبيل المثال: إذا حصل مترشح على 19/20 في مادة التربية التشكيلية، فسيتم احتساب 9 نقاط إضافية (19 - 10 = 9) وتُضاف إلى مجموع نقاط المواد الأخرى التي يتم حسابها بالمعاملات، ثم يتم تقسيم المجموع النهائي على مجموع المعاملات.</p>
+							<hr>
+							<p class="mb-0">في حالة حصول المترشح على أقل من 10 في مادتي التربية التشكيلية أو التربية الموسيقية، لا تُحتسب أي نقاط إضافية. بمعنى آخر، إذا كانت النتيجة أقل من 10، فإنها لا تُؤثر في مجموع النقاط ولا تُضاف إلى المعدل العام، نظراً لعدم وجود معامل لهاتين المادتين.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 		
+	</div>
+</div>
+</main>
+<footer>
+	<div class="container">
+		<div class="row mx-auto">
+			<div class="col-lg-6 mx-auto text-center my-5">
+				<div class="text-primary-hover mt-3">حقوق النشر 2024. تصميم <a href="#" target="_blank" class="text-reset">قاسي صارة</a>.</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+<script src="assets/vendor/apexcharts/js/apexcharts.min.js"></script>
+<script src="assets/vendor/choices/js/choices.min.js"></script>
+<script src="assets/vendor/overlay-scrollbar/js/overlayscrollbars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_HTML"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/Calc/moyan.bem.js"></script>
+<script src="assets/js/Calc/moyan.n1.js"></script>
+<script src="assets/js/Calc/moyan.n2.js"></script>
+<script src="assets/js/Calc/moyan.n3.js"></script>
+<script src="assets/js/Calc/moyan.n4.js"></script>
+</body>
+</html>

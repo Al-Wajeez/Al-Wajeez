@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <title>الوجيز  (Al-Wajeez) | متابعة التلاميذ</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+		setTheme(getPreferredTheme())
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+			showActiveTheme(getPreferredTheme())
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+			}
+		})
+	</script>
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="assets/css/magnifypopup.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/animation.min.css">
+    <link rel="stylesheet" href="assets/css/jqueru-ui-min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/tipped.min.css">
+	<link rel="stylesheet" href="assets/css/remixicon.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="assets/css/datatables.min.css" >
+    <link rel="stylesheet" href="assets/css/rowGroup.bootstrap5.min.css"> 
+    <link rel="stylesheet" href="assets/css/fixedHeader.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/css/rowReorder.dataTables.css">
+    <link rel="stylesheet" href="assets/css/responsive.dataTables.css">
+    <link rel="stylesheet" href="assets/css/responsive.bootstrap5.min.css" >
+    <link rel="stylesheet" href="assets/css/buttons.dataTables.css" >
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-rtl.css">
+</head>
+<body>
+<header class="navbar-light navbar-sticky">
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item h-50px" src="assets/images/logo.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item h-50px" src="assets/images/logo-light.png" alt="logo">
+			</a>
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تحليل النتائج</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T1.html">الفصل الأول</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T2.html">الفصل الثاني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T3.html">الفصل الثالث</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-All.html">النتائج السنوية</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-Bem.html">شهادة التعليم المتوسط</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-5eme.html">تقييم المكتسبات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">متابعة نتائج التلاميذ</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="Moutabaa-T1.html">متابعة نتائج الفصل الاول</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T2.html">متابعة نتائج الفصل الثاني</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T3.html">متابعة نتائج الفصل الثالث</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">وثائق</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Ministerial-circular.html">المناشير الوزارية الخاصة بالإعلام ...</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="coming-soon.html">مطويات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Structure-of-the-educational-system.html">هيكلـة النظـام التـربوي</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">بطاقات</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-2.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-1-1.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/01/fiche-de-voeux-003.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الرابعة متوسط</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCL.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCST.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-1-AS.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الأولى ثانوي</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">خدمات</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">فضاءات قطاع التربية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://awlyaa.education.dz/" target="_blank">فضاء الاولياء</a></li>
+									<li> <a class="dropdown-item" href="https://amatti.education.gov.dz/" target="_blank">الأرضية الرقمية + فضاء مستشار التوجية</a></li>
+									<li> <a class="dropdown-item" href="https://ostad.education.gov.dz/auth" target="_blank">فضاء الأساتذة</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/" target="_blank">موقع وزارة التربية</a></li>
+									<li> <a class="dropdown-item" href="https://www.a-onec.com/" target="_blank">مدونة التربية والتعليم</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="http://inscriptic.onefd.edu.dz/" target="_blank">التسجيل الإلكتروني في ONEFD</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">نتائج الإمتحانات الرسمية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://bem.onec.dz/" target="_blank">شهادة التعليم التوسط</a></li>
+									<li> <a class="dropdown-item" href="https://bac.onec.dz/" target="_blank">شهادة البكالوريا</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="rate-calculator.html">حساب المعدلات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="https://onps.com.dz/" target="_blank">البيع الإلكتروني للكتب</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Professional-training.html">مدونة الشعب و تخصصات التكوين المهني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown"><a class="nav-link" href="coming-soon-blog.html">مدونة</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="advanceMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-ellipsis-h"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end min-w-auto" data-bs-popper="none">
+							<li> 
+								<a class="dropdown-item" href="faq.html">
+									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>أسئلة شائعة
+								</a> 
+							</li>
+							<li> 
+								<a class="dropdown-item" href="privacy-policy.html">
+									<i class="text-danger fa-fw bi bi-card-text me-2"></i>سياسة خصوصية
+								</a> 
+							</li>
+							<li> <hr class="dropdown-divider"></li>
+							<li> 
+								<a class="dropdown-item" href="contact-us.html">
+									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>تواصل معنا
+								</a> 
+							</li>
+						</ul>
+					</li>
+				</ul>
+				</ul>
+			</div>
+			<div class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+						<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+			</div>
+		</div>
+	</nav>
+</header>
+<main>
+<section>
+	<div class="container">
+		<div class="row g-4 g-md-5 justify-content-center">
+			<div class="col-lg-8 mx-auto text-center">
+				<h1>متابعة نتائج تلاميذ للفصل الثاني.</h1>
+                <h5>(المعيدين والمنتقلين بالاختبارات الاستدراكية)</h5>
+				<div class="d-sm-flex justify-content-between align-items-center mb-2">
+					<div class="mt-2 mt-sm-2 d-flex mx-auto text-center">
+						<p id="currentDate" class="text-danger mb-0 me-3">
+							<i class="bi bi-clock-history me-0"></i>
+						</p>
+						<p id="currentTime" class="text-danger mb-0">
+							<i class="bi bi-clock-history me-0"></i>
+						</p>
+					</div>
+				</div>
+				<p class="mb-0">عند رفع الملفات على موقعنا لا تبقى لفترة طويلة ولا يتم حفظها نهائيا اي انها تحذف تلقائيا بعد تحديث الصفحة.</p>
+      		</div>
+		</div>
+	</div>
+</section>
+<section class="Import-area">
+	<div class="container">
+		<div class="alert alert-warning text-center" role="alert">
+			عند رفع الملفات على موقعنا لا تبقى لفترة طويلة ولا يتم حفظها نهائيا اي انها <a class="alert-link">تحذف </a> تلقائيا بعد تحديث الصفحة.
+		</div>
+        <div class="col-lg-12">
+            <div class="card card-body bg-light p-5 text-center">
+                <h5 class="fw-normal">تحميل ملف</h5>
+                <h6>قاعدة بيانات متابعة نتائج المعيدين والناجحين بالإستدراك</h6>
+                <a href="https://docs.google.com/spreadsheets/d/1_0jZTq4jR4drnRTurMROAS52-vyWAHIi/export?format=xlsx&id=1_0jZTq4jR4drnRTurMROAS52-vyWAHIi" target="_blank" class="btn btn-blue mb-2">تحميل الملف</a>
+            <p class="mb-0">يرجى إستخدام هذا الملف كأداة لجمع البيانات قبل رفعه على الموقع.</p>
+            </div>
+        </div>
+        <br>
+        <div class="alert alert-info text-center" role="alert">
+            بعد تحميل الملف يجب أن تختار الفصل المناسب، ثم نسخ البيانات الموجودة على ملفات الرقمنة ولصقها في الملف، كون الموقع لا يقبل ملفات أخرى غيره.
+        </div>
+		<div class="row g-4 g-md-2 sub-drop-area">
+			<div class="col-lg-5" style="width:auto">
+				<div class="card-body p-5 text-center">
+					<div id="dropArea" class="card-body p-5 text-center drop-area" accept=".xlsx, .xls">
+						<div id="uploadIcon">
+							<p id="uploadText">
+								<ul class="avatar-group mb-4 justify-content-center h-132px" style="font-size: 5rem">
+									<img src="assets/images/new/checklist.png">
+									</li>
+								</ul>
+								<h6 class="fw-normal mb-2">اسحب الملف  هنا لبدء التحميل</h6>
+								<div class="hr-sect mb-2">او</div>
+								<h6 class="fw-normal mb-2">اضغط على الصندوق لاختيار الملف</h6>
+							</p>
+						</div>
+						<div id="successIcon" class="successIcon hidden">
+							<img src="assets/images/improvement-96.png">
+						</div>
+						<div id="progressCircle" class="progress-circle hidden"></div>
+					</div>
+						<div class="popupmodal-content">
+							<p>في حالة ظهور الجداول بشكل غير طبيعي، يرجى التأكد من الملف مرة أخرى وتحميله من جديد.</p>
+							<button id="calculate-button" class="btn btn-primary-soft mb-0 mt-3 mt-lg-4">تمت عمليت إستيراد النتائج بنجاح</button>
+						</div>
+				</div>
+			</div>
+		</div>
+			<div class="alert alert-danger" role="alert">
+				<h6 class="alert-heading">تنويه هام!</h6>
+				<p>السادة المستخدمين... نود إعلامكم أن عميلة تحليل النتائج تقبل الملفات الغير الأصلية لمنصة الرقمنة الخاصة بوزارة التربية والتعليم الجزائرية.</p>
+				<hr>
+				<p class="mb-0">يرجى إستخدام الملف المرفقة ورفعه على الموقع..</p>
+			</div>
+	</div>
+</section>
+        <section class="section-area">
+            <div id="Orsection" class="container">
+                <br><br>
+                <div class="row g-5 align-items-center">
+                    <a id="titleElement" class="btn-print btn btn-primary-soft">قاعدة بيانات متابعة نتائج تلاميذ مرحلة التعليم المتوسط للفصل الثاني
+                    </a>
+                    <div class="about-image-gallery">
+						<div class="scroll-container">
+							<table id="data-table" class="table table-striped display nowrap" width="100%">
+								<thead>
+									<tr>
+										<th>الرقم</th>
+                                        <th>اللقب و الاسم</th>
+                                        <th>تاريخ الميلاد</th>
+                                        <th>الجنس</th>
+                                        <th>الإعادة</th>
+                                        <th>اللغة العربية ف 1</th>
+                                        <th>اللغة العربية ف 2</th>
+                                        <th>اللغة اﻷمازيغية ف 1</th>
+                                        <th>اللغة اﻷمازيغية ف 2</th>
+                                        <th>اللغة الفرنسية ف 1</th>
+                                        <th>اللغة الفرنسية ف 2</th>
+                                        <th>اللغة الإنجليزية ف 1</th>
+                                        <th>اللغة الإنجليزية ف 2</th>
+                                        <th>التربية الإسلامية ف 1</th>
+                                        <th>التربية الإسلامية ف 2</th>
+                                        <th>التربية المدنية ف 1</th>
+                                        <th>التربية المدنية ف 2</th>
+                                        <th>التاريخ والجغرافيا ف 1</th>
+                                        <th>التاريخ والجغرافيا ف 2</th>
+                                        <th>الرياضيات ف 1</th>
+                                        <th>الرياضيات ف 2</th>
+                                        <th>ع الطبيعة و الحياة ف 1</th>
+                                        <th>ع الطبيعة و الحياة ف 2</th>
+                                        <th>ع الفيزيائية والتكنولوجيا ف 1</th>
+                                        <th>ع الفيزيائية والتكنولوجيا ف 2</th>
+                                        <th>المعلوماتية ف 1</th>
+                                        <th>المعلوماتية ف 2</th>
+                                        <th>التربية التشكيلية ف 1</th>
+                                        <th>التربية التشكيلية ف 2</th>
+                                        <th>التربية الموسيقية ف 1</th>
+                                        <th>التربية الموسيقية ف 2</th>
+                                        <th>ت البدنية و الرياضية ف 1</th>
+                                        <th>ت البدنية و الرياضية ف 2</th>
+                                        <th>معدل الفصل 1</th>
+                                        <th>معدل الفصل 2</th>
+                                        <th>المستوى</th>
+										<th>الإستدراك</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+                                        <td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+									</tr>
+								</tbody>
+							</table>
+    					</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="dataModal" tabindex="-1" role="dialog" aria-labelledby="dataModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-fullscreen" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        <div class="modal-body">
+                            <section class="pt-0">
+                                <div class="container-fluid px-0">
+                                    <div class="card bg-blue h-100px h-md-200px rounded-0" style="background:url(assets/images/pattern/03.png) no-repeat center center; background-size:cover;">
+                                    </div>
+                                </div>
+                                <div class="container mt-n4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="card bg-transparent card-body pb-0 px-0 mt-2 mt-sm-0">
+                                                <div class="row d-sm-flex justify-sm-content-between mt-2 mt-md-0">
+                                                    <div class="col-auto">
+                                                        <div class="avatar avatar-xxl position-relative mt-n4">
+                                                            <img class="avatar-img rounded-circle border border-white border-3 shadow" src="assets/images/avatar/13.png" alt="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col d-sm-flex justify-content-between align-items-center">
+                                                        <div>
+                                                            <h1 class="my-1 fs-4 mt-4" id="name">
+                                                                <i class="bi bi-patch-check-fill text-info small"></i>
+                                                            </h1>
+                                                            <ul class="list-inline mb-0 mt-3">
+                                                                <li class="list-inline-item me-3 mb-1 mb-sm-0">
+                                                                    <i class="fas fa-restroom text-orange"></i>
+                                                                    <span class="h6">الجنس</span>
+                                                                    <span class="text-body fw-light" id="gender"></span>
+                                                                </li>
+                                                                <li class="list-inline-item me-3 mb-1 mb-sm-0">
+                                                                    <i class="fas fa-calendar-alt text-purple"></i>
+                                                                    <span class="h6">تاريخ الميلاد</span>
+                                                                    <span class="text-body fw-light" id="birthdate"></span>
+                                                                </li>
+                                                                <li class="list-inline-item me-3 mb-1 mb-sm-0">
+                                                                    <i class="bi bi-flag-fill text-danger"></i>
+                                                                    <span class="h6">الإعادة</span>
+                                                                    <span class="text-body fw-light" id="repetition"></span>
+                                                                </li>
+                                                                <li class="list-inline-item me-3 mb-1 mb-sm-0">
+                                                                    <i class="fas fa-award text-warning"></i>
+                                                                    <span class="h6">المستوى</span>
+                                                                    <span class="text-body fw-light" id="level"></span>
+                                                                </li>
+                                                                <li class="list-inline-item me-3 mb-1 mb-sm-0">
+                                                                    <i class="fas fa-chalkboard-teacher text-success"></i>
+                                                                    <span class="h6">القسم</span>
+                                                                    <span class="text-body fw-light" id="section"></span>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="col">
+                                            <ul class="list-inline mb-4">
+                                                <li class="list-inline-item">
+                                                    <input type="radio" class="btn-check" name="options" id="option1" checked>
+                                                    <label class="btn btn-primary-soft-check d-flex flex-wrap p-3" for="option1">
+                                                        <span class="mb-2 h6 fw-light">جذع مشترك علوم وتكنولوجيا</span>
+                                                        <span class="d-flex align-items-center col-lg-12">
+                                                            <span id="TCST" class="mb-0 h5 me-2 text-primary"></span>
+                                                            <span class="badge text-bg-primary text-primary bg-opacity-10 mb-0">معدل الجذع</span>
+                                                        </span>
+                                                    </label>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <input type="radio" class="btn-check" name="options" id="option2">
+                                                    <label class="btn btn-primary-soft-check d-flex flex-wrap p-3" for="option2">
+                                                        <span class="mb-2 h6 fw-light">جذع مشترك آداب</span>
+                                                    <span class="d-flex align-items-center col-lg-12">
+                                                        <span id="TCL" class="mb-0 h5 me-2 text-primary"></span>
+                                                        <span class="badge text-bg-primary text-primary bg-opacity-10 mb-0">معدل الجذع</span>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <input type="radio" class="btn-check" name="options" id="option3">
+                                                    <label class="btn btn-primary-soft-check d-flex flex-wrap p-3" for="option3">
+                                                        <span class="mb-2 h6 fw-light">التوجيه التدريجي</span>
+                                                    <span class="d-flex align-items-center col-lg-12">
+                                                        <span id="Gradualguidance" class="mb-0 h5 me-2 text-primary"></span>
+                                                        <span class="badge text-bg-primary text-primary bg-opacity-10 mb-0">الإقتراح</span>
+                                                    </span>
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-12"> 
+                                                <div class="card card-body bg-transparent pb-0 mb-4">
+                                                    <div class="table-responsive border-0">
+                                                        <table class="table align-middle p-4 mb-0 table-hover">
+                                                            <thead class="align-middle">
+                                                                <tr>
+                                                                    <th scope="col" class="border-0 rounded-start" style="width: 5%;">#</th>
+                                                                    <th scope="col" class="border-0">المادة</th>
+                                                                    <th scope="col" class="border-0">النقطة</th>
+                                                                    <th scope="col" class="border-0">ملاحظة</th>
+                                                                    <th scope="col" class="border-0 rounded-start" style="width: 5%;">#</th>
+                                                                    <th scope="col" class="border-0">المادة</th>
+                                                                    <th scope="col" class="border-0">النقطة</th>
+                                                                    <th scope="col" class="border-0">ملاحظة</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">01</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة العربية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="arabic"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="arabicBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">08</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-calculator	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">الرياضيات</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="mathematics"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="mathematicsBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>02</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة الأمازيغية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="amazigh"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="amazighBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">09</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-seedling	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">العلوم الطبيعية والحياة</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="lifeScience"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="lifeScienceBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">03</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة الفرنسية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="french"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="frenchBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">10</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-atom"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">العلوم الفيزيائية والتكنولوجيا</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="physicsTechnology"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="physicsTechnologyBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">04</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="bi bi-translate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">اللغة الإنجليزية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="english"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="englishBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>11</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-laptop"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">المعلوماتية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="informatics"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="informaticsBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>05</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-mosque"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية الإسلامية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="islamicEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="islamicEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>12</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-palette	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية التشكيلية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="artEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="artEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>06</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-balance-scale	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية المدنية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="civicEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="civicEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>13</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-music"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية الموسيقية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="musicEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="musicEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="text-bg-primary text-primary bg-opacity-10">07</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-street-view	"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التاريخ والجغرافيا</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="historyGeography"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="historyGeographyBadge" class="badge"></span>
+                                                                    </td>
+                                                                    <td>14</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-dumbbell"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">التربية البدنية والرياضية</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <h6 class="mb-0"><span id="physicalEducation"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="physicalEducationBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>#</td>
+                                                                    <td>
+                                                                        <div class="d-flex align-items-center position-relative">
+                                                                            <div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+                                                                                <i class="fas fa-user-graduate"></i>
+                                                                            </div>
+                                                                            <div class="mb-0 ms-2">
+                                                                                <h6 class="mb-0"><a class="stretched-link">معدل الفصل الثاني</a></h6>
+                                                                            </div>
+                                                                        </div>
+                                                                    </td>
+                                                                    <td colspan="5">
+                                                                        <h6 class="mb-0"><span id="semesterGrade"></span></h6>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span id="semesterGradeBadge" class="badge"></span>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                        
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Analysesection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn btn-primary-soft">متابعة نتائج التلاميذ في الفصل الثاني (حصيلة عامة)
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container table-responsive border-0 rounded-3">    
+                            <table class="table display nowrap" width="auto">
+                                <thead>
+                                        <tr style="vertical-align: middle; text-align: center;">
+                                            <th style="width: 18%;">المستوى التعليمي</th>
+                                            <th>عدد التلاميذ المسجلين</th>
+                                            <th>عدد التلاميذ المتحصلين على معدل ≥ 10</th>
+                                            <th>نسبة عدد التلاميذ المتحصلين على معدل ≥ 10</th>
+                                            <th>عدد الإناث المتحصلات على معدل ≥ 10</th>
+                                            <th>نسبة الإناث المتحصلات على معدل ≥ 10</th>
+                                        </tr> 
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>الاولى متوسط</td>
+                                            <td id="IntermediateT1M1-count"></td>
+                                            <td id="IntermediateT1M1-G10"></td>
+                                            <td id="IntermediateT1M1-G10-percent"></td>
+                                            <td id="IntermediateT1M1-G10-female"></td>
+                                            <td id="IntermediateT1M1-G10-female-percent"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الثانية متوسط</td>
+                                            <td id="IntermediateT1M2-count"></td>
+                                            <td id="IntermediateT1M2-G10"></td>
+                                            <td id="IntermediateT1M2-G10-percent"></td>
+                                            <td id="IntermediateT1M2-G10-female"></td>
+                                            <td id="IntermediateT1M2-G10-female-percent"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الثالثة متوسط</td>
+                                            <td id="IntermediateT1M3-count"></td>
+                                            <td id="IntermediateT1M3-G10"></td>
+                                            <td id="IntermediateT1M3-G10-percent"></td>
+                                            <td id="IntermediateT1M3-G10-female"></td>
+                                            <td id="IntermediateT1M3-G10-female-percent"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرابعة متوسط</td>
+                                            <td id="IntermediateT1M4-count"></td>
+                                            <td id="IntermediateT1M4-G10"></td>
+                                            <td id="IntermediateT1M4-G10-percent"></td>
+                                            <td id="IntermediateT1M4-G10-female"></td>
+                                            <td id="IntermediateT1M4-G10-female-percent"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>المجموع</td>
+                                            <td id="IntermediateT1M1ALL-count"></td>
+                                            <td id="IntermediateT1M1ALL-G10"></td>
+                                            <td id="IntermediateT1M1ALL-G10-percent"></td>
+                                            <td id="IntermediateT1M1ALL-G10-female"></td>
+                                            <td id="IntermediateT1M1ALL-G10-female-percent"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div>              
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Greatersection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">متابعة نتائج الفصل الثاني للتلاميذ المنتقلين بالاختبارات الاستدراكية (حصيلة عامة)
+                </a>
+                <div class="about-image-gallery">
+                    <div class="scroll-container table-responsive border-0 rounded-3">    
+                        <table class="table display nowrap" width="auto">
+                            <thead>
+                                    <tr style="vertical-align: middle; text-align: center;">
+                                        <th style="width: 18%;">المستوى التعليمي</th>
+                                        <th>عددالمنتقلين بالاستدراك</th>
+                                        <th>نسبة المنتقلين بالاستدراك</th>
+                                        <th>الإناث المنتقلات بالاستدراك</th>
+                                        <th>نسبة الإناث المنتقلات بالاستدراك</th>
+                                        <th>عدد المنتقلين بالاستدراك والمتحصلين على ≥ 10</th>
+                                        <th>نسبة المنتقلين بالاستدراك والمتحصلين على ≥ 10</th>
+                                    </tr> 
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>الاولى متوسط</td>
+                                        <td><a href="#" class="badge bg-secondary bg-opacity-10 text-secondary">غير مشمول</a></td>                                        
+                                        <td><a href="#" class="badge bg-secondary bg-opacity-10 text-secondary">غير مشمول</a></td>                                        
+                                        <td><a href="#" class="badge bg-secondary bg-opacity-10 text-secondary">غير مشمول</a></td>                                        
+                                        <td><a href="#" class="badge bg-secondary bg-opacity-10 text-secondary">غير مشمول</a></td>                                        
+                                        <td><a href="#" class="badge bg-secondary bg-opacity-10 text-secondary">غير مشمول</a></td>                                        
+                                        <td><a href="#" class="badge bg-secondary bg-opacity-10 text-secondary">غير مشمول</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الثانية متوسط</td>
+                                        <td id="IntermediateT1M2-count-trans-recovery"></td>
+                                        <td id="IntermediateT1M2-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M2-female-trans-recovery"></td>
+                                        <td id="IntermediateT1M2-female-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M2-count-trans-recovery-G10"></td>
+                                        <td id="IntermediateT1M2-trans-recovery-G10-percent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الثالثة متوسط</td>
+                                        <td id="IntermediateT1M3-count-trans-recovery"></td>
+                                        <td id="IntermediateT1M3-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M3-female-trans-recovery"></td>
+                                        <td id="IntermediateT1M3-female-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M3-count-trans-recovery-G10"></td>
+                                        <td id="IntermediateT1M3-trans-recovery-G10-percent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الرابعة متوسط</td>
+                                        <td id="IntermediateT1M4-count-trans-recovery"></td>
+                                        <td id="IntermediateT1M4-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M4-female-trans-recovery"></td>
+                                        <td id="IntermediateT1M4-female-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M4-count-trans-recovery-G10"></td>
+                                        <td id="IntermediateT1M4-trans-recovery-G10-percent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المجموع</td>
+                                        <td id="IntermediateT1M1ALL-count-trans-recovery"></td>
+                                        <td id="IntermediateT1M1ALL-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M1ALL-female-trans-recovery"></td>
+                                        <td id="IntermediateT1M1ALL-female-trans-recovery-percent"></td>
+                                        <td id="IntermediateT1M1ALL-count-trans-recovery-G10"></td>
+                                        <td id="IntermediateT1M1ALL-trans-recovery-G10-percent"></td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>              
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Successsection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">متابعة نتائج  الفصل الثاني للتلاميذ المعيدين (حصيلة عامة)
+                </a>
+                <div class="about-image-gallery">
+                    <div class="scroll-container table-responsive border-0 rounded-3">    
+                        <table class="table display nowrap" width="auto">
+                            <thead>
+                                    <tr style="vertical-align: middle; text-align: center;">
+                                        <th style="width: 18%;">المستوى التعليمي</th>
+                                        <th>عدد المعيدين</th>
+                                        <th>نسبة المعيدين</th>
+                                        <th>عدد الإناث المعيدات</th>
+                                        <th>نسبة الإناث المعيدات</th>
+                                        <th>عدد المعيدين والمتحصلين على معدل ≥ 10</th>
+                                        <th>نسبة المعيدين والمتحصلين على معدل ≥ 10</th>
+                                    </tr> 
+                            </thead>
+                            <tbody>
+                                    <tr>
+                                        <td>الاولى متوسط</td>
+                                        <td id="IntermediateT1M1-count-repeaters"></td>
+                                        <td id="IntermediateT1M1-repeaters-percent"></td>
+                                        <td id="IntermediateT1M1-count-female-repeaters"></td>
+                                        <td id="IntermediateT1M1-female-repeaters-percent"></td>
+                                        <td id="IntermediateT1M1-count-repeaters-G10"></td>
+                                        <td id="IntermediateT1M1-repeaters-G10-percent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الثانية متوسط</td>
+                                        <td id="IntermediateT1M2-count-repeaters"></td>
+                                        <td id="IntermediateT1M2-repeaters-percent"></td>
+                                        <td id="IntermediateT1M2-count-female-repeaters"></td>
+                                        <td id="IntermediateT1M2-female-repeaters-percent"></td>
+                                        <td id="IntermediateT1M2-count-repeaters-G10"></td>
+                                        <td id="IntermediateT1M2-repeaters-G10-percent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الثالثة متوسط</td>
+                                        <td id="IntermediateT1M3-count-repeaters"></td>
+                                        <td id="IntermediateT1M3-repeaters-percent"></td>
+                                        <td id="IntermediateT1M3-count-female-repeaters"></td>
+                                        <td id="IntermediateT1M3-female-repeaters-percent"></td>
+                                        <td id="IntermediateT1M3-count-repeaters-G10"></td>
+                                        <td id="IntermediateT1M3-repeaters-G10-percent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الرابعة متوسط</td>
+                                        <td id="IntermediateT1M4-count-repeaters"></td>
+                                        <td id="IntermediateT1M4-repeaters-percent"></td>
+                                        <td id="IntermediateT1M4-count-female-repeaters"></td>
+                                        <td id="IntermediateT1M4-female-repeaters-percent"></td>
+                                        <td id="IntermediateT1M4-count-repeaters-G10"></td>
+                                        <td id="IntermediateT1M4-repeaters-G10-percent"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>المجموع</td>
+                                        <td id="IntermediateT1M1ALL-count-repeaters"></td>
+                                        <td id="IntermediateT1M1ALL-repeaters-percent"></td>
+                                        <td id="IntermediateT1M1ALL-count-female-repeaters"></td>
+                                        <td id="IntermediateT1M1ALL-female-repeaters-percent"></td>
+                                        <td id="IntermediateT1M1ALL-count-repeaters-G10"></td>
+                                        <td id="IntermediateT1M1ALL-repeaters-G10-percent"></td>
+                                    </tr>
+                            </tbody>
+                        </table>
+                    </div>              
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="CVsection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">السنة الأولى متوسط (حسب المواد التعليمية)
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container table-responsive border-0 rounded-3">    
+                            <table class="table display nowrap" width="auto">
+                                <thead>
+                                        <tr style="vertical-align: middle; text-align: center;">
+                                            <th style="width: 18%;">المواد</th>
+                                            <th>التلاميذ المسجلين</th>
+                                            <th>عدد المعيدين والمحصورة معدلاتهم مابين 10-11,99</th>
+                                            <th>عدد المعيدين والمتحصلين على معدل ≥ 12</th>
+                                        </tr> 
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>اللغة العربية</td>
+                                            <td id="arabicM1-count"></td>
+                                            <td id="arabicM1-count-10-11-99"></td>
+                                            <td id="arabicM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الأمازيغية</td>
+                                            <td id="amazighM1-count"></td>
+                                            <td id="amazighM1-count-10-11-99"></td>
+                                            <td id="amazighM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الفرنسية</td>
+                                            <td id="frenchM1-count"></td>
+                                            <td id="frenchM1-count-10-11-99"></td>
+                                            <td id="frenchM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الإنجليزية</td>
+                                            <td id="englishM1-count"></td>
+                                            <td id="englishM1-count-10-11-99"></td>
+                                            <td id="englishM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الإسلامية</td>
+                                            <td id="islamicM1-count"></td>
+                                            <td id="islamicM1-count-10-11-99"></td>
+                                            <td id="islamicM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية المدنية</td>
+                                            <td id="civicsM1-count"></td>
+                                            <td id="civicsM1-count-10-11-99"></td>
+                                            <td id="civicsM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التاريخ والجغرافيا</td>
+                                            <td id="historyandgeographyM1-count"></td>
+                                            <td id="historyandgeographyM1-count-10-11-99"></td>
+                                            <td id="historyandgeographyM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرياضيات</td>
+                                            <td id="mathM1-count"></td>
+                                            <td id="mathM1-count-10-11-99"></td>
+                                            <td id="mathM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الطبيعية والحياة</td>
+                                            <td id="natureM1-count"></td>
+                                            <td id="natureM1-count-10-11-99"></td>
+                                            <td id="natureM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الفزيائية</td>
+                                            <td id="physicalM1-count"></td>
+                                            <td id="physicalM1-count-10-11-99"></td>
+                                            <td id="physicalM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الإعلام الآلي</td>
+                                            <td id="informaticsM1-count"></td>
+                                            <td id="informaticsM1-count-10-11-99"></td>
+                                            <td id="informaticsM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية التشكيلية</td>
+                                            <td id="fineM1-count"></td>
+                                            <td id="fineM1-count-10-11-99"></td>
+                                            <td id="fineM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الموسيقية</td>
+                                            <td id="musicM1-count"></td>
+                                            <td id="musicM1-count-10-11-99"></td>
+                                            <td id="musicM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية البدنية</td>
+                                            <td id="athleticM1-count"></td>
+                                            <td id="athleticM1-count-10-11-99"></td>
+                                            <td id="athleticM1-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>المعدل</td>
+                                            <td id="rateM1-count"></td>
+                                            <td id="rateM1-count-10-11-99"></td>
+                                            <td id="rateM1-count-G12"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="CVsection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">السنة الثانية متوسط (حسب المواد التعليمية)
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container table-responsive border-0 rounded-3">    
+                            <table class="table display nowrap" width="auto">
+                                <thead>
+                                        <tr style="vertical-align: middle; text-align: center;">
+                                            <th style="width: 18%;">المواد</th>
+                                            <th>التلاميذ المسجلين</th>
+                                            <th>عدد المنتقلين بالاستدراك والمحصورة معدلاتهم مابين 10-11,99</th>
+                                            <th>عدد المنتقلين بالاستدراك والمتحصلين على معدل ≥ 12</th>
+                                            <th>عدد المعيدين والمحصورة معدلاتهم مابين 10-11,99</th>
+                                            <th>عدد المعيدين والمتحصلين على معدل ≥ 12</th>
+                                        </tr> 
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>اللغة العربية</td>
+                                            <td id="arabicM2-count"></td>
+                                            <td id="arabicM2-count-remedial-10-11-99"></td>
+                                            <td id="arabicM2-count-remedial-G12"></td>
+                                            <td id="arabicM2-count-10-11-99"></td>
+                                            <td id="arabicM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الأمازيغية</td>
+                                            <td id="amazighM2-count"></td>
+                                            <td id="amazighM2-count-remedial-10-11-99"></td>
+                                            <td id="amazighM2-count-remedial-G12"></td>
+                                            <td id="amazighM2-count-10-11-99"></td>
+                                            <td id="amazighM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الفرنسية</td>
+                                            <td id="frenchM2-count"></td>
+                                            <td id="frenchM2-count-remedial-10-11-99"></td>
+                                            <td id="frenchM2-count-remedial-G12"></td>
+                                            <td id="frenchM2-count-10-11-99"></td>
+                                            <td id="frenchM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الإنجليزية</td>
+                                            <td id="englishM2-count"></td>
+                                            <td id="englishM2-count-remedial-10-11-99"></td>
+                                            <td id="englishM2-count-remedial-G12"></td>
+                                            <td id="englishM2-count-10-11-99"></td>
+                                            <td id="englishM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الإسلامية</td>
+                                            <td id="islamicM2-count"></td>
+                                            <td id="islamicM2-count-remedial-10-11-99"></td>
+                                            <td id="islamicM2-count-remedial-G12"></td>
+                                            <td id="islamicM2-count-10-11-99"></td>
+                                            <td id="islamicM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية المدنية</td>
+                                            <td id="civicsM2-count"></td>
+                                            <td id="civicsM2-count-remedial-10-11-99"></td>
+                                            <td id="civicsM2-count-remedial-G12"></td>
+                                            <td id="civicsM2-count-10-11-99"></td>
+                                            <td id="civicsM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التاريخ والجغرافيا</td>
+                                            <td id="historyandgeographyM2-count"></td>
+                                            <td id="historyandgeographyM2-count-remedial-10-11-99"></td>
+                                            <td id="historyandgeographyM2-count-remedial-G12"></td>
+                                            <td id="historyandgeographyM2-count-10-11-99"></td>
+                                            <td id="historyandgeographyM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرياضيات</td>
+                                            <td id="mathM2-count"></td>
+                                            <td id="mathM2-count-remedial-10-11-99"></td>
+                                            <td id="mathM2-count-remedial-G12"></td>
+                                            <td id="mathM2-count-10-11-99"></td>
+                                            <td id="mathM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الطبيعية والحياة</td>
+                                            <td id="natureM2-count"></td>
+                                            <td id="natureM2-count-remedial-10-11-99"></td>
+                                            <td id="natureM2-count-remedial-G12"></td>
+                                            <td id="natureM2-count-10-11-99"></td>
+                                            <td id="natureM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الفزيائية</td>
+                                            <td id="physicalM2-count"></td>
+                                            <td id="physicalM2-count-remedial-10-11-99"></td>
+                                            <td id="physicalM2-count-remedial-G12"></td>
+                                            <td id="physicalM2-count-10-11-99"></td>
+                                            <td id="physicalM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الإعلام الآلي</td>
+                                            <td id="informaticsM2-count"></td>
+                                            <td id="informaticsM2-count-remedial-10-11-99"></td>
+                                            <td id="informaticsM2-count-remedial-G12"></td>
+                                            <td id="informaticsM2-count-10-11-99"></td>
+                                            <td id="informaticsM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية التشكيلية</td>
+                                            <td id="fineM2-count"></td>
+                                            <td id="fineM2-count-remedial-10-11-99"></td>
+                                            <td id="fineM2-count-remedial-G12"></td>
+                                            <td id="fineM2-count-10-11-99"></td>
+                                            <td id="fineM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الموسيقية</td>
+                                            <td id="musicM2-count"></td>
+                                            <td id="musicM2-count-remedial-10-11-99"></td>
+                                            <td id="musicM2-count-remedial-G12"></td>
+                                            <td id="musicM2-count-10-11-99"></td>
+                                            <td id="musicM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية البدنية</td>
+                                            <td id="athleticM2-count"></td>
+                                            <td id="athleticM2-count-remedial-10-11-99"></td>
+                                            <td id="athleticM2-count-remedial-G12"></td>
+                                            <td id="athleticM2-count-10-11-99"></td>
+                                            <td id="athleticM2-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>المعدل</td>
+                                            <td id="rateM2-count"></td>
+                                            <td id="rateM2-count-remedial-10-11-99"></td>
+                                            <td id="rateM2-count-remedial-G12"></td>
+                                            <td id="rateM2-count-10-11-99"></td>
+                                            <td id="rateM2-count-G12"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="CVsection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">السنة الثالثة متوسط (حسب المواد التعليمية)
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container table-responsive border-0 rounded-3">    
+                            <table class="table display nowrap" width="auto">
+                                <thead>
+                                        <tr style="vertical-align: middle; text-align: center;">
+                                            <th style="width: 18%;">المواد</th>
+                                            <th>التلاميذ المسجلين</th>
+                                            <th>عدد المنتقلين بالاستدراك والمحصورة معدلاتهم مابين 10-11,99</th>
+                                            <th>عدد المنتقلين بالاستدراك والمتحصلين على معدل ≥ 12</th>
+                                            <th>عدد المعيدين والمحصورة معدلاتهم مابين 10-11,99</th>
+                                            <th>عدد المعيدين والمتحصلين على معدل ≥ 12</th>
+                                        </tr> 
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>اللغة العربية</td>
+                                            <td id="arabicM3-count"></td>
+                                            <td id="arabicM3-count-remedial-10-11-99"></td>
+                                            <td id="arabicM3-count-remedial-G12"></td>
+                                            <td id="arabicM3-count-10-11-99"></td>
+                                            <td id="arabicM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الأمازيغية</td>
+                                            <td id="amazighM3-count"></td>
+                                            <td id="amazighM3-count-remedial-10-11-99"></td>
+                                            <td id="amazighM3-count-remedial-G12"></td>
+                                            <td id="amazighM3-count-10-11-99"></td>
+                                            <td id="amazighM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الفرنسية</td>
+                                            <td id="frenchM3-count"></td>
+                                            <td id="frenchM3-count-remedial-10-11-99"></td>
+                                            <td id="frenchM3-count-remedial-G12"></td>
+                                            <td id="frenchM3-count-10-11-99"></td>
+                                            <td id="frenchM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الإنجليزية</td>
+                                            <td id="englishM3-count"></td>
+                                            <td id="englishM3-count-remedial-10-11-99"></td>
+                                            <td id="englishM3-count-remedial-G12"></td>
+                                            <td id="englishM3-count-10-11-99"></td>
+                                            <td id="englishM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الإسلامية</td>
+                                            <td id="islamicM3-count"></td>
+                                            <td id="islamicM3-count-remedial-10-11-99"></td>
+                                            <td id="islamicM3-count-remedial-G12"></td>
+                                            <td id="islamicM3-count-10-11-99"></td>
+                                            <td id="islamicM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية المدنية</td>
+                                            <td id="civicsM3-count"></td>
+                                            <td id="civicsM3-count-remedial-10-11-99"></td>
+                                            <td id="civicsM3-count-remedial-G12"></td>
+                                            <td id="civicsM3-count-10-11-99"></td>
+                                            <td id="civicsM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التاريخ والجغرافيا</td>
+                                            <td id="historyandgeographyM3-count"></td>
+                                            <td id="historyandgeographyM3-count-remedial-10-11-99"></td>
+                                            <td id="historyandgeographyM3-count-remedial-G12"></td>
+                                            <td id="historyandgeographyM3-count-10-11-99"></td>
+                                            <td id="historyandgeographyM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرياضيات</td>
+                                            <td id="mathM3-count"></td>
+                                            <td id="mathM3-count-remedial-10-11-99"></td>
+                                            <td id="mathM3-count-remedial-G12"></td>
+                                            <td id="mathM3-count-10-11-99"></td>
+                                            <td id="mathM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الطبيعية والحياة</td>
+                                            <td id="natureM3-count"></td>
+                                            <td id="natureM3-count-remedial-10-11-99"></td>
+                                            <td id="natureM3-count-remedial-G12"></td>
+                                            <td id="natureM3-count-10-11-99"></td>
+                                            <td id="natureM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الفزيائية</td>
+                                            <td id="physicalM3-count"></td>
+                                            <td id="physicalM3-count-remedial-10-11-99"></td>
+                                            <td id="physicalM3-count-remedial-G12"></td>
+                                            <td id="physicalM3-count-10-11-99"></td>
+                                            <td id="physicalM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الإعلام الآلي</td>
+                                            <td id="informaticsM3-count"></td>
+                                            <td id="informaticsM3-count-remedial-10-11-99"></td>
+                                            <td id="informaticsM3-count-remedial-G12"></td>
+                                            <td id="informaticsM3-count-10-11-99"></td>
+                                            <td id="informaticsM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية التشكيلية</td>
+                                            <td id="fineM3-count"></td>
+                                            <td id="fineM3-count-remedial-10-11-99"></td>
+                                            <td id="fineM3-count-remedial-G12"></td>
+                                            <td id="fineM3-count-10-11-99"></td>
+                                            <td id="fineM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الموسيقية</td>
+                                            <td id="musicM3-count"></td>
+                                            <td id="musicM3-count-remedial-10-11-99"></td>
+                                            <td id="musicM3-count-remedial-G12"></td>
+                                            <td id="musicM3-count-10-11-99"></td>
+                                            <td id="musicM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية البدنية</td>
+                                            <td id="athleticM3-count"></td>
+                                            <td id="athleticM3-count-remedial-10-11-99"></td>
+                                            <td id="athleticM3-count-remedial-G12"></td>
+                                            <td id="athleticM3-count-10-11-99"></td>
+                                            <td id="athleticM3-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>المعدل</td>
+                                            <td id="rateM3-count"></td>
+                                            <td id="rateM3-count-remedial-10-11-99"></td>
+                                            <td id="rateM3-count-remedial-G12"></td>
+                                            <td id="rateM3-count-10-11-99"></td>
+                                            <td id="rateM3-count-G12"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="CVsection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">السنة الرابعة متوسط (حسب المواد التعليمية)
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container table-responsive border-0 rounded-3">    
+                            <table class="table display nowrap" width="auto">
+                                <thead>
+                                        <tr style="vertical-align: middle; text-align: center;">
+                                            <th style="width: 18%;">المواد</th>
+                                            <th>التلاميذ المسجلين</th>
+                                            <th>عدد المنتقلين بالاستدراك والمحصورة معدلاتهم مابين 10-11,99</th>
+                                            <th>عدد المنتقلين بالاستدراك والمتحصلين على معدل ≥ 12</th>
+                                            <th>عدد المعيدين والمحصورة معدلاتهم مابين 10-11,99</th>
+                                            <th>عدد المعيدين والمتحصلين على معدل ≥ 12</th>
+                                        </tr> 
+                                </thead>
+                                <tbody>
+                                        <tr>
+                                            <td>اللغة العربية</td>
+                                            <td id="arabicM4-count"></td>
+                                            <td id="arabicM4-count-remedial-10-11-99"></td>
+                                            <td id="arabicM4-count-remedial-G12"></td>
+                                            <td id="arabicM4-count-10-11-99"></td>
+                                            <td id="arabicM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الأمازيغية</td>
+                                            <td id="amazighM4-count"></td>
+                                            <td id="amazighM4-count-remedial-10-11-99"></td>
+                                            <td id="amazighM4-count-remedial-G12"></td>
+                                            <td id="amazighM4-count-10-11-99"></td>
+                                            <td id="amazighM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الفرنسية</td>
+                                            <td id="frenchM4-count"></td>
+                                            <td id="frenchM4-count-remedial-10-11-99"></td>
+                                            <td id="frenchM4-count-remedial-G12"></td>
+                                            <td id="frenchM4-count-10-11-99"></td>
+                                            <td id="frenchM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>اللغة الإنجليزية</td>
+                                            <td id="englishM4-count"></td>
+                                            <td id="englishM4-count-remedial-10-11-99"></td>
+                                            <td id="englishM4-count-remedial-G12"></td>
+                                            <td id="englishM4-count-10-11-99"></td>
+                                            <td id="englishM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الإسلامية</td>
+                                            <td id="islamicM4-count"></td>
+                                            <td id="islamicM4-count-remedial-10-11-99"></td>
+                                            <td id="islamicM4-count-remedial-G12"></td>
+                                            <td id="islamicM4-count-10-11-99"></td>
+                                            <td id="islamicM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية المدنية</td>
+                                            <td id="civicsM4-count"></td>
+                                            <td id="civicsM4-count-remedial-10-11-99"></td>
+                                            <td id="civicsM4-count-remedial-G12"></td>
+                                            <td id="civicsM4-count-10-11-99"></td>
+                                            <td id="civicsM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التاريخ والجغرافيا</td>
+                                            <td id="historyandgeographyM4-count"></td>
+                                            <td id="historyandgeographyM4-count-remedial-10-11-99"></td>
+                                            <td id="historyandgeographyM4-count-remedial-G12"></td>
+                                            <td id="historyandgeographyM4-count-10-11-99"></td>
+                                            <td id="historyandgeographyM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الرياضيات</td>
+                                            <td id="mathM4-count"></td>
+                                            <td id="mathM4-count-remedial-10-11-99"></td>
+                                            <td id="mathM4-count-remedial-G12"></td>
+                                            <td id="mathM4-count-10-11-99"></td>
+                                            <td id="mathM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الطبيعية والحياة</td>
+                                            <td id="natureM4-count"></td>
+                                            <td id="natureM4-count-remedial-10-11-99"></td>
+                                            <td id="natureM4-count-remedial-G12"></td>
+                                            <td id="natureM4-count-10-11-99"></td>
+                                            <td id="natureM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>العلوم الفزيائية</td>
+                                            <td id="physicalM4-count"></td>
+                                            <td id="physicalM4-count-remedial-10-11-99"></td>
+                                            <td id="physicalM4-count-remedial-G12"></td>
+                                            <td id="physicalM4-count-10-11-99"></td>
+                                            <td id="physicalM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>الإعلام الآلي</td>
+                                            <td id="informaticsM4-count"></td>
+                                            <td id="informaticsM4-count-remedial-10-11-99"></td>
+                                            <td id="informaticsM4-count-remedial-G12"></td>
+                                            <td id="informaticsM4-count-10-11-99"></td>
+                                            <td id="informaticsM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية التشكيلية</td>
+                                            <td id="fineM4-count"></td>
+                                            <td id="fineM4-count-remedial-10-11-99"></td>
+                                            <td id="fineM4-count-remedial-G12"></td>
+                                            <td id="fineM4-count-10-11-99"></td>
+                                            <td id="fineM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية الموسيقية</td>
+                                            <td id="musicM4-count"></td>
+                                            <td id="musicM4-count-remedial-10-11-99"></td>
+                                            <td id="musicM4-count-remedial-G12"></td>
+                                            <td id="musicM4-count-10-11-99"></td>
+                                            <td id="musicM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>التربية البدنية</td>
+                                            <td id="athleticM4-count"></td>
+                                            <td id="athleticM4-count-remedial-10-11-99"></td>
+                                            <td id="athleticM4-count-remedial-G12"></td>
+                                            <td id="athleticM4-count-10-11-99"></td>
+                                            <td id="athleticM4-count-G12"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>المعدل</td>
+                                            <td id="rateM4-count"></td>
+                                            <td id="rateM4-count-remedial-10-11-99"></td>
+                                            <td id="rateM4-count-remedial-G12"></td>
+                                            <td id="rateM4-count-10-11-99"></td>
+                                            <td id="rateM4-count-G12"></td>
+                                        </tr>
+                                </tbody>
+                            </table>
+                        </div> 
+                        </div>
+                </div>
+            </div>
+        </section>
+</main>
+<footer>
+	<div class="container">
+		<div class="row mx-auto">
+			<div class="col-lg-6 mx-auto text-center my-5">
+				<div class="text-primary-hover mt-3">حقوق النشر 2024. تصميم <a href="#" target="_blank" class="text-reset">قاسي صارة</a>.</div>
+			</div>
+		</div>
+	</div>
+</footer>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/sal.min.js"></script>
+    <script src="assets/js/magnifypopup.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/isotop.min.js"></script>
+    <script src="assets/js/imageloaded.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/paralax.min.js"></script>
+    <script src="assets/js/paralax-scroll.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/svg-inject.min.js"></script>
+    <script src="assets/js/vivus.min.js"></script>
+    <script src="assets/js/tipped.min.js"></script>
+    <script src="assets/js/smooth-scroll.min.js"></script>
+    <script src="assets/js/isInViewport.jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/tiny-slider/tiny-slider-rtl.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/Section/scrool.js"></script>
+<script src="assets/js/Follow/datatables.f2.js"></script>
+<script src="assets/js/Print/printadd.js"></script>
+<script src="assets/js/xlsx.full.min.js"></script>
+<script src="assets/js/plotly.js"></script>
+<script src="assets/js/plotly.min.js"></script>
+<script src="assets/js/dataTables.fixedHeader.min.js"></script>
+<script src="assets/js/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+<script src="assets/js/dataTables.buttons.min.js"></script>
+<script src="assets/js/buttons.bootstrap5.min.js"></script>
+<script src="assets/js/buttons.colVis.min.js"></script>
+<script src="assets/js/buttons.dataTables.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script src="assets/js/dataTables.rowGroup.min.js"></script>
+<script src="assets/js/dataTables.rowReorder.js"></script>
+<script src="assets/js/rowReorder.dataTables.js"></script>
+<script src="assets/js/dataTables.responsive.js"></script>
+<script src="assets/js/responsive.dataTables.js"></script>
+</body>
+</html>

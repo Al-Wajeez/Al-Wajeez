@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+	<title>الوجيز  (Al-Wajeez) | مدونة الشعب وتخصصات التكوين المهني</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+		setTheme(getPreferredTheme())
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+			showActiveTheme(getPreferredTheme())
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+			}
+		})
+	</script>
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" href="assets/vendor/choices/css/choices.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-rtl.css">
+</head>
+<body>
+<header class="navbar-light navbar-sticky">
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item h-50px" src="assets/images/logo.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item h-50px" src="assets/images/logo-light.png" alt="logo">
+			</a>
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تحليل النتائج</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T1.html">الفصل الأول</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T2.html">الفصل الثاني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T3.html">الفصل الثالث</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-All.html">النتائج السنوية</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-Bem.html">شهادة التعليم المتوسط</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-5eme.html">تقييم المكتسبات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">متابعة نتائج التلاميذ</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="Moutabaa-T1.html">متابعة نتائج الفصل الاول</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T2.html">متابعة نتائج الفصل الثاني</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T3.html">متابعة نتائج الفصل الثالث</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">وثائق</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Ministerial-circular.html">المناشير الوزارية الخاصة بالإعلام ...</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="coming-soon.html">مطويات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Structure-of-the-educational-system.html">هيكلـة النظـام التـربوي</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">بطاقات</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-2.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-1-1.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/01/fiche-de-voeux-003.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الرابعة متوسط</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCL.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCST.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-1-AS.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الأولى ثانوي</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">خدمات</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">فضاءات قطاع التربية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://awlyaa.education.dz/" target="_blank">فضاء الاولياء</a></li>
+									<li> <a class="dropdown-item" href="https://amatti.education.gov.dz/" target="_blank">الأرضية الرقمية + فضاء مستشار التوجية</a></li>
+									<li> <a class="dropdown-item" href="https://ostad.education.gov.dz/auth" target="_blank">فضاء الأساتذة</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/" target="_blank">موقع وزارة التربية</a></li>
+									<li> <a class="dropdown-item" href="https://www.a-onec.com/" target="_blank">مدونة التربية والتعليم</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="http://inscriptic.onefd.edu.dz/" target="_blank">التسجيل الإلكتروني في ONEFD</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">نتائج الإمتحانات الرسمية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://bem.onec.dz/" target="_blank">شهادة التعليم التوسط</a></li>
+									<li> <a class="dropdown-item" href="https://bac.onec.dz/" target="_blank">شهادة البكالوريا</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="rate-calculator.html">حساب المعدلات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="https://onps.com.dz/" target="_blank">البيع الإلكتروني للكتب</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Professional-training.html">مدونة الشعب و تخصصات التكوين المهني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown"><a class="nav-link" href="coming-soon-blog.html">مدونة</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="advanceMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-ellipsis-h"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end min-w-auto" data-bs-popper="none">
+							<li> 
+								<a class="dropdown-item" href="faq.html">
+									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>أسئلة شائعة
+								</a> 
+							</li>
+							<li> 
+								<a class="dropdown-item" href="privacy-policy.html">
+									<i class="text-danger fa-fw bi bi-card-text me-2"></i>سياسة خصوصية
+								</a> 
+							</li>
+							<li> <hr class="dropdown-divider"></li>
+							<li> 
+								<a class="dropdown-item" href="contact-us.html">
+									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>تواصل معنا
+								</a> 
+							</li>
+						</ul>
+					</li>
+				</ul>
+				</ul>
+			</div>
+			<div class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+						<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+			</div>
+		</div>
+	</nav>
+</header>
+<main>
+<section class="bg-primary bg-opacity-10">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 mx-auto text-center">
+				<h1 class="display-6">مدونة الشعب و تخصصات التكوين المهني</h1>
+				<p class="mb-0" style="margin-bottom: 1.5rem !important;line-height: 2rem">مدونة الشعب و تخصصات التكوين المهني طبعة 2019.</p>
+			</div>
+			<div class="col-12 mt-6">
+				<img src="assets/images/element/help-center.svg" class="w-100" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+<section id="blogsection">
+	<div class="container">
+		<div class="col-lg-12 z-index-9 mt-5 mt-xl-0">
+				<div class="tab-content" id="pills-tabContent">
+					<div class="tab-pane fade" id="course-pills-1" role="tabpanel" aria-labelledby="course-pills-tab-1">
+						<form class="bg-light border p-4 rounded-3 my-4 z-index-9 position-relative">
+							<div class="row g-3">
+								<div class="col-xl-12">
+									<label class="form-label">البحث عن التخصص</label>
+									<input id="searchInput" class="form-control me-1" type="search" placeholder="تسمية التخصص">
+								</div>
+								<hr>
+								<div class="col-xl-12">
+									<label class="form-label">البحث عن رمز التخصص</label>
+									<input id="searchInputC2" class="form-control me-1" type="search" placeholder="رمز التخصص">
+								</div>
+								<hr>
+								<div class="col-xl-12">
+									<div class="row g-3">
+										<div class="col-sm-6 col-md-3 pb-2 pb-md-0">
+											<label class="form-label">الشعبة المهنية</label>
+											<select id="filterC9" class="form-select form-select-sm" aria-label=".form-select-sm example">
+												<option value=""></option>
+											</select>
+										</div>
+										<div class="col-sm-6 col-md-3 pb-2 pb-md-0">
+											<label class="form-label">مدة التكوين</label>
+											<select id="filterC6" class="form-select form-select-sm" aria-label=".form-select-sm example">
+												<option value=""></option>
+											</select>
+										</div>
+										<div class="col-sm-6 col-md-3 pb-2 pb-md-0">
+											<label class="form-label">الشهادة المسلمة</label>
+											<select id="filterC5" class="form-select form-select-sm" aria-label=".form-select-sm example">
+												<option value=""></option>
+											</select>
+										</div>
+										<div class="col-sm-6 col-md-3 pb-2 pb-md-0">
+											<label class="form-label">مستوى التأهيل</label>
+											<select id="filterC4" class="form-select form-select-sm" aria-label=".form-select-sm example">
+												<option value=""></option>
+											</select>
+										</div>
+									</div> 
+								</div>
+								<hr>
+								<div class="col-xl-12">
+									<button id="filterButton" type="button" onclick="filterData()" class="btn btn-primary mb-0 rounded z-index-1 w-100"><i class="fas fa-search"></i></button>
+								</div>
+							</div> 
+						</form>
+						<div class="col-lg-12"> 
+							<div class="card card-body bg-transparent pb-0 mb-4">
+								<div class="table-responsive border-0">
+									<table id="resultsTable" class="table align-middle p-4 mb-0 table-hover display nowrap">
+										<thead class="align-middle">
+											<tr>
+												<th scope="col" class="border-0 rounded-start text-center" style="width: 5%;">#</th>
+												<th scope="col" class="border-0 text-center">رمز التخصّص</th>
+												<th scope="col" class="border-0 text-center">تسمية التخصّص</th>
+												<th scope="col" class="border-0 text-center">الشهادة المسلّمة</th>
+												<th scope="col" class="border-0 text-center">الشعبة المهنية</th>
+											</tr>
+										</thead>
+										<tbody id="tableBody">
+										</tbody>
+									</table>
+										<div class="col-xl-12">
+											<button id="showMoreButton" type="button" class="btn btn-sm btn-light mb-0 z-index-1 w-100" style="display: none;">إظهار المزيد</button>
+										</div>
+								</div>
+							</div>
+						</div>
+						<div id="rowModal" class="modal" tabindex="-1" role="dialog">
+							<div class="modal-dialog modal-xl" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</button>
+									</div>
+									<div class="modal-body">
+										<section class="bg-blue align-items-center d-flex" style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;">
+											<div class="container">
+												<div class="row">
+													<div class="col-12 text-center">
+														<h4 class="text-white">معلومات حول التخصص</h4>
+													</div>
+												</div>
+											</div>
+										</section>
+										<div class="col-lg-12"> 
+											<div class="card card-body bg-transparent pb-0 mb-4">
+												<div class="table-responsive border-0">
+													<table class="table align-middle p-4 mb-0 table-hover">
+														<tbody>
+															<tr>
+																<td class="text-center">01</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-file-code-fill"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">رمز التخصص</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC2"></span></h6>
+																	</td>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-center">02</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-briefcase-fill"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">تسمية التخصص</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC3"></span></h6>
+																	</td>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-center">03</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-patch-check-fill"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">مستوى التأهيل</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC4"></span></h6>
+																	</td>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-center">04</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-award-fill"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">الشهادة المسلمة</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC5"></span></h6>
+																	</td>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-center">05</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-calendar-check-fill"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">مدة الكوين</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC6"></span></h6>
+																	</td>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-center">06</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-file-earmark-check-fill"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">شروط الإلتحاق</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC7"></span></h6>
+																	</td>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-center">07</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-person-video2"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">نمط التكوين</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC8"></span></h6>
+																	</td>
+																</td>
+															</tr>
+															<tr>
+																<td class="text-center">08</td>
+																<td>
+																	<div class="d-flex align-items-center position-relative">
+																		<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																			<i class="bi bi-person-workspace"></i>
+																		</div>
+																		<div class="mb-0 ms-2">
+																			<h6 class="mb-0"><a class="stretched-link">الشعبة المهنية</a></h6>
+																		</div>
+																	</div>
+																	<td>
+																		<h6 class="mb-0"><span id="modalC9"></span></h6>
+																	</td>
+																</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<section class="pt-3 pt-xl-5">
+							<div class="container" data-sticky-container>
+								<div class="row g-4">
+									<div class="col-xl-12">
+										<div class="row g-4 position-relative mb-4">
+											<figure class="position-absolute top-0 start-0 d-none d-sm-block">	
+											  <svg width="22px" height="22px" viewBox="0 0 22 22">
+												<polygon class="fill-purple" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+											  </svg>
+											</figure>
+											<div class="col-lg-10 mx-auto text-center position-relative" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+											  <figure class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+												<svg width="27px" height="27px">
+												  <path class="fill-orange" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+												</svg>
+											  </figure>
+											  <h1>التكوين عن طريق المعابر</h1>
+											  <p class="mb-4 pb-1">المعابر في التكوين المهني آلية تسمح بانتقال من مستوي تأهيل إلى مستوى تأهيل أعلى منه معترف به</p>
+											</div>
+										</div>	
+										<div class="row g-4">
+											<div class="col-12">
+												<div class="card">
+													<div class="card-header border-bottom">
+														<h3 class="mb-0"></h3>
+													</div>
+													<div class="card-body" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+														<p class="mb-3">المعابر في التكوين المهني هي آلية تهدف إلى تسهيل الانتقال التدريجي للمتدربين من مستوى تأهيل إلى مستوى تأهيل أعلى معترف به، وذلك من خلال التكوين المتواصل. هذه الآلية تتيح للمتدربين مواصلة برنامجين من برامج التكوين ضمن نفس التخصص أو الشعبة المهنية، أو حتى ضمن مجموعات وظيفية متشابهة، مما يمكنهم من تحسين مؤهلاتهم والحصول على شهادة أعلى.</p>
+														<h5 class="mt-4">آلية عمل المعابر</h5>
+														<div class="row mb-3">
+															<p class="mb-3">تتيح المعابر للمتدربين مواصلة دراساتهم في إطار التكوين المتواصل، وهو برنامج تدريبي مصمم خصيصًا للمتدربين الذين يرغبون في تحسين مستوياتهم المهنية بشكل تدريجي. ويتيح هذا النظام للمتدرب متابعة تكوينين متتاليين أو أكثر ضمن نفس المجال المهني، سواء كان ذلك داخل نفس الشعبة المهنية أو مجموعات وظيفية متقاربة.</p>
+														</div>
+														<h5 class="mt-4">شروط ومتطلبات المعابر</h5>
+														<div class="row mb-3">
+															<p class="mb-3">تختلف شروط الانتقال بين مستويات التأهيل من مؤسسة إلى أخرى، لكن عمومًا يتطلب الأمر نجاح المتدرب في المستوى الحالي واستيفاء بعض المتطلبات، مثل استكمال فترة زمنية محددة أو اجتياز اختبارات معينة.</p>
+														</div>
+														<h5 class="mt-4">فوائد المعابر</h5>
+														<div class="row mb-3">
+															<div class="col-md-6">
+																<ul class="list-group list-group-borderless">
+																	<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تطوير المهارات</li>
+																	<p class="mb-3">تمكّن المتدربين من اكتساب مهارات جديدة تزيد من قدرتهم على المنافسة في سوق العمل.</p>
+																</ul>
+															</div>
+															<div class="col-md-6">
+																<ul class="list-group list-group-borderless">
+																	<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>التدرج الوظيفي</li>
+																	<p class="mb-3">تساهم المعابر في تعزيز فرص الترقي المهني للمتدربين من خلال تحقيقهم لشهادات أعلى.</p>
+																</ul>
+															</div>
+															<div class="col-md-6">
+																<ul class="list-group list-group-borderless">
+																	<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>شهادات معترف بها</li>
+																</ul>
+																<p class="mb-3">توفر مرونة أكبر للمتدربين في تحديد المسار المهني الذي يناسب احتياجاتهم وأهدافهم.</p>
+															</div>
+															<div class="col-md-6">
+																<ul class="list-group list-group-borderless">
+																	<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>المرونة</li>
+																	<p class="mb-3">يسمح النظام بالحصول على شهادات تأهيلية رسمية معترف بها مما يعزز فرص العمل للمتدربين.</p>
+																</ul>
+															</div>
+														</div>
+														<h5 class="mt-4">أمثلة على استخدام المعابر</h5>
+														<div class="row mb-3">
+															<p class="mb-3">قد يبدأ المتدرب بمستوى تأهيلي أولي كالحصول على شهادة في صيانة الأجهزة الكهربائية، ومن ثم يستفيد من نظام المعابر للانتقال إلى مستوى تأهيلي أعلى في هندسة الطاقة أو تكنولوجيا التشغيل، ليحصل على شهادة أكثر تقدماً، مما يجعله مؤهلاً لأدوار ومهام أكثر تخصصًا ومسؤولية.</p>
+														</div>
+														<h5 class="mt-4">القوانين المتعلقة بالتكوين عن طريق المعابر</h5>
+														<div class="row mb-3">
+															<p class="mb-3">قرار رقم 62 المؤرخ في 05 فيفري 2020، يعرف معابر التكوين المهني، ويحدد شروط الإلتحاق و كيفيات تنظيم و تقييم و تتويج التكوين وكذا الدليل المتعلق بها.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<section class="pt-0 pt-md-5">
+												<div class="container">
+													<div class="row g-4">
+														<div class="col-lg-3">
+															<div class="card overflow-hidden shadow">
+																<div class="card-overlay-hover">
+																	<img src="assets/images/decisions/62-1.jpg" class="rounded-3" alt="course image">
+																</div>
+																<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/62-1.jpg">
+																	<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																</a>
+															</div>
+														</div>
+														<div class="col-lg-3">
+															<div class="card overflow-hidden shadow">
+																<div class="card-overlay-hover">
+																	<img src="assets/images/decisions/62-2.jpg" class="rounded-3" alt="course image">
+																</div>
+																<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/62-2.jpg">
+																	<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																</a>
+															</div>
+														</div>
+														<div class="col-lg-3">
+															<div class="card overflow-hidden shadow">
+																<div class="card-overlay-hover">
+																	<img src="assets/images/decisions/62-3.jpg" class="rounded-3" alt="course image">
+																</div>
+																<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/62-3.jpg">
+																	<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																</a>
+															</div>
+														</div>
+														<div class="col-lg-3">
+															<div class="card overflow-hidden shadow">
+																<div class="card-overlay-hover">
+																	<img src="assets/images/decisions/62-4.jpg" class="rounded-3" alt="course image">
+																</div>
+																<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/62-4.jpg">
+																	<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																</a>
+															</div>
+														</div>
+														<div class="col-lg-3">
+															<div class="card overflow-hidden shadow">
+																<div class="card-overlay-hover">
+																	<img src="assets/images/decisions/62-5.jpg" class="rounded-3" alt="course image">
+																</div>
+																<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/62-5.jpg">
+																	<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																</a>
+															</div>
+														</div>
+														<div class="col-lg-3">
+															<div class="card overflow-hidden shadow">
+																<div class="card-overlay-hover">
+																	<img src="assets/images/decisions/62-6.jpg" class="rounded-3" alt="course image">
+																</div>
+																<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/62-6.jpg">
+																	<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																</a>
+															</div>
+														</div>
+														<div class="col-lg-3">
+															<div class="card overflow-hidden shadow">
+																<div class="card-overlay-hover">
+																	<img src="assets/images/decisions/62-7.jpg" class="rounded-3" alt="course image">
+																</div>
+																<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/62-7.jpg">
+																	<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																</a>
+															</div>
+														</div>
+													</div>
+												</div>
+											</section>
+											<div class="card-body">
+												<p class="mb-3">في الختام، تُعد المعابر في التكوين المهني أداة فعّالة تُمكِّن المتدربين من تطوير مهاراتهم بشكل تدريجي، والوصول إلى مستويات تأهيل أعلى ضمن تخصصاتهم. هذا النظام يُسهم في تعزيز فرص المتدربين في سوق العمل ويمنحهم مرونة أكبر في اختيار مسارهم المهني، مما يسهم في بناء قوى عاملة مؤهلة تواكب متطلبات العصر. من خلال المعابر، يتحقق التوازن بين التعليم النظري والتدريب العملي، ما يسهم في إعداد جيلٍ قادرٍ على مواكبة التطورات المهنية وتحقيق النجاح المستدام.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<div class="tab-pane fade" id="course-pills-2" role="tabpanel" aria-labelledby="course-pills-tab-2">
+							<form class="bg-light border p-4 rounded-3 my-4 z-index-9 position-relative">
+								<div class="row g-3">
+									<div class="col-xl-12">
+										<label class="form-label">البحث عن التخصص</label>
+										<input id="searchInputIQ" class="form-control me-1" type="search" placeholder="تسمية التخصص">
+									</div>
+									<hr>
+									<div class="col-xl-12">
+										<label class="form-label">البحث عن رمز التخصص</label>
+										<input id="searchInputIQ2" class="form-control me-1" type="search" placeholder="رمز التخصص">
+									</div>
+									<hr>
+									<div class="col-xl-12">
+										<div class="row g-3">
+											<div class="col-xl-6 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">الشعبة المهنية</label>
+												<select id="filterIQ9" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-xl-6 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">مدة التكوين</label>
+												<select id="filterIQ6" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+										</div> 
+									</div>
+									<hr>
+									<div class="col-xl-12">
+										<button id="filterButtonIQ" type="button" onclick="filterDataIQ()" class="btn btn-primary mb-0 rounded z-index-1 w-100"><i class="fas fa-search"></i></button>
+									</div>
+								</div> 
+							</form>
+							<div class="col-lg-12"> 
+								<div class="card card-body bg-transparent pb-0 mb-4">
+									<div class="table-responsive border-0">
+										<table id="resultsTableIQ" class="table align-middle p-4 mb-0 table-hover display nowrap">
+											<thead class="align-middle">
+												<tr>
+													<th scope="col" class="border-0 rounded-start text-center" style="width: 5%;">#</th>
+													<th scope="col" class="border-0 text-center">رمز التخصّص</th>
+													<th scope="col" class="border-0 text-center">تسمية التخصّص</th>
+													<th scope="col" class="border-0 text-center">الشهادة المسلّمة</th>
+													<th scope="col" class="border-0 text-center">الشعبة المهنية</th>
+												</tr>
+											</thead>
+											<tbody id="tableBodyIQ">
+											</tbody>
+										</table>
+										<div class="col-xl-12">
+											<button id="showMoreButtonIQ" type="button" class="btn btn-sm btn-light mb-0 z-index-1 w-100" style="display: none;">إظهار المزيد</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="rowModalIQ" class="modal" tabindex="-1" role="dialog">
+								<div class="modal-dialog modal-xl" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</button>
+										</div>
+										<div class="modal-body">
+											<section class="bg-blue align-items-center d-flex" style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;">
+												<div class="container">
+													<div class="row">
+														<div class="col-12 text-center">
+															<h4 class="text-white">معلومات حول التخصص</h4>
+														</div>
+													</div>
+												</div>
+											</section>
+											<div class="col-lg-12"> 
+												<div class="card card-body bg-transparent pb-0 mb-4">
+													<div class="table-responsive border-0">
+														<table class="table align-middle p-4 mb-0 table-hover">
+															<tbody>
+																<tr>
+																	<td class="text-center">01</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-file-code-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">رمز التخصص</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ2"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">02</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-briefcase-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">تسمية التخصص</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ3"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">03</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-patch-check-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">مستوى التأهيل</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ4"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">04</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-award-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">الشهادة المسلمة</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ5"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">05</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-calendar-check-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">مدة الكوين</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ6"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">06</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-file-earmark-check-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">شروط الإلتحاق</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ7"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">07</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-person-video2"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">نمط التكوين</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ8"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">08</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-person-workspace"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">الشعبة المهنية</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalIQ9"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<section class="pt-3 pt-xl-5" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+								<div class="container" data-sticky-container>
+									<div class="row g-4">
+										<div class="col-xl-12">
+											<div class="row g-4 position-relative mb-4">
+												<figure class="position-absolute top-0 start-0 d-none d-sm-block">	
+												  <svg width="22px" height="22px" viewBox="0 0 22 22">
+													<polygon class="fill-purple" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+												  </svg>
+												</figure>
+												<div class="col-lg-10 mx-auto text-center position-relative">
+												  <figure class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+													<svg width="27px" height="27px">
+													  <path class="fill-orange" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+													</svg>
+												  </figure>
+												  <h1>التكوين التأهيلي الاولي</h1>
+												  <p class="mb-4 pb-1">
+													<p>التكوين التأهيلي الأولي، هو تكوين قصير المدى يهدف إلى إكتساب كفاءات خاصة ، تسمح لطالبي التكوين من الحصول على تأهيل أولي يمكّنه من الإندماج الإجتماعي المهني أو إنشاء مؤسسته المصغرة</p>
+												</div>
+											</div>	
+											<div class="row g-4">
+												<div class="col-12">
+													<div class="card">
+														<div class="card-header border-bottom">
+															<h3 class="mb-0"></h3>
+														</div>
+														<div class="card-body">							
+															<h5 class="mt-4">شروط الإلتحاق بالتكوين التكوين الأولي التأهيلي</h5>
+															<div class="row mb-3">
+																<p class="mb-3">يتوجه التكوين الأولي التأهيلي إلى جميع شرائح المجتمع (التلاميذ المنحدرون من الطور الإبتدائي، المتوسط و الثانوي)، الشباب و الكبار المتحررون من الأمية، الشباب ذوو المستوى الدراسي المحدود، النساء الماكثات بالبيت…إلخ و الذين يودون مزاولة التكوين المهني قصير المدى الذي يسمح لهم الإلتحاق بسهولة بعالم الشغل.</p>
+															</div>
+															<h5 class="mt-4">أهداف الأولي التأهيلي</h5>
+															<div class="row mb-3">
+																<p class="mb-3">هدف التكوينات الأولية التأهيلية إلى تأهيل المتدربين وتزويدهم بالمهارات الأساسية في تخصصاتهم، مع تعزيز فرصهم في سوق العمل عبر تدريبات نظرية وعملية.</p>
+															</div>
+															<h5 class="mt-4">مراحل التكوين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>المرحلة النظرية والتي تشمل الدروس الأساسية والمبادئ النظرية في مراكز التكوين</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>المرحلة العملية والتي تتضمن تطبيقات عملية داخل المؤسسات المهنية لضمان خبرة ميدانية.</li>
+																	</ul>
+																</div>
+															</div>
+															<h5 class="mt-4">فوائد الأولي التأهيلي</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>إعداد كوادر مؤهلة ومهنية.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تحسين فرص العمل عبر اكتساب خبرات عملية.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تعزيز التكيف مع متطلبات المهنة.</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="col-12">
+																<p>المدة الإجمالية للتكوين الأولي التأهيلي تُحدد بالأشهر، وتشمل الوقت المخصص للتكوين النظري والتطبيقي، بالإضافة إلى فترة الامتحان النهائي الذي يُكلل التدريب بشهادة تأهيل.</p>
+															</div>
+															<h5 class="mt-4">القانونية المتعلقة بالتكوين التأهيلي الأولي</h5>
+															<div class="row mb-3">
+																<p class="mb-3">قرار  وزاري رقم 127 مؤرخ في 15 أفريل 2019، يحدد دليل التكوينات الأولية التأهلية وكذا كيفيات تنظيمها وتتوجيها.</p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<section class="pt-0 pt-md-5">
+													<div class="container">
+														<div class="row g-4">
+															<div class="col-lg-4">
+																<div class="card overflow-hidden shadow">
+																	<div class="card-overlay-hover">
+																		<img src="assets/images/decisions/127-1.jpg" class="rounded-3" alt="course image">
+																	</div>
+																	<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/127-1.jpg">
+																		<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																	</a>
+																</div>
+															</div>
+															<div class="col-lg-4">
+																<div class="card overflow-hidden shadow">
+																	<div class="card-overlay-hover">
+																		<img src="assets/images/decisions/127-2.jpg" class="rounded-3" alt="course image">
+																	</div>
+																	<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/127-2.jpg">
+																		<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																	</a>
+																</div>
+															</div>
+															<div class="col-lg-4">
+																<div class="card overflow-hidden shadow">
+																	<div class="card-overlay-hover">
+																		<img src="assets/images/decisions/127-3.jpg" class="rounded-3" alt="course image">
+																	</div>
+																	<a class="card-element-hover position-absolute w-100 h-100" data-glightbox data-gallery="gallery" href="assets/images/decisions/127-3.jpg">
+																		<i class="bi bi-fullscreen fs-6 text-white position-absolute top-50 start-50 translate-middle bg-dark rounded-3 p-2 lh-1"></i>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</section>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+					</div>
+					<div class="tab-pane fade" id="course-pills-3" role="tabpanel" aria-labelledby="course-pills-tab-3">
+							<form class="bg-light border p-4 rounded-3 my-4 z-index-9 position-relative">
+								<div class="row g-3">
+									<div class="col-xl-12">
+										<label class="form-label">البحث عن التخصص</label>
+										<input id="searchInputOPT" class="form-control me-1" type="search" placeholder="تسمية التخصص">
+									</div>
+									<hr>
+									<div class="col-xl-12">
+										<label class="form-label">البحث عن رمز التخصص</label>
+										<input id="searchInputOPT2" class="form-control me-1" type="search" placeholder="رمز التخصص">
+									</div>
+									<hr>
+									<div class="col-xl-12">
+										<div class="row g-3">
+											<div class="col-xl-4 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">الشعبة المهنية</label>
+												<select id="filterOPT9" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-xl-4 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">مدة التكوين</label>
+												<select id="filterOPT6" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-xl-4 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">الشهادة المسلمة</label>
+												<select id="filterOPT5" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-xl-4 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">مستوى التأهيل</label>
+												<select id="filterOPT4" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-xl-4 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">شروط الإلتحاق</label>
+												<select id="filterOPT7" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+											<div class="col-xl-4 col-md-3 pb-2 pb-md-0">
+												<label class="form-label">نمط التكوين</label>
+												<select id="filterOPT8" class="form-select form-select-sm" aria-label=".form-select-sm example">
+													<option value=""></option>
+												</select>
+											</div>
+										</div> 
+									</div>
+									<hr>
+									<div class="col-xl-12">
+										<button id="filterButtonOPT" type="button" onclick="filterDataOPT()" class="btn btn-primary mb-0 rounded z-index-1 w-100"><i class="fas fa-search"></i></button>
+									</div>
+								</div> 
+							</form>
+							<div class="col-lg-12"> 
+								<div class="card card-body bg-transparent pb-0 mb-4">
+									<div class="table-responsive border-0">
+										<table id="resultsTableOPT" class="table align-middle p-4 mb-0 table-hover display nowrap">
+											<thead class="align-middle">
+												<tr>
+													<th scope="col" class="border-0 rounded-start text-center" style="width: 5%;">#</th>
+													<th scope="col" class="border-0 text-center">رمز التخصّص</th>
+													<th scope="col" class="border-0 text-center">تسمية التخصّص</th>
+													<th scope="col" class="border-0 text-center">الشهادة المسلّمة</th>
+													<th scope="col" class="border-0 text-center">الشعبة المهنية</th>
+												</tr>
+											</thead>
+											<tbody id="tableBodyOPT">
+											</tbody>
+										</table>
+										<div class="col-xl-12">
+											<button id="showMoreButtonOPT" type="button" class="btn btn-sm btn-light mb-0 z-index-1 w-100" style="display: none;">إظهار المزيد</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="rowModalOPT" class="modal" tabindex="-1" role="dialog">
+								<div class="modal-dialog modal-xl" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</button>
+										</div>
+										<div class="modal-body">
+											<section class="bg-blue align-items-center d-flex" style="background:url(assets/images/pattern/04.png) no-repeat center center; background-size:cover;">
+												<div class="container">
+													<div class="row">
+														<div class="col-12 text-center">
+															<h4 class="text-white">معلومات حول التخصص</h4>
+														</div>
+													</div>
+												</div>
+											</section>
+											<div class="col-lg-12"> 
+												<div class="card card-body bg-transparent pb-0 mb-4">
+													<div class="table-responsive border-0">
+														<table class="table align-middle p-4 mb-0 table-hover">
+															<tbody>
+																<tr>
+																	<td class="text-center">01</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-file-code-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">رمز التخصص</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT2"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">02</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-briefcase-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">تسمية التخصص</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT3"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">03</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-patch-check-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">مستوى التأهيل</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT4"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">04</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-award-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">الشهادة المسلمة</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT5"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">05</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-calendar-check-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">مدة الكوين</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT6"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">06</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-file-earmark-check-fill"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">شروط الإلتحاق</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT7"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">07</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-person-video2"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">نمط التكوين</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT8"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="text-center">08</td>
+																	<td>
+																		<div class="d-flex align-items-center position-relative">
+																			<div class="mb-2 ms-2 mb-md-0 align-items-center position-relative text-purple">
+																				<i class="bi bi-person-workspace"></i>
+																			</div>
+																			<div class="mb-0 ms-2">
+																				<h6 class="mb-0"><a class="stretched-link">الشعبة المهنية</a></h6>
+																			</div>
+																		</div>
+																		<td>
+																			<h6 class="mb-0"><span id="modalOPT9"></span></h6>
+																		</td>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<section class="pt-3 pt-xl-5" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+								<div class="container" data-sticky-container>
+									<div class="row g-4">
+										<div class="col-xl-12">
+											<div class="row g-4 position-relative mb-4">
+												<figure class="position-absolute top-0 start-0 d-none d-sm-block">	
+												  <svg width="22px" height="22px" viewBox="0 0 22 22">
+													<polygon class="fill-purple" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+												  </svg>
+												</figure>
+												<div class="col-lg-10 mx-auto text-center position-relative">
+												  <figure class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+													<svg width="27px" height="27px">
+													  <path class="fill-orange" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+													</svg>
+												  </figure>
+												  <h1>التكوين عن طريق التمهين</h1>
+												  <p class="mb-4 pb-1">
+													<p>التكوين عن طريق التمهين هو نمط من التكوين المهني ينظم في شكل تناوبي بين المؤسسة العمومية للتكوين المهني و الوسط المهني، يهدف إلى اكتساب تأهيل مهني أولي في منصب التمهين يسمح بممارسة مهنة في مختلف قطاعات النشاط المرتبطة بإنتاج المواد و/ أو الخدمات</p>
+												</div>
+											</div>	
+											<div class="row g-4">
+												<div class="col-12">
+													<div class="card">
+														<div class="card-header border-bottom">
+															<h3 class="mb-0"></h3>
+														</div>
+														<div class="card-body">							
+															<h5 class="mt-4">شروط الإلتحاق بالتكوين عن طريق التمهين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>كل شاب ما بين 15 و 35 سنة، يمكنه التسجيل و مزاولة التكوين عن طريق التمهين</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>يعفى الأشخاص ذوو الإحتياجات الخاصة (المعوقون جسدياً)، من شرط السن الأقصى</li>
+																	</ul>
+																</div>
+															</div>
+															<h5 class="mt-4">ما هو منصب التمهين</h5>
+															<div class="row mb-3">
+																<p class="mb-3">كل منصب عمل مخصص من طرف المستخدم لضمان التكوين التطبيقي للمتمهنين في المهنة أو التخصص موضوع عقد التمهين.</p>
+															</div>
+															<h5 class="mt-4">أهداف التكوين عن طريق التمهين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>يساعد هذا النظام المتدربين على تطوير مهاراتهم في بيئة عمل حقيقية، مما يعزز من قدرتهم على تلبية متطلبات المهنة</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>يُمكّن المتدربين من اكتساب خبرات عملية تسهل عليهم الحصول على فرص عمل بعد انتهاء التكوين.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>يكون التدريب تحت إشراف مهنيين مختصين، مما يضمن جودة التدريب ويزود المتدربين بالتوجيه المطلوب.</li>
+																	</ul>
+																</div>
+															</div>
+															<h5 class="mt-4">مراحل التكوين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>بدأ المتدربون بتقديم طلباتهم وفق متطلبات معينة تتعلق بمستواهم التعليمي وتخصصاتهم</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تم تدريب المتدربين على الأساسيات النظرية المتعلقة بالتخصص في مراكز التكوين.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>قضي المتدربون فترة من التكوين داخل مؤسسات مهنية، حيث يعملون تحت إشراف مهنيين، مما يتيح لهم فرصة تطبيق المعلومات النظرية عمليًا.</li>
+																	</ul>
+																</div>
+															</div>
+															<h5 class="mt-4">فوائد التكوين عن طريق التمهين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>من خلال الدمج بين النظري والعملي، يصبح المتدربون أكثر استعدادًا لمواجهة تحديات العمل.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>المهارات المكتسبة تجعل المتدربين أكثر فاعلية وكفاءة.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>يساعد هذا النظام على تكوين أجيال من العمال المؤهلين القادرين على مواكبة التطورات.</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="col-12">
+																<p>في نظام التكوين عن طريق التمهين، تختلف المدة الإجمالية للتكوين ومدة التكوين التقني والتكنولوجي التكميلي حسب المستوى التأهيلي. عمومًا، يتم تخصيص الحجم الساعي للتكوين وفقًا لكل مستوى، بحيث يُدمج بين فترات التعليم النظري في المراكز وفترات التدريب العملي في المؤسسات. للتفاصيل الدقيقة حول كل مستوى تأهيلي والحجم الساعي المحدد.</p>
+															</div>
+															<div class="col-12">
+																<p>حدد الحجم الساعي للتكوين التقني والتكنولوجي التكميلي الخاص بالتكوين عن طريق التمهين بالنسبة لكل مستوى تأهيلي في الجدول أدناه:.</p>
+															</div>
+															<div class="col-lg-12"> 
+																<div class="card card-body bg-transparent pb-0 mb-4">
+																	<div class="table-responsive border-0">
+																		<table class="table align-middle p-4 mb-0 table-hover">
+																			<thead class="align-middle">
+																				<tr>
+																					<th scope="col" class="border-0 text-center rounded-start" style="width: 5%;">#</th>
+																					<th scope="col" class="border-0 text-center" style="width: 20%;">مستويات التاهيل</th>
+																					<th scope="col" class="border-0 text-center" style="width: 20%;">الشهادات</th>
+																					<th scope="col" class="border-0 text-center">المدة الإجمالية للتكوين بالأشهر بما في ذلك العطل</th>
+																					<th scope="col" class="border-0 text-center">المدة الإجمالية للتكوين التقني والتكنولوجي التكميلي بالساعات</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td class="text-center">01</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الأول</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>CFPS</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>12 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>136 ساعة</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">02</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الثاني</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>CAP</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>12 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>272 ساعة</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">03</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الثالث</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>CMP</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>18 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>408 ساعة</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">04</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الرابع</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>تقني</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>24 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>816 ساعة</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">05</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الخامس</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>تقني سامي</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>30 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>1360 ساعة</span></h6></td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>
+															<h5 class="mt-4">التنظيم الساري المفعول الخاص بالتمهين</h5>
+															<div class="row mb-3">
+																<p class="mb-3">القانون رقم 10-18 المؤرخ في 10 جوان 2018 ، المحدد للقواعد التطبيقية في مجال التمهين ( الجريدة الرسمية رقم 35/ 2018).</p>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section class="pt-3 pt-xl-5" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+								<div class="container" data-sticky-container>
+									<div class="row g-4">
+										<div class="col-xl-12">
+											<div class="row g-4 position-relative mb-4">
+												<figure class="position-absolute top-0 start-0 d-none d-sm-block">	
+												  <svg width="22px" height="22px" viewBox="0 0 22 22">
+													<polygon class="fill-purple" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+												  </svg>
+												</figure>
+												<div class="col-lg-10 mx-auto text-center position-relative">
+												  <figure class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+													<svg width="27px" height="27px">
+													  <path class="fill-orange" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+													</svg>
+												  </figure>
+												  <h1>التكوين الحضوري</h1>
+												  <p class="mb-4 pb-1">
+													<p>يتم التكوين الحضوري على مستوى مؤسسات التكوين المهني (مع تربص تطبيقي في الوسط المهني، كما يمكن مزاولة عن طريق الدروس المسائية)</p>
+												</div>
+											</div>	
+											<div class="row g-4">
+												<div class="col-12">
+													<div class="card">
+														<div class="card-header border-bottom">
+															<h3 class="mb-0"></h3>
+														</div>
+														<div class="card-body">							
+															<h5 class="mt-4">شروط الإلتحاق بالتكوين عن طريق التمهين</h5>
+															<div class="row mb-3">
+																<div class="col-md-6">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>يجب أن يكون المتقدم قد أكمل مستوى تعليمي معين (مثل التعليم الثانوي)</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>الالتزام بالدوام في المراكز التعليمية</li>
+																	</ul>
+																</div>
+															</div>
+															<h5 class="mt-4">أهداف التكوين عن طريق التمهين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تأهيل المتدربين بالمعارف والمهارات الأساسية في تخصصاتهم</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تطوير كفاءاتهم المهنية لتمكينهم من الاندماج في سوق العمل.</li>
+																	</ul>
+																</div>
+															</div>
+															<h5 class="mt-4">مراحل التكوين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تقديم الطلبات واستيفاء الشروط</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تلقي الدروس في المراكز.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تطبيق المهارات في مؤسسات العمل.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تقييم المتدربين في نهاية الدورة.</li>
+																	</ul>
+																</div>
+															</div>
+															<h5 class="mt-4">فوائد التكوين عن طريق التمهين</h5>
+															<div class="row mb-3">
+																<div class="col-md-12">
+																	<ul class="list-group list-group-borderless">
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>توفير خبرة عملية.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تحسين فرص التوظيف.</li>
+																		<li class="list-group-item h6 fw-light d-flex mb-0"><i class="fas fa-check-circle text-success me-2"></i>تعزيز المهارات التقنية والمهنية.</li>
+																	</ul>
+																</div>
+															</div>
+															<div class="col-12">
+																<p>تحدد المدة الإجمالية للتكوين بالأشهر، فالتكوين المحدد بـ12 شهرا يعادل سداسيين (2) بيداغوجيين، أي سنة أكاديمية و تتضمن هذه المدة ،العطل القانونية (العطل السنوية وما بين الدورات)، فترات التربص التطبيقي في الوسط المهني وكذا الوقت المكرس للتقييمات المستمرة للمعارف و للإمتحان النهائي لتتويج التكوين.</p>
+															</div>
+															<h5 class="mt-4">الحجم الساعي الإجمالي للتكوين في النمط الحضوري و مدة التربص التطبيقي في الوسط المهني </h5>
+															<div class="row mb-3">
+																<p class="mb-3">إن الحجم الساعي الإجمالي للتكوين في النمط الحضوري وكذا مدة التربص التطبيقي في الوسط المهني محددان بالنسبة لكل مستوى تأهيلي في الجدول أدناه:</p>
+															</div>
+															<div class="col-lg-12"> 
+																<div class="card card-body bg-transparent pb-0 mb-4">
+																	<div class="table-responsive border-0">
+																		<table class="table align-middle p-4 mb-0 table-hover">
+																			<thead class="align-middle">
+																				<tr>
+																					<th scope="col" class="border-0 text-center rounded-start" style="width: 5%;">#</th>
+																					<th scope="col" class="border-0 text-center" style="width: 20%;">مستويات التاهيل</th>
+																					<th scope="col" class="border-0 text-center" style="width: 20%;">الشهادات</th>
+																					<th scope="col" class="border-0 text-center">مدة التكوين الإجمالية بالأشهر</th>
+																					<th scope="col" class="border-0 text-center">مدة التكوين الإجمالية بالساعات</th>
+																					<th scope="col" class="border-0 text-center">الحجم الساعي الأسبوعي للتعليم</th>
+																					<th scope="col" class="border-0 text-center">مدة التربص التطبيقي في الوسط المهني</th>
+																				</tr>
+																			</thead>
+																			<tbody>
+																				<tr>
+																					<td class="text-center">01</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الأول</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>ش.ت.م.م</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>12 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>680 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>20 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>أسبوعين</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">02</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الثاني</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>ش.ك.م</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>12 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>952 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>28 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>03 أسابيع</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">03</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الثالث</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>ش.ت.م</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>18 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>1377 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>27 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>04 أسابيع</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">04</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الرابع</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>ش.ت</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>24 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>1972 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>29 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>12 أسبوعا</span></h6></td>
+																				</tr>
+																				<tr>
+																					<td class="text-center">05</td>
+																					<td>
+																						<div class="d-flex align-items-center position-relative">
+																							<div class="mb-0 ms-2">
+																								<h6 class="mb-0"><a class="stretched-link text-center">المستوى الخامس</a></h6>
+																							</div>
+																						</div>
+																					</td>
+																					<td><h6 class="mb-0 text-center"><span>ش.ت.س</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>30 شهر</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>2465 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>29 ساعة</span></h6></td>
+																					<td><h6 class="mb-0 text-center"><span>24 أسبوعا</span></h6></td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+					</div>
+					<div class="tab-pane fade show active" id="course-pills-4" role="tabpanel" aria-labelledby="course-pills-tab-4">
+						<section>
+							<div class="container">
+								<div class="row g-4 g-md-5">
+									<div class="col-lg-8">
+										<div class="row g-4 position-relative mb-4">
+											<figure class="position-absolute top-0 start-0 d-none d-sm-block">	
+											  <svg width="22px" height="22px" viewBox="0 0 22 22">
+												<polygon class="fill-purple" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "></polygon>
+											  </svg>
+											</figure>
+											<div class="col-lg-10 mx-auto text-center position-relative" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+											  <figure class="position-absolute top-50 end-0 translate-middle-y d-none d-md-block">
+												<svg width="27px" height="27px">
+												  <path class="fill-orange" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"></path>
+												</svg>
+											  </figure>
+											  <h1>مدونة الشعب و تخصصات التكوين المهني</h1>
+											  <div class="mt-2 mt-sm-0">
+												<p class="text-danger mb-0">مدونة الشعب و تخصصات التكوين المهني طبعة 2019 ( المحددة بمقتضى القرار رقم 197 المؤرخ في 11 جوان 2019 ،المعدل و المتمم للقرار رقم 317 المؤرخ في 06 رمضان 1439 الموافق  22 ماي 2018، المحدد لمدونة الشعب المهنية و تخصصات التكوين المهني طبعة 2018).</p>
+												</div>
+											  <p class="mb-4 pb-1">
+												<p>مدونة الشعب وتخصصات التكوين المهني تُعتبر إطارًا تنظيميًا يُحدد التخصصات والمجالات المهنية المتاحة في التكوين المهني. تهدف إلى توجيه المتدربين نحو الخيارات التعليمية المناسبة، وتساعد على تعزيز مهاراتهم بما يتناسب مع احتياجات السوق. تشمل المدونة مجموعة من التخصصات التي تغطي مجالات متنوعة مثل الصناعة، الحرف، والخدمات، مما يساهم في تنمية القوى العاملة وتحسين القدرة التنافسية للاقتصاد</p>
+											</div>
+										</div>	
+							  		</div>
+									<div class="col-lg-12">
+										<div class="card card-body bg-light p-5 text-center">
+											<h5 class="fw-normal">طبعة</h5>
+											<h2>2019</h2>
+											<a href="https://drive.google.com/uc?export=download&id=14AnLJoMCMWMktpXEj35XNhD_cHJ1s_W1" target="_blank" class="btn btn-blue mb-2">تحميل الطبعة</a>
+								  			<p class="mb-0">مدونة الشعب المهنية وتخصصات التكوين المهني.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="container">
+								<div class="row g-4">
+									<div class="col-10 text-center mx-auto position-relative">
+										<figure class="position-absolute top-100 start-50 translate-middle mt-5 ms-n9 pt-5 d-none d-lg-block">
+											<svg>
+												<path class="fill-success" d="m181.6 6.7c-0.1 0-0.2-0.1-0.3 0-2.5-0.3-4.9-1-7.3-1.4-2.7-0.4-5.5-0.7-8.2-0.8-1.4-0.1-2.8-0.1-4.1-0.1-0.5 0-0.9-0.1-1.4-0.2-0.9-0.3-1.9-0.1-2.8-0.1-5.4 0.2-10.8 0.6-16.1 1.4-2.7 0.3-5.3 0.8-7.9 1.3-0.6 0.1-1.1 0.3-1.8 0.3-0.4 0-0.7-0.1-1.1-0.1-1.5 0-3 0.7-4.3 1.2-3 1-6 2.4-8.8 3.9-2.1 1.1-4 2.4-5.9 3.9-1 0.7-1.8 1.5-2.7 2.2-0.5 0.4-1.1 0.5-1.5 0.9s-0.7 0.8-1.1 1.2c-1 1-1.9 2-2.9 2.9-0.4 0.3-0.8 0.5-1.2 0.5-1.3-0.1-2.7-0.4-3.9-0.6-0.7-0.1-1.2 0-1.8 0-3.1 0-6.4-0.1-9.5 0.4-1.7 0.3-3.4 0.5-5.1 0.7-5.3 0.7-10.7 1.4-15.8 3.1-4.6 1.6-8.9 3.8-13.1 6.3-2.1 1.2-4.2 2.5-6.2 3.9-0.9 0.6-1.7 0.9-2.6 1.2s-1.7 1-2.5 1.6c-1.5 1.1-3 2.1-4.6 3.2-1.2 0.9-2.7 1.7-3.9 2.7-1 0.8-2.2 1.5-3.2 2.2-1.1 0.7-2.2 1.5-3.3 2.3-0.8 0.5-1.7 0.9-2.5 1.5-0.9 0.8-1.9 1.5-2.9 2.2 0.1-0.6 0.3-1.2 0.4-1.9 0.3-1.7 0.2-3.6 0-5.3-0.1-0.9-0.3-1.7-0.8-2.4s-1.5-1.1-2.3-0.8c-0.2 0-0.3 0.1-0.4 0.3s-0.1 0.4-0.1 0.6c0.3 3.6 0.2 7.2-0.7 10.7-0.5 2.2-1.5 4.5-2.7 6.4-0.6 0.9-1.4 1.7-2 2.6s-1.5 1.6-2.3 2.3c-0.2 0.2-0.5 0.4-0.6 0.7s0 0.7 0.1 1.1c0.2 0.8 0.6 1.6 1.3 1.8 0.5 0.1 0.9-0.1 1.3-0.3 0.9-0.4 1.8-0.8 2.7-1.2 0.4-0.2 0.7-0.3 1.1-0.6 1.8-1 3.8-1.7 5.8-2.3 4.3-1.1 9-1.1 13.3 0.1 0.2 0.1 0.4 0.1 0.6 0.1 0.7-0.1 0.9-1 0.6-1.6-0.4-0.6-1-0.9-1.7-1.2-2.5-1.1-4.9-2.1-7.5-2.7-0.6-0.2-1.3-0.3-2-0.4-0.3-0.1-0.5 0-0.8-0.1s-0.9 0-1.1-0.1-0.3 0-0.3-0.2c0-0.4 0.7-0.7 1-0.8 0.5-0.3 1-0.7 1.5-1l5.4-3.6c0.4-0.2 0.6-0.6 1-0.9 1.2-0.9 2.8-1.3 4-2.2 0.4-0.3 0.9-0.6 1.3-0.9l2.7-1.8c1-0.6 2.2-1.2 3.2-1.8 0.9-0.5 1.9-0.8 2.7-1.6 0.9-0.8 2.2-1.4 3.2-2 1.2-0.7 2.3-1.4 3.5-2.1 4.1-2.5 8.2-4.9 12.7-6.6 5.2-1.9 10.6-3.4 16.2-4 5.4-0.6 10.8-0.3 16.2-0.5h0.5c1.4-0.1 2.3-0.1 1.7 1.7-1.4 4.5 1.3 7.5 4.3 10 3.4 2.9 7 5.7 11.3 7.1 4.8 1.6 9.6 3.8 14.9 2.7 3-0.6 6.5-4 6.8-6.4 0.2-1.7 0.1-3.3-0.3-4.9-0.4-1.4-1-3-2.2-3.9-0.9-0.6-1.6-1.6-2.4-2.4-0.9-0.8-1.9-1.7-2.9-2.3-2.1-1.4-4.2-2.6-6.5-3.5-3.2-1.3-6.6-2.2-10-3-0.8-0.2-1.6-0.4-2.5-0.5-0.2 0-1.3-0.1-1.3-0.3-0.1-0.2 0.3-0.4 0.5-0.6 0.9-0.8 1.8-1.5 2.7-2.2 1.9-1.4 3.8-2.8 5.8-3.9 2.1-1.2 4.3-2.3 6.6-3.2 1.2-0.4 2.3-0.8 3.6-1 0.6-0.2 1.2-0.2 1.8-0.4 0.4-0.1 0.7-0.3 1.1-0.5 1.2-0.5 2.7-0.5 3.9-0.8 1.3-0.2 2.7-0.4 4.1-0.7 2.7-0.4 5.5-0.8 8.2-1.1 3.3-0.4 6.7-0.7 10-1 7.7-0.6 15.3-0.3 23 1.3 4.2 0.9 8.3 1.9 12.3 3.6 1.2 0.5 2.3 1.1 3.5 1.5 0.7 0.2 1.3 0.7 1.8 1.1 0.7 0.6 1.5 1.1 2.3 1.7 0.2 0.2 0.6 0.3 0.8 0.2 0.1-0.1 0.1-0.2 0.2-0.4 0.1-0.9-0.2-1.7-0.7-2.4-0.4-0.6-1-1.4-1.6-1.9-0.8-0.7-2-1.1-2.9-1.6-1-0.5-2-0.9-3.1-1.3-2.5-1.1-5.2-2-7.8-2.8-1-0.8-2.4-1.2-3.7-1.4zm-64.4 25.8c4.7 1.3 10.3 3.3 14.6 7.9 0.9 1 2.4 1.8 1.8 3.5-0.6 1.6-2.2 1.5-3.6 1.7-4.9 0.8-9.4-1.2-13.6-2.9-4.5-1.7-8.8-4.3-11.9-8.3-0.5-0.6-1-1.4-1.1-2.2 0-0.3 0-0.6-0.1-0.9s-0.2-0.6 0.1-0.9c0.2-0.2 0.5-0.2 0.8-0.2 2.3-0.1 4.7 0 7.1 0.4 0.9 0.1 1.6 0.6 2.5 0.8 1.1 0.4 2.3 0.8 3.4 1.1z"/>
+											</svg>
+										</figure>
+										<figure class="position-absolute top-0 start-0 ms-n9">	
+											<svg width="22px" height="22px" viewBox="0 0 22 22">
+												<polygon class="fill-orange" points="22,8.3 13.7,8.3 13.7,0 8.3,0 8.3,8.3 0,8.3 0,13.7 8.3,13.7 8.3,22 13.7,22 13.7,13.7 22,13.7 "/>
+											</svg>
+										</figure>
+										<figure class="position-absolute top-100 start-100 translate-middle ms-5 d-none d-md-block">
+											<svg  width="21.5px" height="21.5px" viewBox="0 0 21.5 21.5">
+												<polygon class="fill-danger" points="21.5,14.3 14.4,9.9 18.9,2.8 14.3,0 9.9,7.1 2.8,2.6 0,7.2 7.1,11.6 2.6,18.7 7.2,21.5 11.6,14.4 18.7,18.9 "/>
+											</svg>
+										</figure>
+										<figure class="position-absolute top-0 start-100 translate-middle">
+											<svg width="27px" height="27px">
+												<path class="fill-orange" d="M13.122,5.946 L17.679,-0.001 L17.404,7.528 L24.661,5.946 L19.683,11.533 L26.244,15.056 L18.891,16.089 L21.686,23.068 L15.400,19.062 L13.122,26.232 L10.843,19.062 L4.557,23.068 L7.352,16.089 L-0.000,15.056 L6.561,11.533 L1.582,5.946 L8.839,7.528 L8.565,-0.001 L13.122,5.946 Z"/>
+											</svg>
+										</figure>
+										<h1 class="position-relative fs-2">تفاصيل مدونة الشعب المهنية وتخصصات التكوين المهني.</h1>
+									</div>
+								</div>
+								<div class="row g-4 mt-0 mt-lg-5">
+									<div class="col-6 col-md-4">
+										<div class="row g-4">
+											<div class="col-10 col-lg-6">
+												<img class="rounded-4" src="assets/images/job/profession-2.jpg" alt="">
+											</div>
+											<div class="col-12">
+												<img class="rounded-4" src="assets/images/job/profession-1.jpg" alt="">
+											</div>
+										</div>
+									</div>
+									<div class="col-6 col-md-4 position-relative">
+										<figure class="position-absolute bottom-0 start-0 ms-n5">
+											<svg width="129px" height="133px">
+												<path class="fill-blue" d="M127.581,25.993 C122.659,31.935 113.441,24.283 118.356,18.351 C123.278,12.408 132.496,20.060 127.581,25.993 ZM115.247,49.292 C106.977,59.275 91.492,46.420 99.748,36.454 C108.018,26.470 123.503,39.325 115.247,49.292 ZM86.935,2.378 C91.464,-3.089 99.944,3.951 95.423,9.409 C90.894,14.876 82.414,7.836 86.935,2.378 ZM93.501,43.010 C84.246,54.182 66.918,39.796 76.157,28.643 C85.411,17.471 102.740,31.856 93.501,43.010 ZM57.726,6.672 C63.633,-0.460 74.694,8.723 68.796,15.842 C62.889,22.973 51.828,13.791 57.726,6.672 ZM65.132,42.254 C65.414,45.250 64.407,48.520 62.488,50.836 C60.459,53.285 57.635,54.609 54.547,55.032 C51.448,55.456 48.387,54.215 45.962,52.383 C43.626,50.618 42.031,47.307 41.761,44.441 C41.479,41.444 42.486,38.175 44.406,35.858 C46.434,33.410 49.258,32.085 52.346,31.662 C55.446,31.238 58.507,32.479 60.931,34.312 C63.267,36.076 64.862,39.387 65.132,42.254 ZM48.502,101.257 C42.496,108.507 31.251,99.172 37.247,91.934 C43.252,84.684 54.497,94.019 48.502,101.257 ZM23.966,17.251 C29.774,10.238 40.651,19.267 34.852,26.269 C29.043,33.281 18.167,24.251 23.966,17.251 ZM9.378,26.952 C15.088,20.059 25.780,28.935 20.079,35.817 C14.369,42.711 3.677,33.835 9.378,26.952 ZM10.074,49.315 C5.742,54.545 -2.369,47.811 1.955,42.590 C6.287,37.361 14.399,44.094 10.074,49.315 ZM10.889,68.408 C13.679,70.517 13.903,74.910 11.746,77.514 C9.434,80.305 5.439,80.481 2.640,78.366 C-0.150,76.258 -0.375,71.865 1.783,69.260 C4.095,66.469 8.090,66.293 10.889,68.408 ZM9.881,114.513 C5.450,119.861 -2.845,112.974 1.578,107.635 C6.008,102.287 14.304,109.173 9.881,114.513 ZM12.758,94.899 C14.381,91.994 16.764,89.898 20.208,89.575 C22.532,89.358 25.068,90.140 26.866,91.630 C28.766,93.203 29.795,95.394 30.124,97.789 C30.589,101.171 28.744,104.038 26.279,106.100 C26.173,106.189 26.066,106.278 25.960,106.367 C24.381,107.689 21.309,108.287 19.326,107.873 C17.757,107.545 16.312,106.882 15.033,105.915 C13.453,104.722 12.479,102.811 12.056,100.935 C11.657,99.164 11.627,96.924 12.555,95.263 C12.622,95.142 12.690,95.021 12.758,94.899 ZM23.787,69.054 C28.020,63.943 35.947,70.523 31.721,75.626 C27.487,80.736 19.560,74.156 23.787,69.054 ZM23.899,47.361 C28.822,41.418 38.039,49.070 33.125,55.003 C28.202,60.945 18.985,53.293 23.899,47.361 ZM51.663,129.014 C42.901,139.591 26.494,125.972 35.242,115.411 C44.004,104.833 60.411,118.454 51.663,129.014 ZM69.137,67.525 C69.381,67.564 69.626,67.602 69.871,67.641 C77.305,68.819 80.658,77.977 75.894,83.728 C71.131,89.478 61.508,87.888 58.968,80.803 C58.884,80.570 58.800,80.337 58.717,80.104 C56.311,73.396 62.098,66.410 69.137,67.525 Z"/>
+											</svg>
+										</figure>
+										<img class="rounded-4" src="assets/images/about/09.jpg" alt="">
+									</div>
+									<div class="col-md-4">
+										<div class="row g-4">
+											<div class="col-sm-6 col-md-12">
+												<div class="bg-grad rounded-4 p-5 text-start">
+													<span class="text-white">Our goal:</span>
+													<h3 class="text-white">“Be open to new ideas and approaches. Develop your problem-solving skills.”</h3>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-12 col-lg-6">
+												<img class="rounded-4" src="assets/images/job/profession-4.jpg" alt="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="pt-0 pt-md-5">
+							<div class="container">
+								<div class="row mb-4">
+									<div class="col-lg-8" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+										<p class="mb-0">تعتبر مدونة الشعب المهنية وتخصصات التكوين المهني، أداة للسهر و مراقبة  المهن، أعدت وفقا لتطور  قطاعات النشاط. فهي تحدد جميع خصائص الشعب المهنية وتخصصات التكوين المهني المدرّسة والتخصصات التي  ستبرمج على المدى القريب، المتوسط والبعيد.</p>
+										<p class="mb-0">تكتسي طابعا وطنيا وتمثل الوسيلة المرجعية القانونية  للتكوينات وشهادات التكوين المهني ، المحددة بموجب المرسوم التنفيذي رقم 16-  282 المؤرخ في 2  نوفمبر 2016 ، الذي يحدد نظام التكوين المهني الأولي والشهادات المتوجة له. فهي مهيكلة في  دليل واحد يضم كل أنماط التكوين ( التكوين الحضوري، التكوين عن طريق التمهين و    التكوين عن البعد )، للتصدي لمشكل عدم استغلال  التجهيزات التقنية  و البيداغوجية المصادف عند  وضع  مدونة الشعب المهنية وتخصصات التكوين المهني-   طبعة 2018- حيز التنفيذ.</p>
+										<p class="mb-0">إن مدونة الشعب المهنية وتخصصات التكوين المهني طبعة 2019 مهيكلة في ثلاثة وعشرين (23) شعبة مهنية، تغطي أهم ميادين النشاط، كما تحتوي على أربعمائة و خمسة وتسعين (495) تخصصًا في جميع أنماط التكوين، مع إدراج واحد وعشرين  (21) تخصصًا جديدًا موزعا على تسعة (09) شعب مهنية.</p>
+									</div>
+								</div>
+								<div class="row align-items-center">
+									<div class="col-lg-5 position-relative">
+										<figure class="position-absolute top-0 start-0 d-inline-block mt-n3">
+											<svg width="180" height="188" viewBox="0 0 379 395" xmlns="http://www.w3.org/2000/svg">
+												<path class="fill-dark" d="m194.01 213.69c0.16-5.82-0.7-11.77-1.4-17.55-0.64-5.35-0.76-11.29-2.82-16.27-1.96-4.73-8.61-4.2-9.04 1.22-0.43 5.35 1.23 11.08 2.27 16.34 1.14 5.75 2.15 11.66 4.1 17.18 1.3 3.67 6.78 3.18 6.89-0.92z"/>
+												<path class="fill-dark" d="m128.66 204.59c6.52 6.1 15.48 10.99 24.03 13.51 5.22 1.54 7.32-5.35 3.46-8.21-6.75-5.01-16.05-9.23-24.35-10.7-2.94-0.52-5.69 3.02-3.14 5.4z"/>
+												<path class="fill-dark" d="m132.2 252.72c6.03 2.03 13-2.24 18.55-4.47 5.74-2.31 12.86-4.01 16.33-9.42 1.35-2.1 0.13-5.66-2.49-6.12-6.49-1.13-12.33 2.76-18.07 5.5-5.32 2.53-13.35 4.85-15.93 10.57-0.73 1.63-0.16 3.34 1.61 3.94z"/>
+												<path class="fill-dark" d="m182.31 247.3c-1.06 5.43-0.29 10.91 0.17 16.38 0.45 5.37 0.39 10.33 3.86 14.65 2.48 3.08 6.71 0.8 7.87-2.08 1.92-4.74-0.07-10.24-1.09-15.05-1.07-5.05-1.88-10.15-4.3-14.75-1.37-2.61-5.92-2.16-6.51 0.85z"/>
+												<path class="fill-dark" d="m211.23 241.9c5.34 2.71 11.14 3.79 16.93 5.12 5.44 1.25 11.33 3.6 16.8 1.69 2.97-1.04 4.8-5.22 2.01-7.6-4.56-3.89-10.1-3.93-15.86-4.77-5.93-0.87-11.93-2.18-17.94-1.58-3.44 0.33-5.65 5.25-1.94 7.14z"/>
+												<path class="fill-dark" d="m214.37 216.88c4.35-2.81 8.22-6.6 12.01-10.11 3.85-3.57 8.13-6.91 9.69-12.11 1.18-3.93-2.72-7.7-6.6-6.6-5.19 1.47-8.64 5.78-12.25 9.56-3.58 3.74-7.38 7.54-10.27 11.86-3.01 4.48 2.94 10.3 7.42 7.4z"/>
+												<path class="fill-dark" d="m207.17 163.93c0.09-5.41-0.52-10.86-1.1-16.24-0.53-4.88-0.69-9.86-5.27-12.57-1.66-0.99-4.25-0.79-5.58 0.72-3.58 4.05-2.41 8.55-1.43 13.51 1.05 5.32 2.17 10.73 3.91 15.86 1.72 5.06 9.38 4.33 9.47-1.28z"/>
+												<path class="fill-dark" d="m170.28 175.82c-1.08-4.59-5.06-8.9-8.25-12.24-3.48-3.65-7.11-6.76-11.91-8.47-3.27-1.16-6.56 2.43-5.59 5.59 1.49 4.87 4.62 8.63 8.09 12.28 3.19 3.35 7.33 7.35 11.86 8.62 3.57 1.02 6.6-2.33 5.8-5.78z"/>
+												<path class="fill-dark" d="m113.84 176.01c-7.44-4.12-18.57-4.89-26.84-3.99-5.8 0.63-7.84 9.04-1.46 10.76 4.65 1.25 9.05 1.98 13.88 1.84 4.39-0.13 9.32 0.11 13.47-1.4 3.03-1.1 4.11-5.46 0.95-7.21z"/>
+												<path class="fill-dark" d="m125.34 225.91c-5.47 2.02-10.75 4.18-16 6.74-5.16 2.52-11.05 4.98-14.84 9.42-3.46 4.06-0.13 9.64 5.06 8.7 5.73-1.04 10.86-4.93 15.62-8.12 4.84-3.23 9.35-6.72 13.83-10.42 2.88-2.38-0.19-7.6-3.67-6.32z"/>
+												<path class="fill-dark" d="m154.27 279.62c-3.59 9.53-5.46 22.66-3.96 32.73 0.5 3.32 6.07 4.06 7.41 0.97 4.05-9.33 5.62-22.49 4.62-32.61-0.46-4.65-6.4-5.53-8.07-1.09z"/>
+												<path class="fill-dark" d="m215.3 280.91c2.51 5 6.64 8.95 10.55 12.87 3.98 3.99 8.2 7.99 13.42 10.24 4.15 1.79 8.7-1.96 6.37-6.37-2.78-5.28-7.24-9.31-11.78-13.1-4.44-3.7-8.65-7.32-14.04-9.52-3.51-1.43-5.91 3.11-4.52 5.88z"/>
+												<path class="fill-dark" d="m254.24 267.03c5.83 1.72 12.15 1.57 18.2 1.8 6.2 0.24 12.37 0.53 18.44-0.9 4.44-1.05 4.44-7.93 0-8.98-6.07-1.43-12.24-1.14-18.44-0.9-6.05 0.23-12.36 0.08-18.2 1.8-3.54 1.04-3.55 6.13 0 7.18z"/>
+												<path class="fill-dark" d="m249.57 220.6c5.74 0.12 11.6-2.08 17.06-3.7 5.45-1.61 11.25-2.56 15.39-6.7 2.54-2.55 1.73-8.18-2.32-8.79-5.98-0.91-10.83 1.38-16.4 3.38-5.3 1.91-11.59 3.59-16.1 7.03-3.55 2.7-2.68 8.67 2.37 8.78z"/>
+												<path class="fill-dark" d="m238.02 166.17c5.01 0.05 6.68-5.95 8.2-9.72 2.09-5.16 5.82-11.06 4.3-16.7-1.07-3.99-5.57-4.49-8.42-2.22-4.5 3.56-5.43 12.37-6.71 17.73-0.63 2.63-2.45 10.86 2.63 10.91z"/>
+												<path class="fill-dark" d="m175.92 131.08c-1.38-4.98-4.55-9.43-7.22-13.81-2.74-4.5-5.16-8.6-9.77-11.37-3.99-2.4-7.62 1.55-7.08 5.44 0.71 5.16 3.67 8.88 6.59 13.03 2.76 3.92 5.45 8.49 9.2 11.53 3.63 2.95 9.7 0.32 8.28-4.82z"/>
+												<path class="fill-dark" d="m127.5 145.68c-1.48-4.47-4.02-8.5-6.53-12.46-2.62-4.14-5.16-8.26-9.07-11.29-3.8-2.95-11.23-0.45-9.16 5.33 1.79 4.99 4.71 8.72 8.08 12.77 3.16 3.81 6.31 7.59 10.31 10.54 3.06 2.24 7.5-1.48 6.37-4.89z"/>
+												<path class="fill-dark" d="m101.97 207.71c-4.66-0.27-9.34 0.67-13.89 1.61-4.86 1-9.5 1.89-13.64 4.77-4.3 2.98-3.09 10.56 2.82 10.41 5.31-0.13 9.68-2.1 14.43-4.28 4.41-2.01 8.72-4.09 12.48-7.19 2.26-1.84 0.25-5.18-2.2-5.32z"/>
+												<path class="fill-dark" d="m116.71 272.51c-4.44 3-7.89 7.25-11.32 11.32-3.27 3.87-8.11 8.18-9.12 13.28-0.88 4.45 3.4 7.81 7.48 5.75 4.67-2.35 7.5-8.09 10.36-12.29 3-4.4 6.21-8.89 7.91-13.97 0.98-2.92-2.72-5.84-5.31-4.09z"/>
+												<path class="fill-dark" d="m122.39 301.82c-5.73 9.01-7.71 21.98-9 32.42-0.66 5.35 7.05 5.43 8.72 1.18 3.68-9.42 7.84-21.51 7.12-31.74-0.25-3.62-4.81-5.04-6.84-1.86z"/>
+												<path class="fill-dark" d="m175.01 308.29c-2.31 11.43-3.44 23.86-1.94 35.44 0.5 3.89 6.31 5.52 7.42 1.01 2.79-11.35 3.18-23.81 2.16-35.41-0.36-4.07-6.71-5.66-7.64-1.04z"/>
+												<path class="fill-dark" d="m210.59 318.2c1.26 8.85 4.01 18.05 7.97 26.05 2.65 5.35 9.5 1.21 8.81-3.71-1.22-8.79-4.36-17.94-8.27-25.92-2.53-5.17-9.19-1.18-8.51 3.58z"/>
+												<path class="fill-dark" d="m259.62 289.8c3.87 4.03 9.22 6.16 14.27 8.35 5.5 2.38 10.65 4.46 16.62 5.28 3.9 0.54 6.45-4.22 2.79-6.61-5.03-3.27-10.23-5.13-15.94-6.92-5.3-1.66-10.9-3.61-16.51-3.1-1.47 0.15-2.34 1.84-1.23 3z"/>
+												<path class="fill-dark" d="m278.17 239.36c4.63 0.39 9.28-1.67 13.66-3 4.69-1.43 9.34-2.62 13.55-5.22 4.66-2.88 1.5-9.44-3.59-8.51-4.84 0.89-9.1 3.2-13.52 5.27-4.12 1.93-8.83 3.5-11.99 6.88-1.68 1.79-0.41 4.39 1.89 4.58z"/>
+												<path class="fill-dark" d="m260.7 185.8c6.75-0.5 12.46-6.6 17.59-10.64 6.06-4.77 13.55-9.38 17.13-16.41 1.61-3.15-1.07-7.46-4.83-6.28-7.33 2.3-12.71 8.29-18.33 13.29-4.95 4.42-12.78 9.58-14.42 16.28-0.42 1.75 0.87 3.91 2.86 3.76z"/>
+												<path class="fill-dark" d="m222.24 126.71c1.72-5.82 2.23-12.08 2.75-18.11 0.53-6.15 1.5-12.24-0.7-18.15-0.98-2.63-5.02-3.81-6.51-0.85-2.84 5.63-2.77 11.47-2.92 17.68-0.16 6.48-0.31 13.03 0.82 19.43 0.62 3.45 5.67 3 6.56 0z"/>
+												<path class="fill-dark" d="m189.37 103.89c1.91-10.31-0.85-23.15-4.28-32.87-1.79-5.06-9.95-4.6-9.79 1.33 0.27 10.37 2.05 23.4 7.57 32.4 1.48 2.42 5.92 2.3 6.5-0.86z"/>
+												<path class="fill-dark" d="m138.39 113.34c-2.42-11.53-5.76-23.3-11.04-33.86-2.46-4.91-9.59-1.36-8.51 3.59 2.49 11.44 7.43 22.73 12.74 33.14 2 3.93 7.64 1.09 6.81-2.87z"/>
+												<path class="fill-dark" d="m95.58 142.36c-10.59-3.62-23.57-6.37-34.52-2.95-3.37 1.05-4.68 6.37-1.06 8.11 10.9 5.24 23.97 4.38 35.58 2.23 4-0.73 3.28-6.27 0-7.39z"/>
+												<path class="fill-dark" d="m71.61 190.69c-11.35-0.2-25.08 1.31-35.4 6.17-5.27 2.48-2.55 10.83 2.9 10.72 11.39-0.23 24.24-5.15 34.27-10.36 3.19-1.65 1.57-6.47-1.77-6.53z"/>
+												<path class="fill-dark" d="m70.91 241.18c-6.14 1.41-11.5 5.82-16.53 9.45-5.45 3.92-10.23 8.3-14.75 13.25-3.72 4.07 0.98 10.58 5.97 7.74 5.82-3.3 11.15-6.97 16.18-11.39 4.67-4.1 10.21-8.39 12.96-14.07 1.3-2.67-0.82-5.67-3.83-4.98z"/>
+												<path class="fill-dark" d="m80.75 290.12c-11.72 5.48-23.72 14.77-32.18 24.52-3.31 3.82 0.8 9.5 5.44 7.06 11.45-6.02 23.21-15.54 31.25-25.72 2.62-3.32-0.53-7.72-4.51-5.86z"/>
+												<path class="fill-dark" d="m137.08 338.96c-3.59 8.71-5.75 20.22-5.21 29.62 0.31 5.45 7.72 6.52 9.47 1.28 3-8.95 3.91-20.61 2.73-29.96-0.5-4.05-5.42-4.76-6.99-0.94z"/>
+												<path class="fill-dark" d="m90.97 334.12c-7.42 8.44-11.65 20.48-14.36 31.22-1.21 4.8 5.58 7.88 8.11 3.42 5.49-9.67 10.82-21.27 11.3-32.55 0.11-2.48-3.36-4.01-5.05-2.09z"/>
+												<path class="fill-dark" d="m183.75 362.85c-0.94 8.43-1.81 20.63 3.62 27.64 1.57 2.03 5.08 1.2 6.2-0.8 2.33-4.17 2.01-8.48 1.47-13.1-0.58-5-1.14-10.08-2.47-14.94-1.42-5.19-8.29-3.59-8.82 1.2z"/>
+												<path class="fill-dark" d="m231.99 363.98c0.76 4.42 4.35 8.51 6.86 12.12 2.85 4.09 5.89 7.41 9.98 10.26 3.45 2.41 9.16-1.67 7.48-5.75-1.99-4.85-4.64-8.7-8.21-12.55-3.27-3.52-6.35-7.46-10.86-9.33-3.33-1.39-5.73 2.47-5.25 5.25z"/>
+												<path class="fill-dark" d="m266.34 334.6c3.77 5.1 9.94 7.95 15.32 11.13 5.77 3.4 11.98 8.41 18.68 9.44 4.88 0.75 8.48-4.45 4.9-8.42-4.54-5.05-12.05-7.51-18.06-10.47-5.59-2.74-11.57-6.54-17.86-6.87-2.45-0.14-4.53 3.09-2.98 5.19z"/>
+												<path class="fill-dark" d="m316.13 301.59c4.75 2.94 10.54 4.1 15.86 5.66 4.95 1.45 10.22 3.67 14.39-0.45 1.09-1.07 1.7-2.93 1.17-4.42-2.02-5.66-7.03-5.96-12.33-6.86-5.49-0.94-11.33-2.55-16.91-1.99-4.14 0.41-6.06 5.65-2.18 8.06z"/>
+												<path class="fill-dark" d="m316.55 243.69c4.9 0.41 9.87-0.06 14.73-0.78 4.98-0.74 9.48-1.05 13.4-4.41 2.7-2.31 1.2-7.08-2.08-7.87-4.92-1.2-9.43 0.65-14.08 2.29-4.56 1.61-9.16 3.42-13.28 5.97-2.27 1.41-1.18 4.59 1.31 4.8z"/>
+												<path class="fill-dark" d="m308.04 203.69c4.85-0.37 9.55-2.49 14.01-4.38 4.56-1.94 9.9-3.42 13.28-7.2 3.13-3.51 1.13-9.73-3.99-9.63-5.12 0.09-9.53 2.9-14.03 5.11-4.35 2.14-9.26 4.34-12.71 7.79-2.82 2.8-0.89 8.65 3.44 8.31z"/>
+												<path class="fill-dark" d="m269.75 136.35c2.23-2.11 4.44-3.56 6.47-5.95 2.15-2.52 4.26-5.06 6.29-7.68 3.67-4.73 7.87-9.39 10.84-14.59 3.28-5.75-4.7-12.37-9.38-7.24-4.06 4.46-7.24 9.78-10.63 14.75-1.66 2.44-3.23 4.94-4.8 7.44-1.9 3.04-2.79 5.84-4.31 9.01-1.66 3.52 2.51 7.11 5.52 4.26z"/>
+												<path class="fill-dark" d="m249.62 85.78c6.03-7.39 11.22-17.92 13.28-27.22 1.53-6.93-6.93-9.89-10.91-4.6-3.02 4.01-4.88 8.3-6.86 12.9-1.87 4.33-4 8.83-4.85 13.48-0.89 4.88 5.45 10.21 9.34 5.44z"/>
+												<path class="fill-dark" d="m90.05 91.45c-2.56-5.05-7.57-9.23-11.65-13.07-4.09-3.85-8.31-9.07-14.25-9.28-3.38-0.12-5.49 3.27-4.81 6.31 1.25 5.6 7.66 8.94 12 12.12 4.52 3.31 9.43 7.32 14.87 8.91 3 0.87 5.14-2.45 3.84-4.99z"/>
+												<path class="fill-dark" d="m44.95 170.14c-6.71-0.76-13.22-1.96-20-2.4-6.02-0.39-10.51-1.6-14.47 3.58-0.86 1.12-0.86 3.41 0 4.53 3.97 5.2 8.38 3.97 14.47 3.58 6.77-0.43 13.29-1.63 20-2.4 4.42-0.49 4.43-6.38 0-6.89z"/>
+												<path class="fill-dark" d="m311.93 138.89c5.64-2.46 10.99-5.48 16.42-8.37 4.61-2.46 10.32-5.01 12.47-10.07 1.14-2.67-0.21-5.1-3.12-5.44-5.48-0.63-10.55 3.08-14.97 5.89-5.19 3.29-10.47 6.45-15.39 10.14-4.7 3.53-0.8 10.21 4.59 7.85z"/>
+												<path class="fill-dark" d="m214.43 69.49c1.24-8.38 0.44-19.18-2.63-27.11-1.83-4.74-8.98-4.29-9.15 1.24-0.25 8.53 2.45 19.03 6.47 26.56 1.09 2.05 4.94 1.83 5.31-0.69z"/>
+												<path class="fill-dark" d="m155.87 76.25c-0.17-7.42-1.86-17.18-5.87-23.48-2.59-4.06-8.63-2.33-8.88 2.41-0.39 7.46 2.98 16.77 6.49 23.32 2.07 3.87 8.37 2.09 8.26-2.25z"/>
+												<path class="fill-dark" d="m69.9 110.49c-2.8-4.65-8.9-5.51-13.81-6.83-5.97-1.6-11.86-2.8-17.96-1.33-3.79 0.91-3.81 5.75-1.01 7.71 4.9 3.44 10.46 4.3 16.31 5 4.92 0.59 11.26 2.24 15.51-0.95 1.15-0.84 1.77-2.26 0.96-3.6z"/>
+												<path class="fill-dark" d="m33.45 135.28c-8.15-0.52-16.37-1.58-24.44-0.08-6.41 1.2-4.57 10.75 1.49 10.98 8.03 0.3 16.11-2.12 23.92-3.8 4.17-0.89 2.92-6.85-0.97-7.1z"/>
+												<path class="fill-dark" d="m34.21 221.12c-8.24 1.61-16.84 3.23-24.39 7.05-5.18 2.62-1.4 9.93 3.76 8.91 8.15-1.62 15.99-5.81 23.33-9.56 3.73-1.89 1.01-7.12-2.7-6.4z"/>
+												<path class="fill-dark" d="m26.3 285.19c-7.04 2.19-14.06 4.08-20.61 7.52-5.56 2.91-1.73 11.9 4.26 10.11 7.07-2.1 13.42-5.69 19.98-9.02 4.75-2.42 1.45-10.2-3.63-8.61z"/>
+												<path class="fill-dark" d="m334.44 278.26c5.12 1.04 10.28 0.66 15.46 0.55 5.07-0.11 10.07 0.09 14.73-2.05 3.9-1.78 2.43-7.51-1.13-8.61-4.72-1.46-9.81-0.37-14.64 0.17-4.83 0.53-9.81 0.75-14.43 2.34-3.39 1.17-4.08 6.78 0.01 7.6z"/>
+												<path class="fill-dark" d="m324.69 166.67c8.1-2.25 17.57-5.63 24.26-10.79 3.5-2.7 1.72-8.92-3.21-7.61-8.31 2.21-16.63 7.54-23.46 12.69-2.64 2.01-1.26 6.74 2.41 5.71z"/>
+												<path class="fill-dark" d="m308.96 97.65c2.67-2.59 4.86-5.22 7.13-8.19 0.99-1.29 1.95-2.55 2.73-3.97 1.11-2.03 1.38-3.83 1.67-6.08 0.47-3.72-4.54-6.15-7.42-4.26-6.13 4.02-8.89 11.77-11.06 18.46-1.33 4.06 4.08 6.83 6.95 4.04z"/>
+												<path class="fill-dark" d="m255.79 103.01c4.15-1.4 6.18-6.01 8.31-9.58 2.77-4.65 4.79-9.2 6.24-14.42 1.23-4.44-4.45-6.11-6.91-2.91-3.15 4.1-5.39 8.18-7.37 12.96-1.57 3.81-4.27 8.3-2.9 12.46 0.35 1.05 1.49 1.87 2.63 1.49z"/>
+												<path class="fill-dark" d="m237.22 29.96c1.02-7.08 2.4-15.28 0.51-22.27-1.45-5.37-9.43-5.37-10.88 0-1.89 7-0.51 15.19 0.51 22.27 0.7 4.89 9.16 4.89 9.86 0z"/>
+												<path class="fill-dark" d="m176.87 37.88c0.46-8.08 0.72-18.2-1.81-25.96-1.44-4.4-8.12-3.72-8.18 1.11-0.1 8.22 3.14 17.78 6.01 25.39 0.79 2.12 3.84 1.82 3.98-0.54z"/>
+												<path class="fill-dark" d="m106.47 60.88c-0.25-8.78-2.31-19.27-6.16-27.17-2.47-5.06-8.95-1.13-8.31 3.5 1.12 8.07 5.45 18.05 9.78 24.94 1.28 2.05 4.76 1.32 4.69-1.27z"/>
+												<path class="fill-dark" d="m349.66 212.77c6.02-1.78 12.43-3.1 17.89-6.26 2.49-1.44 1.63-6.21-1.58-5.82-6.32 0.77-12.15 3.42-18.09 5.64-3.95 1.47-2.41 7.67 1.78 6.44z"/>
+												<path class="fill-dark" d="m263.24 357.22c3.03 5.01 5.77 10.27 10.26 14.11 2.62 2.25 8.08 0.17 6.5-3.78-1.21-3.04-2.59-5.39-4.57-7.97-1.89-2.46-3.92-4.82-5.91-7.21-2.93-3.52-8.59 1.02-6.28 4.85z"/>
+											</svg>
+										</figure>
+										<img src="assets/images/job/profession-3.jpg" class="rounded" alt="">
+									</div>
+									<div class="col-lg-7 mt-4 mt-lg-0" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+										<h4 class="mb-3">تحديات تطبيق مدونة الشعب والتخصصات المهنية</h4>
+										<p>تطبيق مدونة الشعب والتخصصات المهنية لعام 2018 واجه عدة تحديات في المؤسسات التكوينية، منها نقص التوجيه المهني للمتدربين، وعدم توفر مدربين مؤهلين، وافتقار المرافق والتجهيزات اللازمة، بالإضافة إلى فجوة بين التكوين واحتياجات سوق العمل. هذه الصعوبات تؤثر سلبًا على جودة وفاعلية التكوين المهني.</p>
+										<p>يمكن تلخيصها في النقاط التالية:</p>
+										<ul class="list-group list-group-borderless mt-4">
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>الشروط المحددة للإلتحاق ببعض التخصصات (مثل التعليم الابتدائي والسنة الرابعة متوسط) لا تسمح للمترشحين الذين غادروا المدرسة قبل إتمام الطور الابتدائي أو المتوسط بالتسجيل لمتابعة التكوين المتوج بالشهادة.
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>بعض التخصصات تمثل كفاءات واردة في ميدان آخر أو تختلف تسمياتها، لكن في الحقيقة هي تخصص واحد، وبعض التخصصات مقننة.
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>إن وجود مدونة الشعب والتخصصات المهنية في ثلاثة دلائل (دليل لكل نمط تكوين) قد يؤدي إلى سوء استغلال التجهيزات التقنية والبيداغوجية، خاصة عندما يتعمق الأمر ببرمجة التخصص في نمط التمهين فقط. كما أن برامج التكوين الحالية غير مطابقة بسبب مراجعة الحجم الساعي.
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>إن وجود مدونة الشعب والتخصصات المهنية في ثلاثة دلائل (دليل لكل نمط تكوين) قد يؤدي إلى سوء استغلال التجهيزات التقنية والبيداغوجية، خاصة عندما يتعمق الأمر ببرمجة التخصص في نمط التمهين فقط. كما أن برامج التكوين الحالية غير مطابقة بسبب مراجعة الحجم الساعي.
+											</li>
+										</ul>
+									</div>	
+								</div>
+								<p style="margin-bottom: 1.5rem !important;line-height: 2rem">ومن أجل دراسة هذه العراقيل والصعوبات، تم تنظيم يوم دراسي بتاريخ 26 نوفمبر 2018 تحت إشراف السيد وزير التكوين والتعليم المهنيين، جمع المسؤولين المعنيين، والإطارات من الإدارة المركزية، وممثلين عن مؤسسات الهندسة البيداغوجية، وكذا مجمع الشراكة للتكوين والتعليم المهنيين. وقد انبثقت عن هذه الندوة توصيات من أجل التكفل بالمشاكل المطروحة.</p>
+								<div class="row align-items-center">
+									<div class="col-lg-12 mt-4 mt-lg-0" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+										<h4 class="mb-3">ثمرة مدونة الشعب وتخصصات التكوين المهني طبعة 2019</h4>
+										<p>إن مدونة الشعب وتخصصات التكوين المهني طبعة 2019 تُعتبر ثمرة جهود متكاملة تهدف إلى تحسين جودة التكوين وتعزيز التوجيه المهني. تعكس هذه المدونة التوجهات الحديثة في تطوير مهارات المتدربين وتلبية احتياجات سوق العمل، من خلال تنظيم وتحديث التخصصات بما يتناسب مع متطلبات التنمية الاقتصادية والاجتماعية.</p>
+									</div>	
+								</div>
+								<div class="row align-items-center">
+									<div class="col-lg-12 mt-4 mt-lg-0" style="margin-bottom: 1.5rem !important;line-height: 2rem">
+										<h4 class="mb-3">أهداف مدونة الشعب وتخصصات التكوين المهني</h4>
+										<p>تعتبر مدونة الشعب المهنية وتخصصات التكوين المهني أداة للمراقبة والإشراف، أُعدت وفقًا لتطور قطاعات النشاط. تحدد هذه المدونة جميع خصائص الشعب والتخصصات المبرمجة على المدى القريب والمتوسط والبعيد، وتكتسي طابعًا وطنيًا، حيث تمثل الوسيلة المرجعية القانونية للتكوينات والشهادات، المحددة بموجب المرسوم التنفيذي رقم 16-282 المؤرخ في 2 نوفمبر 2016، الذي يحدد نظام التكوين المهني الأولي والشهادات المتوجة له.</p>
+										<p>تضم المدونة دليلًا واحدًا يشتمل على جميع أنماط التكوين (التكوين الحضوري، التكوين عن طريق التمهين، والتكوين عن بُعد)، لمواجهة مشكل عدم استغلال التجهيزات التقنية والبيداغوجية. تحتوي مدونة 2019 على ثلاثة وعشرين (23) شعبة مهنية، تغطي أهم ميادين النشاط، كما تشمل أربعمائة وخمسة وتسعين (495) تخصصًا في جميع أنماط التكوين، مع إدراج واحد وعشرين (21) تخصصًا جديدًا في تسعة (09) شعب مهنية. تم إرفاق هذه المدونة بدليل البطاقات الوصفية لتخصصات التكوين المهني، والذي يشمل الأنماط الثلاثة (03) المذكورة.</p>
+										<p>يعرف كل تخصص بـ:</p>
+										<ul class="list-group list-group-borderless mt-4">
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>الرقم التسلسلي للتخصص
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>رمز التخصص
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>تسمية التخصص
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>المستوى التأهيلي
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>الشهادة المتوجة للتكوين المتبع
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>المدة الإجمالية للتكون، معبر عنها بالأشهر
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>المستوى الدراسي المطلوب للإلتحاق بالتكوين
+											</li>
+											<li class="list-group-item d-flex">
+												<i class="bi bi-patch-check-fill text-success me-2"></i>نمط التكوين المفضل
+											</li>
+										</ul>
+									</div>	
+								</div>
+							</div>
+						</section>
+						<h4 class="mb-3 text-center" style="margin-bottom: 1.5rem !important;line-height: 3rem">ولهذا السبب تم وضع المدونة الإلكترونية بين أيديكم، لتكون مرجعًا يسهل عملية البحث والوصول إلى التخصصات المهنية المتاحة، ويوفر معلومات واضحة وشاملة عن المسارات التعليمية المناسبة. من خلال هذه المدونة، نهدف إلى تسهيل اتخاذ القرارات المهنية الواعية، مما يساعدكم على اختيار ما يتناسب مع طموحاتكم واحتياجات سوق العمل المتغيرة.</h4>
+					</div>
+				</div>
+				<ul class="nav nav-pills nav-pill-soft my-4 nav-fill" id="course-pills-tab" role="tablist" style="line-height: 10rem;">
+					<li class="nav-item me-2 me-lg-4" role="presentation" style="display: none;">
+						<button class="nav-link mb-2 mb-xl-0 active" id="course-pills-tab-4" data-bs-toggle="pill" data-bs-target="#course-pills-4" type="button" role="tab" aria-controls="course-pills-4" aria-selected="false"></button>
+					</li>
+					<li class="nav-item me-2 me-lg-4" role="presentation">
+						<button class="nav-link mb-2 mb-xl-0 scroll-btn" data-target="blogsection" id="course-pills-tab-1" data-bs-toggle="pill" data-bs-target="#course-pills-1" type="button" role="tab" aria-controls="course-pills-1" aria-selected="true">تكوين عن طريق المعابر</button>
+					</li>
+					<li class="nav-item me-2 me-lg-4" role="presentation">
+						<button class="nav-link mb-2 mb-xl-0 scroll-btn" data-target="blogsection" id="course-pills-tab-2" data-bs-toggle="pill" data-bs-target="#course-pills-2" type="button" role="tab" aria-controls="course-pills-2" aria-selected="false">تكوين تأهيلي أولي</button>
+					</li>
+					<li class="nav-item me-2 me-lg-4" role="presentation">
+						<button class="nav-link mb-2 mb-xl-0 scroll-btn" data-target="blogsection" id="course-pills-tab-3" data-bs-toggle="pill" data-bs-target="#course-pills-3" type="button" role="tab" aria-controls="course-pills-3" aria-selected="false">تكوين حضوري تمهين</button>
+					</li>
+				</ul>
+		</div>
+	</div>
+</section>
+</main>
+<footer>
+	<div class="container">
+		<div class="row mx-auto">
+			<div class="col-lg-6 mx-auto text-center my-5">
+				<div class="text-primary-hover mt-3">حقوق النشر 2024. تصميم <a href="#" target="_blank" class="text-reset">قاسي صارة</a>.</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+<script src="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/Section/scrool.js"></script>
+<script src="assets/js/SVTS/iq.js"></script>
+<script src="assets/js/SVTS/fc.js"></script>
+<script src="assets/js/SVTS/opt.js"></script>
+</body>
+</html>

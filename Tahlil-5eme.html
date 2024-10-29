@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+	<title>الوجيز  (Al-Wajeez) | البطاقة التحليلية</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="author" content="Webestica.com">
+	<meta name="description" content="Eduport- LMS, Education and Course Theme">
+	<script>
+		const storedTheme = localStorage.getItem('theme')
+		const getPreferredTheme = () => {
+			if (storedTheme) {
+				return storedTheme
+			}
+			return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+		}
+		const setTheme = function (theme) {
+			if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				document.documentElement.setAttribute('data-bs-theme', 'dark')
+			} else {
+				document.documentElement.setAttribute('data-bs-theme', theme)
+			}
+		}
+		setTheme(getPreferredTheme())
+		window.addEventListener('DOMContentLoaded', () => {
+		    var el = document.querySelector('.theme-icon-active');
+			if(el != 'undefined' && el != null) {
+				const showActiveTheme = theme => {
+				const activeThemeIcon = document.querySelector('.theme-icon-active use')
+				const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+				const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+				document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+					element.classList.remove('active')
+				})
+				btnToActive.classList.add('active')
+				activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+			}
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+				if (storedTheme !== 'light' || storedTheme !== 'dark') {
+					setTheme(getPreferredTheme())
+				}
+			})
+			showActiveTheme(getPreferredTheme())
+			document.querySelectorAll('[data-bs-theme-value]')
+				.forEach(toggle => {
+					toggle.addEventListener('click', () => {
+						const theme = toggle.getAttribute('data-bs-theme-value')
+						localStorage.setItem('theme', theme)
+						setTheme(theme)
+						showActiveTheme(theme)
+					})
+				})
+			}
+		})
+	</script>
+	<link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/icomoon.css">
+    <link rel="stylesheet" href="assets/css/magnifypopup.min.css">
+    <link rel="stylesheet" href="assets/css/odometer.min.css">
+    <link rel="stylesheet" href="assets/css/lightbox.min.css">
+    <link rel="stylesheet" href="assets/css/animation.min.css">
+    <link rel="stylesheet" href="assets/css/jqueru-ui-min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/tipped.min.css">
+	<link rel="stylesheet" href="assets/css/remixicon.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&amp;family=Roboto:wght@400;500;700&amp;display=swap">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+    <link rel="stylesheet" href="assets/css/dataTables.bootstrap5.min.css">
+	<link rel="stylesheet" href="assets/css/datatables.min.css" >
+    <link rel="stylesheet" href="assets/css/rowGroup.bootstrap5.min.css"> 
+    <link rel="stylesheet" href="assets/css/fixedHeader.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/css/buttons.bootstrap5.min.css">
+    <link rel="stylesheet" href="assets/css/rowReorder.dataTables.css">
+    <link rel="stylesheet" href="assets/css/responsive.dataTables.css">
+    <link rel="stylesheet" href="assets/css/responsive.bootstrap5.min.css" >
+    <link rel="stylesheet" href="assets/css/buttons.dataTables.css" >
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-rtl.css">
+</head>
+<body>
+<header class="navbar-light navbar-sticky">
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand me-0" href="index.html">
+				<img class="light-mode-item navbar-brand-item h-50px" src="assets/images/logo.png" alt="logo">
+				<img class="dark-mode-item navbar-brand-item h-50px" src="assets/images/logo-light.png" alt="logo">
+			</a>
+			<button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-animation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarCollapse">
+				<ul class="navbar-nav navbar-nav-scroll mx-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">تحليل النتائج</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T1.html">الفصل الأول</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T2.html">الفصل الثاني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-T3.html">الفصل الثالث</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-All.html">النتائج السنوية</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-Bem.html">شهادة التعليم المتوسط</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Tahlil-5eme.html">تقييم المكتسبات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">متابعة نتائج التلاميذ</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="Moutabaa-T1.html">متابعة نتائج الفصل الاول</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T2.html">متابعة نتائج الفصل الثاني</a></li>
+									<li> <a class="dropdown-item" href="Moutabaa-T3.html">متابعة نتائج الفصل الثالث</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">وثائق</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Ministerial-circular.html">المناشير الوزارية الخاصة بالإعلام ...</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="coming-soon.html">مطويات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Structure-of-the-educational-system.html">هيكلـة النظـام التـربوي</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">بطاقات</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-2.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2022/12/%D8%A8%D8%B7%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D8%B1%D8%BA%D8%A8%D8%A7%D8%AA-1-1.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الأولى ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/01/fiche-de-voeux-003.pdf" target="_blank">بطاقة الرغبات خاصة بتلاميذ السنة الرابعة متوسط</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCL.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.أ</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-2-AS-TCST.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الثانية ثانوي ج.م.ع.ت</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/wp-content/uploads/2015/02/orient-1-AS.pdf" target="_blank">بطاقة المتابعة و التوجيه إلى السنة الأولى ثانوي</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">خدمات</a>
+            			<ul class="dropdown-menu" aria-labelledby="demoMenu">
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">فضاءات قطاع التربية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://awlyaa.education.dz/" target="_blank">فضاء الاولياء</a></li>
+									<li> <a class="dropdown-item" href="https://amatti.education.gov.dz/" target="_blank">الأرضية الرقمية + فضاء مستشار التوجية</a></li>
+									<li> <a class="dropdown-item" href="https://ostad.education.gov.dz/auth" target="_blank">فضاء الأساتذة</a></li>
+									<li> <a class="dropdown-item" href="https://www.education.gov.dz/" target="_blank">موقع وزارة التربية</a></li>
+									<li> <a class="dropdown-item" href="https://www.a-onec.com/" target="_blank">مدونة التربية والتعليم</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="http://inscriptic.onefd.edu.dz/" target="_blank">التسجيل الإلكتروني في ONEFD</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-toggle" href="#">نتائج الإمتحانات الرسمية</a>
+								<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+									<li> <a class="dropdown-item" href="https://bem.onec.dz/" target="_blank">شهادة التعليم التوسط</a></li>
+									<li> <a class="dropdown-item" href="https://bac.onec.dz/" target="_blank">شهادة البكالوريا</a></li>
+								</ul>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="rate-calculator.html">حساب المعدلات</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="https://onps.com.dz/" target="_blank">البيع الإلكتروني للكتب</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+							<li class="d-flex justify-content-between align-items-center">
+								<a class="dropdown-item" href="Professional-training.html">مدونة الشعب و تخصصات التكوين المهني</a>
+								<a class="badge bg-success bg-opacity-10 text-success">جديد</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown"><a class="nav-link" href="coming-soon-blog.html">مدونة</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="advanceMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i class="fas fa-ellipsis-h"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-menu-end min-w-auto" data-bs-popper="none">
+							<li> 
+								<a class="dropdown-item" href="faq.html">
+									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>أسئلة شائعة
+								</a> 
+							</li>
+							<li> 
+								<a class="dropdown-item" href="privacy-policy.html">
+									<i class="text-danger fa-fw bi bi-card-text me-2"></i>سياسة خصوصية
+								</a> 
+							</li>
+							<li> <hr class="dropdown-divider"></li>
+							<li> 
+								<a class="dropdown-item" href="contact-us.html">
+									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>تواصل معنا
+								</a> 
+							</li>
+						</ul>
+					</li>
+				</ul>
+				</ul>
+			</div>
+			<div class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+				<button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+						<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+						<path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+						<use href="#"></use>
+					</svg> 
+				</button>
+			</div>
+		</div>
+	</nav>
+</header>
+<main>
+<section>
+	<div class="container">
+		<div class="row g-4 g-md-5 justify-content-center">
+			<div class="col-lg-8 mx-auto text-center">
+				<h1>تحليل إمتحان تقييم المكتسبات.</h1>
+				<div class="d-sm-flex justify-content-between align-items-center mb-2">
+					<div class="mt-2 mt-sm-2 d-flex mx-auto text-center">
+						<p id="currentDate" class="text-danger mb-0 me-3">
+							<i class="bi bi-clock-history me-0"></i>
+						</p>
+						<p id="currentTime" class="text-danger mb-0">
+							<i class="bi bi-clock-history me-0"></i>
+						</p>
+					</div>
+				</div>
+				<p class="mb-0">عند رفع الملفات على موقعنا لا تبقى لفترة طويلة ولا يتم حفظها نهائيا اي انها تحذف تلقائيا بعد تحديث الصفحة.</p>
+      		</div>
+		</div>
+	</div>
+</section>
+<section class="Import-area">
+	<div class="container">
+		<div class="alert alert-warning text-center" role="alert">
+			عند رفع الملفات على موقعنا لا تبقى لفترة طويلة ولا يتم حفظها نهائيا اي انها <a class="alert-link">تحذف </a> تلقائيا بعد تحديث الصفحة.
+		</div>
+        <div class="alert alert-info text-center" role="alert">
+			ملف البطاقة التحليلية يأتي على شكل <a class="alert-link">HTML </a> لا تقبل أي صيغة أخرى من الملفات.
+		</div>
+		<div class="row g-4 g-md-2 sub-drop-area">
+			<div class="col-lg-5" style="width:auto">
+				<div class="card card-body p-5 text-center">
+					<div id="dropArea" class="card card-body p-5 text-center drop-area" accept=".HTML, .html">
+						<div id="uploadIcon">
+							<p id="uploadText">
+									<ul class="avatar-group mb-4 justify-content-center h-132px" style="font-size: 5rem">
+										<img src="assets/images/new/checklist.png">
+										</li>
+									</ul>
+								<h6 class="fw-normal mb-2">اسحب الملفات  هنا لبدء التحميل</h6>
+								<div class="hr-sect mb-2">او</div>
+								<h6 class="fw-normal mb-2">اضغط على الصندوق لاختيار الملفات</h6>
+							</p>
+						</div>
+						<div id="successIcon" class="successIcon hidden">
+							<img src="assets/images/improvement-96.png">
+						</div>
+						<div id="progressCircle" class="progress-circle hidden"></div>
+					</div>
+						<div class="popupmodal-content">
+							<p>في حالة ظهور الجداول بشكل غير طبيعي، يرجى التأكد من الملفات مرة أخرى وتحميلها من جديد.</p>
+							<button id="calculate-button" class="btn btn-primary-soft mb-0 mt-3 mt-lg-4">تمت عمليت إستيراد النتائج بنجاح</button>
+						</div>
+				</div>
+			</div>
+		</div>
+			<div class="alert alert-danger" role="alert">
+				<h6 class="alert-heading">تنويه هام!</h6>
+				<p>السادة المستخدمين... نود تذكيركم أن عميلة تحليل النتائج لا تقبل إلا الملفات الأصلية لمنصة الرقمنة الخاصة بوزارة التربية والتعليم الجزائرية.</p>
+				<hr>
+				<p class="mb-0">يرجى تحميل ورفع الملفات الأصلية للرقمنة فقط ولا غير..</p>
+			</div>
+	</div>
+</section>
+        <section class="section-area">
+            <div id="Orsection" class="container">
+                <br><br>
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn-print btn btn-primary-soft">قاعدة بيانات البطاقة التحليلية
+                </a>
+                    <div class="about-image-gallery">
+						<div class="scroll-container">
+							<table id="data-table" class="table table-striped display nowrap" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>اللقب و الاسم</th>,
+                                        <th>اللغة العربية</th>,
+                                        <th>اللغة الفرنسية</th>,
+                                        <th>التربية الإسلامية</th>,
+                                        <th>التربية المدنية</th>,
+                                        <th>التاريخ والجغرافيا</th>,
+                                        <th>الرياضيات</th>,
+                                        <th>ع الطبيعة و الحياة</th>,
+                                        <th>ع الفيزيائية والتكنولوجيا</th>,
+                                        <th>أ</th>,
+                                        <th>ب</th>,
+                                        <th>ج</th>,
+                                        <th>د</th>,
+                                        <th>المتابعة والتكفل</th>
+                                        <th>موجب</th>
+                                        <th>سالب</th>
+                                        <th>ملمح الضعف</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+    					</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-area">
+            <div id="Analysesection" class="container">
+                <div class="row g-5 align-items-center">
+                <a id="titleElement" class="btn btn-primary-soft">تحليل إمتحان تقييم المكتسبات
+                    <div class="btn-drop">
+						<i class="bi bi-printer-fill" onclick="printSection('Analysesection')"></i>
+						<i class="bi bi-file-earmark-excel-fill" onclick="xlsxSection('Analysesection')"></i>
+						<i class="bi bi-bar-chart-fill" data-bs-toggle="modal" data-bs-target="#FollowupBackdrop"></i>
+					</div>
+                </a>
+                    <div class="about-image-gallery">
+                        <div class="scroll-container">    
+                            <table id="data-table" class="table display nowrap" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">المادة</th>
+                                        <th colspan="2">تقدير أعلى</th>
+                                        <th colspan="2">تقدير مقبول</th>
+                                        <th colspan="2">تقدير جزئي</th>
+                                        <th colspan="2">تقدير أدنى</th>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="1">العدد</th>
+                                        <th colspan="1">النسبة</th>
+                                        <th colspan="1">العدد</th>
+                                        <th colspan="1">النسبة</th>
+                                        <th colspan="1">العدد</th>
+                                        <th colspan="1">النسبة</th>
+                                        <th colspan="1">العدد</th>
+                                        <th colspan="1">النسبة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>اللغة العربية</td>
+                                        <td id="arabic-countA"></td>
+                                        <td id="arabic-percentageA"></td>
+                                        <td id="arabic-countB"></td>
+                                        <td id="arabic-percentageB"></td>
+                                        <td id="arabic-countC"></td>
+                                        <td id="arabic-percentageC"></td>
+                                        <td id="arabic-countD"></td>
+                                        <td id="arabic-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>اللغة الفرنسية</td>
+                                        <td id="french-countA"></td>
+                                        <td id="french-percentageA"></td>
+                                        <td id="french-countB"></td>
+                                        <td id="french-percentageB"></td>
+                                        <td id="french-countC"></td>
+                                        <td id="french-percentageC"></td>
+                                        <td id="french-countD"></td>
+                                        <td id="french-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التربية الإسلامية</td>
+                                        <td id="islamic-countA"></td>
+                                        <td id="islamic-percentageA"></td>
+                                        <td id="islamic-countB"></td>
+                                        <td id="islamic-percentageB"></td>
+                                        <td id="islamic-countC"></td>
+                                        <td id="islamic-percentageC"></td>
+                                        <td id="islamic-countD"></td>
+                                        <td id="islamic-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التربية المدنية</td>
+                                        <td id="civics-countA"></td>
+                                        <td id="civics-percentageA"></td>
+                                        <td id="civics-countB"></td>
+                                        <td id="civics-percentageB"></td>
+                                        <td id="civics-countC"></td>
+                                        <td id="civics-percentageC"></td>
+                                        <td id="civics-countD"></td>
+                                        <td id="civics-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>التاريخ والجغرافيا</td>
+                                        <td id="historyandgeography-countA"></td>
+                                        <td id="historyandgeography-percentageA"></td>
+                                        <td id="historyandgeography-countB"></td>
+                                        <td id="historyandgeography-percentageB"></td>
+                                        <td id="historyandgeography-countC"></td>
+                                        <td id="historyandgeography-percentageC"></td>
+                                        <td id="historyandgeography-countD"></td>
+                                        <td id="historyandgeography-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>الرياضيات</td>
+                                        <td id="math-countA"></td>
+                                        <td id="math-percentageA"></td>
+                                        <td id="math-countB"></td>
+                                        <td id="math-percentageB"></td>
+                                        <td id="math-countC"></td>
+                                        <td id="math-percentageC"></td>
+                                        <td id="math-countD"></td>
+                                        <td id="math-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>العلوم الطبيعية</td>
+                                        <td id="nature-countA"></td>
+                                        <td id="nature-percentageA"></td>
+                                        <td id="nature-countB"></td>
+                                        <td id="nature-percentageB"></td>
+                                        <td id="nature-countC"></td>
+                                        <td id="nature-percentageC"></td>
+                                        <td id="nature-countD"></td>
+                                        <td id="nature-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>العلوم الفزيائية</td>
+                                        <td id="physical-countA"></td>
+                                        <td id="physical-percentageA"></td>
+                                        <td id="physical-countB"></td>
+                                        <td id="physical-percentageB"></td>
+                                        <td id="physical-countC"></td>
+                                        <td id="physical-percentageC"></td>
+                                        <td id="physical-countD"></td>
+                                        <td id="physical-percentageD"></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="font-weight: bold;">المجموع</td>
+                                        <td style="font-weight: bold;" id="followup-countA"></td>
+                                        <td style="font-weight: bold;" id="followup-percentageA"></td>
+                                        <td style="font-weight: bold;" id="followup-countB"></td>
+                                        <td style="font-weight: bold;" id="followup-percentageB"></td>
+                                        <td style="font-weight: bold;" id="followup-countC"></td>
+                                        <td style="font-weight: bold;" id="followup-percentageC"></td>
+                                        <td style="font-weight: bold;" id="followup-countD"></td>
+                                        <td style="font-weight: bold;" id="followup-percentageD"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>              
+							<div class="modal fade" id="FollowupBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
+								<div class="modal-dialog modal-fullscreen">
+									<div class="modal-content">
+										<div class="modal-header">
+										<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<div id="Followup-chart" style="width: auto; height: auto;"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+                        </div>
+                </div>
+            </div>
+        </section>
+</main>
+<footer>
+	<div class="container">
+		<div class="row mx-auto">
+			<div class="col-lg-6 mx-auto text-center my-5">
+				<div class="text-primary-hover mt-3">حقوق النشر 2024. تصميم <a href="#" target="_blank" class="text-reset">قاسي صارة</a>.</div>
+			</div>
+		</div>
+	</div>
+</footer>
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/sal.min.js"></script>
+    <script src="assets/js/magnifypopup.min.js"></script>
+    <script src="assets/js/jquery.countdown.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/isotop.min.js"></script>
+    <script src="assets/js/imageloaded.min.js"></script>
+    <script src="assets/js/lightbox.min.js"></script>
+    <script src="assets/js/paralax.min.js"></script>
+    <script src="assets/js/paralax-scroll.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/svg-inject.min.js"></script>
+    <script src="assets/js/vivus.min.js"></script>
+    <script src="assets/js/tipped.min.js"></script>
+    <script src="assets/js/smooth-scroll.min.js"></script>
+    <script src="assets/js/isInViewport.jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/tiny-slider/tiny-slider-rtl.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.js"></script>
+<script src="assets/js/functions.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/Calc/datatables.5eme.js"></script>
+<script src="assets/js/simple-statistics.js"></script>
+<script src="assets/js/jstat.min.js"></script>
+<script src="assets/js/Print/printadd.js"></script>
+<script src="assets/js/xlsx.full.min.js"></script>
+<script src="assets/js/plotly.js"></script>
+<script src="assets/js/plotly.min.js"></script>
+<script src="assets/js/dataTables.fixedHeader.min.js"></script>
+<script src="assets/js/jquery-3.7.1.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.1.8/js/dataTables.bootstrap5.js"></script>
+<script src="assets/js/dataTables.buttons.min.js"></script>
+<script src="assets/js/buttons.bootstrap5.min.js"></script>
+<script src="assets/js/buttons.colVis.min.js"></script>
+<script src="assets/js/buttons.dataTables.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.0.1/js/buttons.print.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+<script src="assets/js/dataTables.rowGroup.min.js"></script>
+<script src="assets/js/dataTables.rowReorder.js"></script>
+<script src="assets/js/rowReorder.dataTables.js"></script>
+<script src="assets/js/dataTables.responsive.js"></script>
+<script src="assets/js/responsive.dataTables.js"></script>
+</body>
+</html>

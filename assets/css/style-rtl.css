@@ -22837,5 +22837,112 @@ display: inline-block;
   -ms-user-select: none; /* For older IE */
 }
 
+#edublink-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99999999999999;
+  overflow: hidden;
+  background-image: -webkit-linear-gradient(70deg, #31b978 0%, #1ab69d 100%);
+  background-image: linear-gradient(20deg, #31b978 0%, #1ab69d 100%);
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+}
+
+#edublink-preloader.loaded .preloader-close-btn-wraper {
+  bottom: 200%;
+}
+
+.preloader-close-btn-wraper {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+  -webkit-transition: all 1.5s ease-out;
+  transition: all 1.5s ease-out;
+}
+
+.preloader-close-btn-wraper .preloader-close-btn {
+  border-radius: 50px;
+  font-size: 13px;
+  padding: 4px 23px;
+  background: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
+  height: 45px;
+  line-height: 35px;
+  border: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.preloader-spin-1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: edublink-preloader-bounce-animation 2.0s infinite ease-in-out;
+  animation: edublink-preloader-bounce-animation 2.0s infinite ease-in-out;
+}
+
+.preloader-spin-2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: edublink-preloader-bounce-animation 2.0s infinite ease-in-out;
+  animation: edublink-preloader-bounce-animation 2.0s infinite ease-in-out;
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes edublink-preloader-bounce-animation {
+  0%,
+100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+
+  50% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+}
+
+@keyframes edublink-preloader-bounce-animation {
+  0%,
+100% {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+  }
+
+  50% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+  }
+}
+
+
 /*User CSS*/
 /*# sourceMappingURL=style-rtl.css.map */

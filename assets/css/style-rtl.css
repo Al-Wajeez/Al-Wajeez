@@ -23062,14 +23062,13 @@ display: inline-block;
 }
 
 /* Smooth continuous scroll */
-@keyframes tic-h {
-	0% {
-		transform: translate3d(-100%, 0, 0);
-		visibility: visible;
-	}
-	100% {
-		transform: translate3d(100%, 0, 0);
-	}
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
 }
 
 /*User CSS*/

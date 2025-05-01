@@ -34126,7 +34126,7 @@ a {
 	display: flex;
 	margin:0;
 	padding: 0;
-	padding-left: 90%;
+	padding-left: 0;
 	z-index: 999;
 	
 	animation-iteration-count: infinite;
@@ -34154,10 +34154,10 @@ a {
 
 @keyframes tic-h {
 	0% {
-		transform: translate3d(100%, 0, 0);
+		transform: translate3d(-100%, 0, 0); /* Start off-screen to the left */
 		visibility: visible;
 	}
 	100% {
-		transform: translate3d(-100%, 0, 0);
+		transform: translate3d(100%, 0, 0); /* Move off-screen to the right */
 	}
 }

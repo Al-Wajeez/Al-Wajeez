@@ -23054,7 +23054,7 @@ a {
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-name: tic-h;
-	animation-duration: 30s;
+	animation-duration: 60s;
 	
 }
 .news-ticker-h:hover { 
@@ -23076,11 +23076,10 @@ a {
 
 @keyframes tic-h {
 	0% {
-		transform: translate3d(-100%, 0, 0); /* Start off-screen to the left */
-		visibility: visible;
+		transform: translate3d(-100%); /* Start off-screen to the left */
 	}
 	100% {
-		transform: translate3d(100%, 0, 0); /* Move off-screen to the right */
+		transform: translate3d(0%); /* Move off-screen to the right */
 	}
 }
 

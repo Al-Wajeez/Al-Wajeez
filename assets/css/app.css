@@ -34111,25 +34111,16 @@ a {
 	display: flex;	
 	position: relative;
 	overflow: hidden;
-	border: 1px solid #1c6547;
+	border: 1px solid #1d3b53;
 }
 
 .ticker-wrapper-h .heading{
-	background-color: #1c6547;
+	background-color: #1d3b53;
 	color: #fff;
 	padding: 5px 10px;
 	flex: 0 0 auto;
 	z-index: 1000;
 }
-.ticker-wrapper-h .heading:after{
-	content: "";
-	position: absolute;
-	top: 0;
-	border-left: 20px solid #1c6547;
-	border-top: 17px solid transparent;
-	border-bottom: 15px solid transparent;
-}
-
 
 .news-ticker-h{
 	display: flex;
@@ -34163,12 +34154,10 @@ a {
 
 @keyframes tic-h {
 	0% {
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
+		transform: translate3d(-100%, 0, 0);
 		visibility: visible;
 	}
 	100% {
-		-webkit-transform: translate3d(-100%, 0, 0);
-		transform: translate3d(-100%, 0, 0);
+		transform: translate3d(100%, 0, 0);
 	}
 }
